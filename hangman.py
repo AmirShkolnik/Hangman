@@ -2,12 +2,26 @@ import random
 import string
 from words import words
 
-def get_valid_word(words):
-    word = random.choice(words)  # randomly chooses something from the list
+def get_valid_word(words_list):
+    word = random.choice(words_list)  # randomly chooses something from the list
     while '-' in word or ' ' in word:
-        word = random.choice(words)
-
+        word = random.choice(words_list)
     return word.upper()
+
+def display_hangman(mistakes):
+    hangman_stages = [
+        "",
+       "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
+        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
+    ]
+    
+    print(hangman_stages[mistakes])
 
 def hangman():
     word = get_valid_word(words)
@@ -15,12 +29,15 @@ def hangman():
     alphabet = set(string.ascii_uppercase)
     used_letters = set()    # what the user has guessed
 
-    lives = 6 # Define lives as a global variable
+    mistakes = 0
     # getting user input
-    while len(word_letters) > 0 and lives > 0:
+    while len(word_letters) > 0 and mistakes < 7:
+        # display hangman
+        display_hangman(mistakes)
+
         # letters used
         # ' '.join(['a', 'b',  'cd']) --> 'a b cd'
-        print('You have', lives, 'lives left and you have used these letters:', ' '.join(used_letters))
+        print('You have', 7 - mistakes, 'lives left and you have used these letters:', ' '.join(used_letters))
 
         # what current word is (ie W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
@@ -32,7 +49,7 @@ def hangman():
             if user_letter in word_letters:
                 word_letters.remove(user_letter)
             else:
-                lives -= 1  # takes away a life if wrong
+                mistakes += 1  # increment mistake count if wrong
                 print('Letter is not in word.')
 
         elif user_letter in used_letters:
@@ -41,12 +58,12 @@ def hangman():
         else:
             print('Invalid character. Please try again.')
 
-    # gets here when len(word_letters) == 0 OR when lives == 0
-    if lives == 0:
+    # gets here when len(word_letters) == 0 OR when mistakes == 7
+    if mistakes == 7:
+        display_hangman(mistakes)
         print('You died, sorry. The word was', word)
     else:
         print('You guessed the word', word, '!!')
-
 
 def continue_game():
     play_game = True
@@ -63,7 +80,6 @@ def continue_game():
             print("That is not a valid option. Please try again.")
 
     print("Thanks for playing")
-
 
 hangman()
 continue_game()
