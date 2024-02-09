@@ -134,7 +134,7 @@ def hangman():
         else:
             print('Invalid character. Please try again.')
 
-    if mistakes == 7:
+    if mistakes == 9:
         display_hangman(mistakes)
         print('You died, sorry. The word was', word)
     else:
