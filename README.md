@@ -429,6 +429,15 @@ Bugs
 ## After
 ![Bug number 4](Readme-images/bug-4-after.png)
 
+    - Bug nr 5. - The hangman drawing is not showing the whole body when the player ran out of guesse and loses. The solution was changing the number of lives from 7 to 9.
+
+## Before
+![Bug number 5](Readme-images/bug-5.png)
+
+## After
+![Bug number 5](Readme-images/bug-5-after.png)
+
+
 
      def get_valid_word(words_list):
     word = random.choice(fruits)  # randomly choose a fruit from the fruits list
