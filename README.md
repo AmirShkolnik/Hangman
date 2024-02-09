@@ -288,7 +288,8 @@ These steps were taken for the deployment:
 - On the dashboard, in the right corner click the button that says "New" and choose "Create New App".
 - Pick a name of the app. The name has to be unique because it can't match any other name being used.
 - Select your region, United States or Europe.
-- "Create App".
+- Add payment method if needed.
+- Click "Create App".
 - On the menu at the top of the page, go to the Settings Tab.
 - Scroll down to Config Vars and click "Reveal Config Vars".
 - Add a new Config Var and enter PORT in the keybox and 8000 in the valuebox.
@@ -296,7 +297,7 @@ These steps were taken for the deployment:
 - Click "Add Buildpacks".
 - Select python.
 - Repeat this step but select nodejs.
-- Important to know: The python has to be picked before the nodejs, if it is not you can change the order by click and drag to correct the order.
+- Important to know: The python has to be picked before the nodejs, if it is not in order 6you can change the order by click and drag to correct the order.
 - Scroll back to the top of the page, to the menu and go to the Deploy Tab.
 - Select GitHub as the deployment method and confirm.
 - Search for you repository name and connect that.
