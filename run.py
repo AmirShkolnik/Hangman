@@ -72,17 +72,19 @@ def choose_category():
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
-    choice = int(input("Enter your choice (1-5): \n")) - 1
-
-    if choice < 0 or choice >= len(categories):
-        print("Invalid choice. Please try again.")
-        return choose_category()  # Recursive call to prompt the user again
-    else:
-        chosen_category = list(categories.keys())[choice]
-        print("You chose", chosen_category + ".", "Great choice!")  # Print the chosen category here
-        chosen_list = categories[chosen_category] #chosen_list refers to a list of words associated with the category that the user has chosen to play with.
-        return chosen_category, chosen_list
-       
+    while True:
+        choice = input("Enter your choice (1-5): \n")
+        if choice.isdigit():
+            choice = int(choice) - 1
+            if 0 <= choice < len(categories):
+                chosen_category = list(categories.keys())[choice]
+                print("You chose", chosen_category + ".", "Great choice!")  # Print the chosen category here
+                chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                return chosen_category, chosen_list
+            else:
+                print("Invalid choice. Please enter a number between 1 and 5.")
+        else:
+            print("Invalid choice. Please enter a number.")
 
 def display_hangman(mistakes):
     hangman_stages = [
