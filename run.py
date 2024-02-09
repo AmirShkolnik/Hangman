@@ -85,7 +85,7 @@ def choose_category():
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
-    choice = int(input("Enter your choice (1-5): ")) - 1
+    choice = int(input("Enter your choice (1-5): \n")) - 1
 
     if choice < 0 or choice >= len(categories):
         print("Invalid choice. Please try again.")
@@ -143,7 +143,7 @@ def hangman():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print('Current word:', ' '.join(word_list))
 
-        user_letter = input('Guess a letter: ').upper()
+        user_letter = input('Guess a letter: \n').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
@@ -168,7 +168,7 @@ def hangman():
 def continue_game():
     play_game = True
     while play_game:
-        continue_playing = input("Would you like to continue playing the game? y/n ")
+        continue_playing = input("Would you like to continue playing the game? y/n \n")
         
         if continue_playing.lower() == "y":
             print("You have decided to continue playing the game.")
