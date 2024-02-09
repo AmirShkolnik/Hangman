@@ -416,6 +416,15 @@ Bugs
 
 ### Solved Bugs
 
+- First testing after deployment the hangman game started with "You have 7 lives left..." 
+     - Bug nr 1. - and not with the choosing a category.
+     - Bug nr 2. - Should be 6 and not 7 lives.
+
+![Bug number 1](Readme-images/bug-1.png)
+
+
+--------------
+
 - When testing the JavaScript code for the first time, [JSHint Validator](https://jshint.com/) returned a few crucial errors because semicolons were missing in a couple of lines.
 
 After fixing all the errors, JSHint returned 23 warnings regarding ES6. 
