@@ -115,9 +115,9 @@ def hangman():
     used_letters = set()
     mistakes = 0
 
-    while len(word_letters) > 0 and mistakes < 8:
+    while len(word_letters) > 0 and mistakes < 9:
         display_hangman(mistakes)
-        print('You have', 8 - mistakes, 'lives left and you have used these letters:', ' '.join(used_letters))
+        print('You have', 9 - mistakes, 'lives left and you have used these letters:', ' '.join(used_letters))
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print('Current word:', ' '.join(word_list))
 
