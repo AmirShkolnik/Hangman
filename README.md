@@ -421,6 +421,13 @@ Bugs
       Solution: adding "\n" after the "choice (1-5):"  choise = int(input("Enter your choice (1-5): \n")) - 1.
      - Bug nr 2. - Should be 6 and not 7 lives.
      - Bug nr 3. - category option works on VS Code BUT display only words from the fruits category. 
+     The problem was in the following code I wrote at the beggining as defult before adding more categories and forgot to change 
+
+     def get_valid_word(words_list):
+    word = random.choice(fruits)  # randomly choose a fruit from the fruits list
+    while '-' in word or ' ' in word:
+        word = random.choice(fruits)
+    return word.upper()
 
 ![Bug number 1](Readme-images/bug-1.png)
 
