@@ -419,7 +419,7 @@ Bugs
 - First testing after deployment the hangman game started with "You have 7 lives left..." 
      - Bug nr 1. - the choosing a category option is not displaying.
       Solution: adding "\n" after the "choice (1-5):"  choise = int(input("Enter your choice (1-5): \n")) - 1.
-     - Bug nr 2. - Should be 6 and not 7 lives.
+     - Bug nr 2. - Should be 8 and not 6 lives.
      - Bug nr 3. - category option works on VS Code BUT display only words from the fruits category. 
      The problem was in the following code I wrote at the beggining as defult before adding more categories and forgot to change 
      - Bug nr 4. - The user is suppose to chose a category number between 1 and 5 but if he chose a letter or a symbole an error was displayed. The solution was modifing "def choose_category()". The code continuously prompts the user for input until a valid numeric choice between 1 and 5 is entered. If the input cannot be converted to an integer or is outside this range, appropriate error messages are displayed. Once a valid choice is made, the chosen category and its associated word list are returned.
@@ -429,7 +429,7 @@ Bugs
 ## After
 ![Bug number 4](Readme-images/bug-4-after.png)
 
-    - Bug nr 5. - The hangman drawing is not showing the whole body when the player ran out of guesse and loses. The solution was changing the number of lives from 7 to 9.
+    - Bug nr 5. - The hangman drawing is not showing the whole body when the player ran out of guesse and loses. The solution was changing the number of lives from 7 to 8.
 
 ## Before
 ![Bug number 5](Readme-images/bug-5.png)
