@@ -423,7 +423,12 @@ Bugs
      - Bug nr 3. - category option works on VS Code BUT display only words from the fruits category. 
      The problem was in the following code I wrote at the beggining as defult before adding more categories and forgot to change 
      - Bug nr 4. - The user is suppose to chose a category number between 1 and 5 but if he chose a letter or a symbole an error was displayed. The solution was modifing "def choose_category()". The code continuously prompts the user for input until a valid numeric choice between 1 and 5 is entered. If the input cannot be converted to an integer or is outside this range, appropriate error messages are displayed. Once a valid choice is made, the chosen category and its associated word list are returned.
+## Before
 ![Bug number 4](Readme-images/bug-4.png)
+
+## After
+![Bug number 4](Readme-images/bug-4-after.png)
+
 
      def get_valid_word(words_list):
     word = random.choice(fruits)  # randomly choose a fruit from the fruits list
