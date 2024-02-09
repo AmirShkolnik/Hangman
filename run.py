@@ -138,12 +138,15 @@ def hangman():
 
     if mistakes == 8:
         display_hangman(mistakes)
+        print()
         print('You died, sorry. The word was', word)
     else:
+        print()
         print('You guessed the word', word, '!!')
 
 def continue_game():
     while True:
+        print()
         continue_playing = input("Would you like to continue playing the game? (y/n): \n")
         if continue_playing.lower() == "y":
             print("You have decided to continue playing the game.")
