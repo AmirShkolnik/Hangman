@@ -132,8 +132,10 @@ def hangman():
                 mistakes += 1
                 print('Letter is not in word.')
         elif user_letter in used_letters:
+            print()
             print('You have already used that character. Please try again.')
         else:
+            print()
             print('Invalid character. Please try again.')
 
     if mistakes == 8:
