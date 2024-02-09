@@ -91,6 +91,7 @@ def choose_category():
         print("Invalid choice. Please try again.")
         return choose_category()  # Recursive call to prompt the user again
     else:
+        print("You chose ")
         chosen_category = list(categories.keys())[choice]
         chosen_list = categories[chosen_category]
         return chosen_category, chosen_list
@@ -143,7 +144,7 @@ def hangman():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print('Current word:', ' '.join(word_list))
 
-        user_letter = input('Guess a letter: \n').upper()
+        user_letter = input('Guess a letter: ').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
@@ -168,7 +169,7 @@ def hangman():
 def continue_game():
     play_game = True
     while play_game:
-        continue_playing = input("Would you like to continue playing the game? y/n \n")
+        continue_playing = input("Would you like to continue playing the game? y/n ")
         
         if continue_playing.lower() == "y":
             print("You have decided to continue playing the game.")

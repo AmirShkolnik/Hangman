@@ -417,8 +417,10 @@ Bugs
 ### Solved Bugs
 
 - First testing after deployment the hangman game started with "You have 7 lives left..." 
-     - Bug nr 1. - and not with the choosing a category.
+     - Bug nr 1. - the choosing a category option is not displaying.
+      Solution: adding "\n" after the "choice (1-5):"  choise = int(input("Enter your choice (1-5): \n")) - 1.
      - Bug nr 2. - Should be 6 and not 7 lives.
+     - Bug nr 3. - category option works on VS Code BUT display only words from the fruits category. 
 
 ![Bug number 1](Readme-images/bug-1.png)
 
