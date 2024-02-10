@@ -98,7 +98,11 @@ def display_hangman(mistakes, chosen_level):
     return stages_to_display
 
 def choose_level():
-    print("Choose your level:")
+    print("Welcome to Hangman Madness!")
+    print("Prepare yourself for an epic journey through the alphabet jungle!")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print()
+    print("Step 1: Choose Your Level of Adventure!")
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
 
@@ -108,8 +112,8 @@ def choose_level():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
-                print("You chose", chosen_level + ".", "Excellent choice!")  # Print the chosen category here
-                print()
+                print("You chose:", chosen_level + ".",)  # Print the chosen category here
+                print("Excellent choice!")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
@@ -128,7 +132,7 @@ def choose_category():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
                 chosen_category = list(categories.keys())[choice]
-                print("You chose", chosen_category + ".",)
+                print("You selected", chosen_category + ".",)
                 print()
                 print("Good Luck :-)")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
