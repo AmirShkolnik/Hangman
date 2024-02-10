@@ -170,7 +170,8 @@ def hangman():
     while len(word_letters) > 0 and mistakes < chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print('You have', chosen_level_lives - mistakes, 'lives left.')
-        print("------------------------------------------------------")
+        print("----------------------")
+        print(" ")
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
@@ -182,21 +183,21 @@ def hangman():
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
-                print('Letter is not in word.')
+                print("Yikes! Swing and a miss, Keep guessing.")
         elif user_letter in used_letters:
-            print()
-            print('You have already used that character. Please try again.')
+            print("Oopsie! That letter's already been served. Let's order something new!")
+            print(" ")
         else:
             print()
-            print('Invalid character. Please try again.')
+            print("Invalid character. Please try again.")
 
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print()
-        print('You died, sorry. The word was', word)
+        print("Aw, shucks! Looks like your brain went on vacation with the penguins. The word was", word)
     else:
-        print()
-        print('You guessed the word', word, '!!')
+        print(" ")
+        print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
 
 def continue_game():
     while True:
