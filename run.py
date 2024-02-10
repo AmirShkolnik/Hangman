@@ -144,7 +144,6 @@ def choose_category():
                 print(" ")
                 print("Step 3: Let the guessing games begin!")
                 print("-------------------------------------")
-                print(" ")
                 print("On your marks, get set, guess! The hangman's rope hangs in the balance!")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
@@ -171,7 +170,7 @@ def hangman():
     while len(word_letters) > 0 and mistakes < chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print('You have', chosen_level_lives - mistakes, 'lives left.')
-        print()
+        print("------------------------------------------------------")
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
