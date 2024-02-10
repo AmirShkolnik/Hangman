@@ -202,17 +202,17 @@ def hangman():
 def continue_game():
     while True:
         print()
-        continue_playing = input("Would you like to continue playing the game? (y/n): \n")
+        continue_playing = input("Ready for round two? It's like potato chips, you can't have just one. (y/n) \n")
         if continue_playing.lower() == "y":
-            print("You have decided to continue playing the game.")
+            print("Oh good, you haven't given up yet. This could get interesting...")
             hangman()
         elif continue_playing.lower() == "n":
-            print("Now closing the game...")
+            print("Farewell, brave soul! Remember, quitting is bravery... sometimes. Don't tell my therapist I said that.")
             break
         else:
-            print("That is not a valid option. Please try again.")
+            print("Wow, that was... something. Are you trying to speak Morse code? Please try again.")
 
-    print("Thanks for playing")
+    print("Phew, that was almost too close for comfort! Thanks for playing, and please excuse any existential dread you may have experienced during the game. I'm still under development, after all.")
 
 
 hangman()
