@@ -67,11 +67,51 @@ categories = {
     "Fruits": fruits
 }
 
+"""
+def display_hangman(mistakes):
+    hangman_stages = [
+        "",
+        "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
+        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
+    ]
+
+    print(hangman_stages[mistakes])
+"""
 levels = {
-    "Easy - 9 lives": 9,
-    "Medium - 6 lives": 6,
+    "Easy - 8 lives": 8,
     "Hard - 4 lives": 4
 }
+
+def display_hangman(mistakes, chosen_level):
+    hangman_stages = [
+        "",
+        "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
+        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
+    ]
+    
+    # Adjust the rate of displaying hangman stages based on the chosen level
+    if chosen_level == "Easy_8_lives":
+        display_per_mistake = 1  # Display two stages per mistake
+    else:  # Easy level
+        display_per_mistake = 2  # Hard level  # Display one stage per mistake
+    
+    # Calculate the number of stages to display for the current mistake
+    stages_to_display = min(mistakes * display_per_mistake, len(hangman_stages) - 1)
+    
+    print(hangman_stages[stages_to_display])
+    return stages_to_display
 
 def choose_level():
     print("Choose your level:")
@@ -84,9 +124,9 @@ def choose_level():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
-                print("You chose", chosen_level + ".", "ex choice!")  # Print the chosen category here
-                chosen_level_list = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
-                return chosen_level, chosen_level_list
+                print("You chose", chosen_level + ".", "Excellent choice!")  # Print the chosen category here
+                chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                return chosen_level, chosen_level_lives
             else:
                 print("Invalid choice. Please enter a number between 1 and 3.")
         else:
@@ -103,7 +143,7 @@ def choose_category():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
                 chosen_category = list(categories.keys())[choice]
-                print("You chose", chosen_category + ".", "Excellent choice!")
+                print("You chose", chosen_category + ".", "Great choice!")
                 print("Good Luck :-)")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
@@ -112,21 +152,6 @@ def choose_category():
         else:
             print("Invalid choice. Please enter a number.")
 
-def display_hangman(mistakes):
-    hangman_stages = [
-        "",
-        "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
-        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
-    ]
-
-    print(hangman_stages[mistakes])
-
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
@@ -134,7 +159,7 @@ def chosen_category_word(chosen_list):
     return word.upper()
 
 def hangman():
-    chosen_level, chosen_level_list = choose_level()
+    chosen_level, chosen_level_lives = choose_level()
     chosen_category, chosen_list = choose_category()
     word = chosen_category_word(chosen_list)
     word_letters = set(word)
@@ -142,9 +167,9 @@ def hangman():
     used_letters = set()
     mistakes = 0
 
-    while len(word_letters) > 0 and mistakes < 8:
-        display_hangman(mistakes)
-        print('You have', 8 - mistakes, 'lives left.')
+    while len(word_letters) > 0 and mistakes < chosen_level_lives:
+        display_hangman(mistakes, chosen_level)
+        print('You have', chosen_level_lives - mistakes, 'lives left.')
         print()
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
@@ -165,8 +190,8 @@ def hangman():
             print()
             print('Invalid character. Please try again.')
 
-    if mistakes == 8:
-        display_hangman(mistakes)
+    if mistakes == chosen_level_lives:
+        display_hangman(mistakes, chosen_level)
         print()
         print('You died, sorry. The word was', word)
     else:

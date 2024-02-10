@@ -447,7 +447,16 @@ Bugs
 
 ![Bug number 1](Readme-images/bug-1.png)
 
+- Bug nr. 6 - While adding levels at the begging of the game the display was syncronized aith the hard level which gave only 4 lives. I want the hangman to display twice as fast aka 2 stpes for each mistake.
 
+solution was adding: if chosen_level == "Easy_8_lives":
+        display_per_mistake = 1  # Display two stages per mistake
+    else:  # Easy level
+        display_per_mistake = 2  # Hard level  # Display one stage per mistake
+
+and
+
+I forgot return stages_to_display
 --------------
 
 - When testing the JavaScript code for the first time, [JSHint Validator](https://jshint.com/) returned a few crucial errors because semicolons were missing in a couple of lines.
