@@ -68,8 +68,8 @@ categories = {
 }
 
 levels = {
-    "Easy - 8 lives": 8,
-    "Hard - 4 lives": 4
+    "Easy - 8 lives: Perfect for hangman beginners": 8,
+    "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
 
 def display_hangman(mistakes, chosen_level):
@@ -86,7 +86,7 @@ def display_hangman(mistakes, chosen_level):
     ]
     
     # Adjust the rate of displaying hangman stages based on the chosen level
-    if chosen_level == "Easy_8_lives":
+    if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
     else:  # Easy level
         display_per_mistake = 2  # Hard level  # Display one stage per mistake
@@ -101,12 +101,13 @@ def choose_level():
     print("Welcome to Hangman Madness!")
     print("Prepare yourself for an epic journey through the alphabet jungle!")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print()
+    print(" ")
     print("Step 1: Choose Your Level of Adventure!")
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
 
     while True:
+        print(" ")
         choice = input("Enter your level (1-2): \n")
         if choice.isdigit():
             choice = int(choice) - 1
