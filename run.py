@@ -1,9 +1,6 @@
-from turtle import *
-screen = Screen ()
-screen.setup(400, 400)
-screen.bgcolor('blue')
 import random
 import string
+import os
 
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
@@ -76,6 +73,15 @@ levels = {
     "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
 
+def clear_terminal():
+    """
+    Clears the terminal.
+    """
+    # From:
+    # https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
         "",
@@ -118,6 +124,7 @@ def choose_level():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
+                clear_terminal()
                 print("You selected:")
                 print("-------------")
                 print(chosen_level + ".",)  # Print the chosen category here
@@ -127,9 +134,9 @@ def choose_level():
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
-                print("Invalid choice. Please enter a number between 1 and 3.")
+                print("My circuits are overloaded! Please enter a number between 1 and 3.")
         else:
-            print("Invalid choice. Please enter a number.")
+            print("Your character sounds like a dolphin sneeze. Please enter a number.")
 
 def choose_category():
     print("Step 2: Let's explore the world of letters! Choose your favorite category!")
@@ -143,18 +150,19 @@ def choose_category():
         if choice.isdigit():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
+                clear_terminal()
                 chosen_category = list(categories.keys())[choice]
                 print("You selected", chosen_category + ".",)
                 print(" ")
-                print("Step 3: Let the guessing games begin!")
+                print("Step 3: Let the guessing game begin!")
                 print("-------------------------------------")
                 print("On your marks, get set, guess! The hangman's rope hangs in the balance!")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
-                print("Invalid choice. Please enter a number between 1 and 5.")
+                print("I see you're struggling with your keyboard skills. Please enter a number between 1 and 5.")
         else:
-            print("Invalid choice. Please enter a number.")
+            print("Is that character part of a secret code? Please enter a number.")
 
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
@@ -183,40 +191,46 @@ def hangman():
         print(" ")
         user_letter = input('Guess a letter: \n').upper()
         if user_letter in alphabet - used_letters:
+            clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print ("The eagle has landed! (Or was it a penguin? No matter, you guessed right!)")
+                print ("The eagle has landed! Or was it a penguin? No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
                 print("Yikes! Swing and a miss...")
         elif user_letter in used_letters:
+            clear_terminal()
             print("Oopsie! That letter's already been served. Let's order something new!")
         else:
+            clear_terminal()
             print(" ")
             print("The keyboard gremlins just ate your character! Please choose a valid one before they attack again.")
 
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print("Aw, shucks! Looks like your brain went on vacation with the penguins. The word was", word)
+        print("Aw, shucks! Looks like your brain went on vacation with the penguins.") 
+        print("The word was", word)
     else:
         print(" ")
         print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
 
 def continue_game():
     while True:
-        print()
+        print(" ")
         continue_playing = input("Ready for round two? It's like potato chips, you can't have just one. (y/n) \n")
         if continue_playing.lower() == "y":
             print("Oh good, you haven't given up yet. This could get interesting...")
+            clear_terminal()
             hangman()
         elif continue_playing.lower() == "n":
+            clear_terminal()
             print("Farewell, brave soul! Remember, quitting is bravery... sometimes. Don't tell my therapist I said that.")
             break
         else:
             print("Wow, that was... something. Are you trying to speak Morse code? Please try again.")
-
+    clear_terminal()
     print("Phew, that was almost too close for comfort! Thanks for playing, and please excuse any existential dread you may have experienced during the game. I'm still under development, after all.")
     print(" ")
 
