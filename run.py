@@ -1,6 +1,11 @@
 import random
 import string
 import os
+from colorama import init
+from colorama import Fore, Style
+
+init()
+init(autoreset=True)
 
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
