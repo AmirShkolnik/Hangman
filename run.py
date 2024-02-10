@@ -115,6 +115,7 @@ def choose_level():
                 chosen_level = list(levels.keys())[choice]
                 print("You chose:", chosen_level + ".",)  # Print the chosen category here
                 print("Excellent choice!")
+                print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
@@ -123,7 +124,7 @@ def choose_level():
             print("Invalid choice. Please enter a number.")
 
 def choose_category():
-    print("Choose a category to play with:")
+    print("Step 2: Let's explore the world of letters! Choose your favorite challenge!")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
