@@ -67,6 +67,31 @@ categories = {
     "Fruits": fruits
 }
 
+levels = {
+    "Easy - 9 lives": 9,
+    "Medium - 6 lives": 6,
+    "Hard - 4 lives": 4
+}
+
+def choose_level():
+    print("Choose your level:")
+    for i, level in enumerate(levels):
+        print(f"{i+1}. {level}")
+
+    while True:
+        choice = input("Enter your level (1-3): \n")
+        if choice.isdigit():
+            choice = int(choice) - 1
+            if 0 <= choice < len(levels):
+                chosen_level = list(levels.keys())[choice]
+                print("You chose", chosen_level + ".", "ex choice!")  # Print the chosen category here
+                chosen_level_list = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                return chosen_level, chosen_level_list
+            else:
+                print("Invalid choice. Please enter a number between 1 and 3.")
+        else:
+            print("Invalid choice. Please enter a number.")
+
 def choose_category():
     print("Choose a category to play with:")
     for i, category in enumerate(categories):
@@ -78,7 +103,8 @@ def choose_category():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
                 chosen_category = list(categories.keys())[choice]
-                print("You chose", chosen_category + ".", "Great choice!")  # Print the chosen category here
+                print("You chose", chosen_category + ".", "Excellent choice!")
+                print("Good Luck :-)")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
@@ -108,6 +134,7 @@ def chosen_category_word(chosen_list):
     return word.upper()
 
 def hangman():
+    chosen_level, chosen_level_list = choose_level()
     chosen_category, chosen_list = choose_category()
     word = chosen_category_word(chosen_list)
     word_letters = set(word)
