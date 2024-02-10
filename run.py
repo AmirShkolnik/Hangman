@@ -212,6 +212,7 @@ def hangman():
         print(" ")
         print("Aw, shucks! Looks like your brain went on vacation with the penguins.") 
         print("The word was", word)
+        print(" ")
     else:
         print(" ")
         print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
@@ -231,7 +232,10 @@ def continue_game():
         else:
             print("Wow, that was... something. Are you trying to speak Morse code? Please try again.")
     clear_terminal()
-    print("Phew, that was almost too close for comfort! Thanks for playing, and please excuse any existential dread you may have experienced during the game. I'm still under development, after all.")
+    print("Phew, that was almost too close for comfort!")
+    print("Thanks for playing,")
+    print("and please excuse any existential dread you may have experienced during the game.")
+    print("I'm still under development, after all.")
     print(" ")
 
 hangman()
