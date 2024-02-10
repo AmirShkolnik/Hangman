@@ -67,22 +67,6 @@ categories = {
     "Fruits": fruits
 }
 
-"""
-def display_hangman(mistakes):
-    hangman_stages = [
-        "",
-        "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
-        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
-    ]
-
-    print(hangman_stages[mistakes])
-"""
 levels = {
     "Easy - 8 lives": 8,
     "Hard - 4 lives": 4
@@ -119,12 +103,13 @@ def choose_level():
         print(f"{i+1}. {level}")
 
     while True:
-        choice = input("Enter your level (1-3): \n")
+        choice = input("Enter your level (1-2): \n")
         if choice.isdigit():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
                 print("You chose", chosen_level + ".", "Excellent choice!")  # Print the chosen category here
+                print()
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
@@ -143,7 +128,8 @@ def choose_category():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
                 chosen_category = list(categories.keys())[choice]
-                print("You chose", chosen_category + ".", "Great choice!")
+                print("You chose", chosen_category + ".",)
+                print()
                 print("Good Luck :-)")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
