@@ -97,7 +97,7 @@ def display_hangman(mistakes, chosen_level):
         "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
         "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
         "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
+       Fore.RED + "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ " + Style.RESET_ALL
     ]
     
     # Adjust the rate of displaying hangman stages based on the chosen level
@@ -132,16 +132,16 @@ def choose_level():
                 clear_terminal()
                 print("You selected:")
                 print("-------------")
-                print(chosen_level + ".",)  # Print the chosen category here
+                print(Fore.GREEN + chosen_level + "." + Style.RESET_ALL)  # Print the chosen category here
                 print(" ")
                 print("Excellent choice!")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
-                print("My circuits are overloaded! Please enter a number between 1 and 3.")
+                print(Fore.RED + "My circuits are overloaded! Please enter a number between 1 and 3." + Style.RESET_ALL)
         else:
-            print("Your character sounds like a dolphin sneeze. Please enter a number.")
+            print(Fore.RED + "Your character sounds like a dolphin sneeze. Please enter a number." + Style.RESET_ALL)
 
 def choose_category():
     print("Step 2: Let's explore the world of letters! Choose your favorite category!")
@@ -157,7 +157,7 @@ def choose_category():
             if 0 <= choice < len(categories):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
-                print("You selected", chosen_category + ".",)
+                print(Fore.GREEN + "You selected", chosen_category + ".", + Style.RESET_ALL)
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
                 print("-------------------------------------")
@@ -165,9 +165,9 @@ def choose_category():
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
-                print("I see you're struggling with your keyboard skills. Please enter a number between 1 and 5.")
+                print(Fore.RED +  "I see you're struggling with your keyboard skills. Please enter a number between 1 and 5." + Style.RESET_ALL)
         else:
-            print("Is that character part of a secret code? Please enter a number.")
+            print(Fore.RED +  "Is that character part of a secret code? Please enter a number." + Style.RESET_ALL)
 
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
@@ -199,43 +199,44 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print ("The eagle has landed! Or was it a penguin? No matter, you guessed right!")
+                print (Fore.GREEN + "The eagle has landed! Or was it a penguin? No matter, you guessed right!" + Style.RESET_ALL)
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
-                print("Yikes! Swing and a miss...")
+                print(Fore.RED + "Yikes! Swing and a miss..." + Style.RESET_ALL)
         elif user_letter in used_letters:
             clear_terminal()
-            print("Oopsie! That letter's already been served. Let's order something new!")
+            print(Fore.RED + "Oopsie! That letter's already been served. Let's order something new!" + Style.RESET_ALL)
         else:
             clear_terminal()
             print(" ")
-            print("The keyboard gremlins just ate your character! Please choose a valid one before they attack again.")
+            print(Fore.RED + "The keyboard gremlins just ate your character! Please choose a valid one before they attack again." + Style.RESET_ALL)
 
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print("Aw, shucks! Looks like your brain went on vacation with the penguins.") 
+        print(Fore.RED + "Aw, shucks! Looks like your brain went on vacation with the penguins." + Style.RESET_ALL) 
         print("The word was", word)
         print(" ")
     else:
         print(" ")
-        print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
+        print(Fore.GREEN + "You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender." + Style.RESET_ALL)
 
 def continue_game():
     while True:
         print(" ")
         continue_playing = input("Ready for round two? It's like potato chips, you can't have just one. (y/n) \n")
         if continue_playing.lower() == "y":
-            print("Oh good, you haven't given up yet. This could get interesting...")
+            print(Fore.GREEN + "Oh good, you haven't given up yet. This could get interesting..." + Style.RESET_ALL)
             clear_terminal()
             hangman()
         elif continue_playing.lower() == "n":
             clear_terminal()
-            print("Farewell, brave soul! Remember, quitting is bravery... sometimes. Don't tell my therapist I said that.")
+            print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
+            print("Don't tell my therapist I said that.")
             break
         else:
-            print("Wow, that was... something. Are you trying to speak Morse code? Please try again.")
+            print(Fore.GREEN + "Wow, that was... something. Are you trying to speak Morse code? Please try again." + Style.RESET_ALL)
     clear_terminal()
     print("Phew, that was almost too close for comfort!")
     print("Thanks for playing,")
