@@ -97,7 +97,7 @@ def display_hangman(mistakes, chosen_level):
         "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
         "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
         "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
-       Fore.RED + "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ " + Style.RESET_ALL
+        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
     ]
     
     # Adjust the rate of displaying hangman stages based on the chosen level
@@ -109,11 +109,11 @@ def display_hangman(mistakes, chosen_level):
     # Calculate the number of stages to display for the current mistake
     stages_to_display = min(mistakes * display_per_mistake, len(hangman_stages) - 1)
     
-    print(hangman_stages[stages_to_display])
+    print(Fore.RED + hangman_stages[stages_to_display] + Style.RESET_ALL)
     return stages_to_display
 
 def choose_level():
-    print("Welcome to Hangman Madness!")
+    print(Fore.BLUE + "Welcome to Hangman Madness!" + Style.RESET_ALL)
     print("---------------------------")
     print("Prepare yourself for an epic journey through the alphabet jungle.")
     print(" ")
@@ -157,7 +157,7 @@ def choose_category():
             if 0 <= choice < len(categories):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
-                print(Fore.GREEN + "You selected", chosen_category + ".", + Style.RESET_ALL)
+                print(Fore.GREEN + "You selected", chosen_category + "." + Style.RESET_ALL)
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
                 print("-------------------------------------")
@@ -203,7 +203,7 @@ def hangman():
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
-                print(Fore.RED + "Yikes! Swing and a miss..." + Style.RESET_ALL)
+                print("Yikes! Swing and a miss...")
         elif user_letter in used_letters:
             clear_terminal()
             print(Fore.RED + "Oopsie! That letter's already been served. Let's order something new!" + Style.RESET_ALL)
@@ -215,8 +215,8 @@ def hangman():
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print(Fore.RED + "Aw, shucks! Looks like your brain went on vacation with the penguins." + Style.RESET_ALL) 
-        print("The word was", word)
+        print("Aw, shucks! Looks like your brain went on vacation with the penguins.") 
+        print("The word was", Fore.GREEN + word + Style.RESET_ALL)
         print(" ")
     else:
         print(" ")
