@@ -181,16 +181,16 @@ def hangman():
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
+                print ("The eagle has landed! (Or was it a penguin? No matter, you guessed right!)")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
-                print("Yikes! Swing and a miss, Keep guessing.")
+                print("Yikes! Swing and a miss...")
         elif user_letter in used_letters:
             print("Oopsie! That letter's already been served. Let's order something new!")
-            print(" ")
         else:
             print(" ")
-            print("Invalid character. Please try again.")
+            print("The keyboard gremlins just ate your character! Please choose a valid one before they attack again.")
 
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
@@ -214,7 +214,7 @@ def continue_game():
             print("Wow, that was... something. Are you trying to speak Morse code? Please try again.")
 
     print("Phew, that was almost too close for comfort! Thanks for playing, and please excuse any existential dread you may have experienced during the game. I'm still under development, after all.")
-
+    print(" ")
 
 hangman()
 continue_game()
