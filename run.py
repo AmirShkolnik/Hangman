@@ -1,3 +1,7 @@
+from turtle import *
+screen = Screen ()
+screen.setup(400, 400)
+screen.bgcolor('blue')
 import random
 import string
 
