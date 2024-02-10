@@ -99,10 +99,11 @@ def display_hangman(mistakes, chosen_level):
 
 def choose_level():
     print("Welcome to Hangman Madness!")
-    print("Prepare yourself for an epic journey through the alphabet jungle!")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("---------------------------")
+    print("Prepare yourself for an epic journey through the alphabet jungle.")
     print(" ")
     print("Step 1: Choose Your Level of Adventure!")
+    print("---------------------------------------")
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
 
@@ -113,7 +114,10 @@ def choose_level():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
-                print("You chose:", chosen_level + ".",)  # Print the chosen category here
+                print("You selected:")
+                print("-------------")
+                print(chosen_level + ".",)  # Print the chosen category here
+                print(" ")
                 print("Excellent choice!")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
@@ -125,6 +129,7 @@ def choose_level():
 
 def choose_category():
     print("Step 2: Let's explore the world of letters! Choose your favorite challenge!")
+    print("---------------------------------------------------------------------------")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
@@ -135,8 +140,8 @@ def choose_category():
             if 0 <= choice < len(categories):
                 chosen_category = list(categories.keys())[choice]
                 print("You selected", chosen_category + ".",)
-                print()
-                print("Good Luck :-)")  # Print the chosen category here
+                print(" ")
+                print("On your marks, get set, guess! The hangman's rope hangs in the balance!")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
