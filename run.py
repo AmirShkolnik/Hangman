@@ -262,7 +262,7 @@ def hangman():
 def continue_game():
     while True:
         print(" ")
-        continue_playing = input("Ready for another round? \n\n It's like potato chips, you can't have just one. (y/n) \n")
+        continue_playing = input("Ready for another round? \n\nIt's like potato chips, you can't have just one. (y/n) \n")
         print(" ")
         if continue_playing.lower() == "y":
             print("Oh good, you haven't given up yet. This could get interesting...")
@@ -281,8 +281,12 @@ def continue_game():
             print(Fore.RED + "Please try again." + Style.RESET_ALL)
     clear_terminal()
     print("Phew, that was almost too close for comfort!")
+    print(" ")
     print("Thanks for playing,")
-    print("and please excuse any existential dread you may have experienced during the game.")
+    print(" ")
+    print("...and please excuse any existential dread you may have")
+    print("experienced during the game.")
+    print(" ")
     print("I'm still under development, after all.")
     print(" ")
 
