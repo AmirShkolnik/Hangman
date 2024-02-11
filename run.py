@@ -1,11 +1,12 @@
+import colorama
 import random
 import string
+import sys
 import os
+import time
+from datetime import datetime, date
 from colorama import init
 from colorama import Fore, Style
-
-init()
-init(autoreset=True)
 
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
@@ -78,6 +79,36 @@ levels = {
     "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
 
+def startup_view():
+    """
+    Plays the startup welcome effect with colors and text effects.
+    """
+    colorama.init()  # Initialize colorama
+
+    print(Fore.WHITE + "----------------------------------\n")
+    time.sleep(1.2)  # Adjust delay for a smoother presentation
+
+    print(Fore.CYAN + "Welcome to Hangman Madness!")  # Blue title
+    print(Fore.BLACK + "—" * 34)  # Black decorative line
+    txt_effect(Fore.CYAN + "Let the games begin!\n" + Style.RESET_ALL)
+
+    time.sleep(1.5)  # Allow time for visual impact
+
+    print(Fore.WHITE + "----------------------------------\n")
+
+    colorama.deinit()  # Deinitialize colorama
+
+def txt_effect(text_to_print):
+    """
+    Prints the text with a slower typing effect and additional customizations.
+    """
+    # Consider using a more advanced library like "rich" for complex effects
+    for character in text_to_print:
+        # Adjust speed if needed (lower number means slower typing)
+        time.sleep(0.03)
+        sys.stdout.write(character)
+        sys.stdout.flush()
+
 def clear_terminal():
     """
     Clears the terminal.
@@ -113,6 +144,7 @@ def display_hangman(mistakes, chosen_level):
     return stages_to_display
 
 def choose_level():
+    startup_view()
     print(Fore.BLUE + "Welcome to Hangman Madness!" + Style.RESET_ALL)
     print("---------------------------")
     print("Prepare yourself for an epic journey through the alphabet jungle.")
