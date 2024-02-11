@@ -85,10 +85,10 @@ def startup_view():
     """
     colorama.init()  # Initialize colorama
     # Welcome message with slow typing effect using txt_effect
-    txt_effect(Fore.CYAN + "—" * 74 + "\n\n") # Blue decorative line
+    print(Fore.CYAN + "—" * 74 + "\n") # Blue decorative line
     txt_effect(Fore.WHITE + "Welcome to Hangman Madness!\n\n")
     txt_effect(Fore.WHITE + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
-    txt_effect(Fore.CYAN + "—" * 74 + "\n\n")  # Blue decorative line
+    print(Fore.CYAN + "—" * 74 + "\n\n")  # Blue decorative line
     time.sleep(1.5)  # Allow time for visual impact
     colorama.deinit()  # Deinitialize colorama
 
@@ -171,7 +171,9 @@ def choose_level():
             print(Fore.RED + "Please enter a number." + Style.RESET_ALL)
 
 def choose_category():
-    print("Step 2: Let's explore the world of letters! Choose your favorite category!")
+    print("Step 2: Let's explore the world of letters!")
+    print(" ")
+    print("Choose your favorite category!")
     print(Fore.CYAN + "—" * 74 + Style.RESET_ALL)  # Blue decorative line
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
