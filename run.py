@@ -85,10 +85,10 @@ def startup_view():
     """
     colorama.init()  # Initialize colorama
     # Welcome message with slow typing effect using txt_effect
-    txt_effect(Fore.CYAN + "—" * 34 + "\n\n") # Blue decorative line
-    txt_effect("Welcome to Hangman Madness!\n\n")
-    txt_effect("Prepare yourself for an epic journey through the alphabet jungle.\n\n")
-    txt_effect(Fore.CYAN + "—" * 34 + "\n\n")  # Blue decorative line
+    txt_effect(Fore.CYAN + "—" * 74 + "\n\n") # Blue decorative line
+    txt_effect(Fore.WHITE + "Welcome to Hangman Madness!\n\n")
+    txt_effect(Fore.WHITE + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
+    txt_effect(Fore.CYAN + "—" * 74 + "\n\n")  # Blue decorative line
     time.sleep(1.5)  # Allow time for visual impact
     colorama.deinit()  # Deinitialize colorama
 
@@ -140,7 +140,7 @@ def display_hangman(mistakes, chosen_level):
 def choose_level():
     startup_view()
     print(" ")
-    print("Step 1: Choose Your Level of Adventure!")
+    print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
@@ -232,7 +232,7 @@ def hangman():
             if user_letter in word_letters:
                 print ("The eagle has landed! Or was it a penguin?")
                 print(" ")
-                print (Fore.GREEN + "No matter, you guessed right!" + Style.RESET_ALL)
+                print ("No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
@@ -255,14 +255,17 @@ def hangman():
         print(" ")
     else:
         print(" ")
-        print(Fore.GREEN + "You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender." + Style.RESET_ALL)
+        print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
 
 def continue_game():
     while True:
         print(" ")
         continue_playing = input("Ready for round two? It's like potato chips, you can't have just one. (y/n) \n")
+        print(" ")
         if continue_playing.lower() == "y":
-            print(Fore.GREEN + "Oh good, you haven't given up yet. This could get interesting..." + Style.RESET_ALL)
+            print("Oh good, you haven't given up yet. This could get interesting...")
+            print(" ")
+            you_sure = input("Are you sure? (y/n) \n")
             clear_terminal()
             hangman()
         elif continue_playing.lower() == "n":
@@ -271,7 +274,9 @@ def continue_game():
             print("Don't tell my therapist I said that.")
             break
         else:
-            print(Fore.GREEN + "Wow, that was... something. Are you trying to speak Morse code? Please try again." + Style.RESET_ALL)
+            print("Wow, that was... something.")
+            print("Are you trying to speak Morse code?") 
+            print(Fore.RED + "Please try again." + Style.RESET_ALL)
     clear_terminal()
     print("Phew, that was almost too close for comfort!")
     print("Thanks for playing,")
