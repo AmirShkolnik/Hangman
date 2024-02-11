@@ -241,7 +241,7 @@ def hangman():
                 print("Yikes! Swing and a miss...")
         elif user_letter in used_letters:
             clear_terminal()
-            print(Fore.RED + "Oopsie! That letter's already been served. Let's order something new!" + Style.RESET_ALL)
+            print("Oopsie! That letter's already been served. Let's order something new!")
         else:
             clear_terminal()
             print(" ")
