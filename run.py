@@ -174,7 +174,7 @@ def choose_category():
     print("Step 2: Let's explore the world of letters!")
     print(" ")
     print("Choose your favorite category!")
-    print(Fore.CYAN + "—" * 74 + Style.RESET_ALL)  # Blue decorative line
+    print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)  # Blue decorative line
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
