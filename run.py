@@ -85,10 +85,10 @@ def startup_view():
     """
     colorama.init()  # Initialize colorama
     # Welcome message with slow typing effect using txt_effect
-    txt_effect(Fore.WHITE + "—" * 34 + "\n\n") # White decorative line
-    txt_effect(Fore.CYAN + "Welcome to Hangman Madness!\n\n")  # Blue title
-    txt_effect(Fore.CYAN + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
-    txt_effect(Fore.WHITE + "—" * 34 + "\n\n")  # White decorative line
+    txt_effect(Fore.CYAN + "—" * 34 + "\n\n") # Blue decorative line
+    txt_effect("Welcome to Hangman Madness!\n\n")
+    txt_effect("Prepare yourself for an epic journey through the alphabet jungle.\n\n")
+    txt_effect(Fore.CYAN + "—" * 34 + "\n\n")  # Blue decorative line
     time.sleep(1.5)  # Allow time for visual impact
     colorama.deinit()  # Deinitialize colorama
 
@@ -141,7 +141,7 @@ def choose_level():
     startup_view()
     print(" ")
     print("Step 1: Choose Your Level of Adventure!")
-    print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # CYAN decorative line
+    print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
 
@@ -155,9 +155,9 @@ def choose_level():
                 clear_terminal()
                 print("You selected:")
                 print(Fore.CYAN + "—" * 13 + Style.RESET_ALL) 
-                print(Fore.WHITE + chosen_level + "." + Style.RESET_ALL)  # Print the chosen category here
+                print(chosen_level + ".")  # Print the chosen category here
                 print(" ")
-                print(Fore.CYAN + "Excellent choice!" + Style.RESET_ALL)
+                print("Excellent choice!")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
@@ -172,7 +172,7 @@ def choose_level():
 
 def choose_category():
     print("Step 2: Let's explore the world of letters! Choose your favorite category!")
-    print(Fore.CYAN + "—" * 74 + Style.RESET_ALL)  # CYAN decorative line
+    print(Fore.CYAN + "—" * 74 + Style.RESET_ALL)  # Blue decorative line
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
 
@@ -184,10 +184,10 @@ def choose_category():
             if 0 <= choice < len(categories):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
-                print(Fore.CYAN + "You selected", chosen_category + "." + Style.RESET_ALL)
+                print("You selected", chosen_category + ".")
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
-                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL ) # CYNE decorative line
+                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL ) # Blue decorative line
                 print("On your marks, get set, guess! The hangman's rope hangs in the balance!")  # Print the chosen category here
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
@@ -219,11 +219,11 @@ def hangman():
         display_hangman(mistakes, chosen_level)
         print (" ")
         print('You have', chosen_level_lives - mistakes, 'lives left.')
-        print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)  # CYAN decorative line
+        print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)  # Blue decorative line
         print(" ")
         word_list = [letter if letter in used_letters else '_' for letter in word]
-        print(Fore.CYAN + 'Current word:', Style.RESET_ALL, ' '.join(word_list))
-        print(Fore.CYAN + 'Used letters:', Style.RESET_ALL, ' '.join(used_letters))
+        print('Current word:', ' '.join(word_list))
+        print('Used letters:', ' '.join(used_letters))
         print(" ")
         user_letter = input('Guess a letter: \n').upper()
         if user_letter in alphabet - used_letters:
