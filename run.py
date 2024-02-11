@@ -84,13 +84,11 @@ def startup_view():
     Plays the startup welcome effect with colors and text effects.
     """
     colorama.init()  # Initialize colorama
-
-    print(Fore.WHITE + "—" * 34)  # White decorative line
-    print(" ")
-    time.sleep(1.2)  # Adjust delay for a smoother presentation
-    print(Fore.CYAN + "Welcome to Hangman Madness!")  # Blue title
-    print(" ")
-    print(Fore.WHITE + "—" * 34)  # White decorative line
+    # Welcome message with slow typing effect using txt_effect
+    txt_effect(Fore.WHITE + "—" * 34 + "\n\n") # White decorative line
+    txt_effect(Fore.CYAN + "Welcome to Hangman Madness!\n\n")  # Blue title
+    txt_effect(Fore.CYAN + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
+    txt_effect(Fore.WHITE + "—" * 34 + "\n\n")  # White decorative line
     time.sleep(1.5)  # Allow time for visual impact
     colorama.deinit()  # Deinitialize colorama
 
@@ -141,7 +139,6 @@ def display_hangman(mistakes, chosen_level):
 
 def choose_level():
     startup_view()
-    print("Prepare yourself for an epic journey through the alphabet jungle.")
     print(" ")
     print("Step 1: Choose Your Level of Adventure!")
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # CYAN decorative line
@@ -157,17 +154,21 @@ def choose_level():
                 chosen_level = list(levels.keys())[choice]
                 clear_terminal()
                 print("You selected:")
-                print(Fore.WHITE + "—" * 13 + Style.RESET_ALL) 
-                print(Fore.GREEN + chosen_level + "." + Style.RESET_ALL)  # Print the chosen category here
+                print(Fore.CYAN + "—" * 13 + Style.RESET_ALL) 
+                print(Fore.WHITE + chosen_level + "." + Style.RESET_ALL)  # Print the chosen category here
                 print(" ")
-                print("Excellent choice!")
+                print(Fore.CYAN + "Excellent choice!" + Style.RESET_ALL)
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
             else:
-                print(Fore.RED + "My circuits are overloaded! Please enter a number between 1 and 3." + Style.RESET_ALL)
+                print("My circuits are overloaded!")
+                print(" ")
+                print(Fore.RED + "Please enter a number between 1 and 3." + Style.RESET_ALL)
         else:
-            print(Fore.RED + "Your character sounds like a dolphin sneeze. Please enter a number." + Style.RESET_ALL)
+            print("Your character sounds like a dolphin sneeze.")
+            print(" ")
+            print(Fore.RED + "Please enter a number." + Style.RESET_ALL)
 
 def choose_category():
     print("Step 2: Let's explore the world of letters! Choose your favorite category!")
@@ -183,7 +184,7 @@ def choose_category():
             if 0 <= choice < len(categories):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
-                print(Fore.GREEN + "You selected", chosen_category + "." + Style.RESET_ALL)
+                print(Fore.CYAN + "You selected", chosen_category + "." + Style.RESET_ALL)
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
                 print(Fore.CYAN + "—" * 36 + Style.RESET_ALL ) # CYNE decorative line
@@ -191,9 +192,13 @@ def choose_category():
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
-                print(Fore.RED +  "I see you're struggling with your keyboard skills. Please enter a number between 1 and 5." + Style.RESET_ALL)
+                print("I see you're struggling with your keyboard skills.")
+                print(" ")
+                print (Fore.RED + "Please enter a number between 1 and 5." + Style.RESET_ALL)
         else:
-            print(Fore.RED +  "Is that character part of a secret code? Please enter a number." + Style.RESET_ALL)
+            print("Is that character part of a secret code?") 
+            print(" ")
+            print(Fore.RED + "Please enter a number." + Style.RESET_ALL)
 
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
@@ -225,7 +230,9 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print (Fore.GREEN + "The eagle has landed! Or was it a penguin? No matter, you guessed right!" + Style.RESET_ALL)
+                print ("The eagle has landed! Or was it a penguin?")
+                print(" ")
+                print (Fore.GREEN + "No matter, you guessed right!" + Style.RESET_ALL)
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
@@ -236,7 +243,9 @@ def hangman():
         else:
             clear_terminal()
             print(" ")
-            print(Fore.RED + "The keyboard gremlins just ate your character! Please choose a valid one before they attack again." + Style.RESET_ALL)
+            print("The keyboard gremlins just ate your character!")
+            print(" ")
+            print(Fore.RED + "Please choose a valid one before they attack again." + Style.RESET_ALL)
 
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
