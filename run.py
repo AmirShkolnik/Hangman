@@ -171,9 +171,10 @@ def choose_level():
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives, name
             else:
+                print(" ")
                 print("My circuits are overloaded!")
                 print(" ")
-                print(Fore.RED + f"{name}, Please enter a number between 1 and 3." + Style.RESET_ALL)
+                print(Fore.RED + f"{name}, Please enter a number between 1 and 2." + Style.RESET_ALL)
         else:
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
@@ -207,7 +208,7 @@ def choose_category(name):
                 print(" ")
                 print("I see you're struggling with your keyboard skills.")
                 print(" ")
-                print (Fore.RED + "Please enter a number between 1 and 5." + Style.RESET_ALL)
+                print (Fore.RED + f"{name}, Please enter a number between 1 and 5." + Style.RESET_ALL)
         else:
             print("Is that character part of a secret code?") 
             print(" ")
@@ -282,28 +283,22 @@ def continue_game():
         print(" ")
         if continue_playing.lower() == "y":
             clear_terminal()
-            print("Oh good, you haven't given up yet. This could get interesting...")
-            print(" ")
-            you_sure = input("Are you sure? (y/n) \n")
-            print(" ")
-            if you_sure.lower() == "y":
-                clear_terminal()
-                hangman()
-            elif continue_playing.lower() == "n":
-                clear_terminal()
-                print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
-                print("Don't tell my therapist I said that.")
+            hangman()    
+        elif continue_playing.lower() == "n":
+            clear_terminal()
+            print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
+            print("Don't tell my therapist I said that.")
             break
         else:
             print("Wow, that was... something.")
             print(" ")
             print("Are you trying to speak Morse code?")
             print(" ")
-            print(Fore.RED + f"{name}, Please try again." + Style.RESET_ALL)
+            print(Fore.RED + "Please try again." + Style.RESET_ALL)
     clear_terminal()
    
     print(" ")
-    print(f"Thanks for playing {name}!")
+    print("Thanks for playing!")
     print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
     print(" ")
     print("...and please excuse any existential dread")
