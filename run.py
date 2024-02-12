@@ -139,6 +139,10 @@ def display_hangman(mistakes, chosen_level):
 
 def choose_level():
     startup_view()
+    name = get_user_input(Fore.WHITE + "What do your friends call you? \n" + Style.RESET_ALL)
+    clear_terminal()
+
+    print(f"Nice to virtualy meet you {name}, Let's get started!")
     print(" ")
     print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
@@ -157,7 +161,7 @@ def choose_level():
                 print(Fore.CYAN + "—" * 13 + Style.RESET_ALL) 
                 print(chosen_level + ".")  # Print the chosen category here
                 print(" ")
-                print("Excellent choice!")
+                print(f"Excellent choice {name}1")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
@@ -207,6 +211,12 @@ def chosen_category_word(chosen_list):
     while '-' in word or ' ' in word:
         word = random.choice(chosen_list) # randomly choose a word fron the chosen category
     return word.upper()
+
+def get_user_input(prompt):
+    return input(prompt)
+
+def print_out_to_console(value_to_be_printed):
+    print(value_to_be_printed)
 
 def hangman():
     chosen_level, chosen_level_lives = choose_level()
