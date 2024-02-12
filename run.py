@@ -141,8 +141,7 @@ def choose_level():
     startup_view()
     name = get_user_input(Fore.WHITE + "What do your friends call you? \n" + Style.RESET_ALL)
     clear_terminal()
-
-    print(f"Nice to virtualy meet you {name}, Let's get started!")
+    print(f"{name}, thrilled to have you join! Ready to tackle some challenging words?")
     print(" ")
     print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
@@ -161,7 +160,7 @@ def choose_level():
                 print(Fore.CYAN + "—" * 13 + Style.RESET_ALL) 
                 print(chosen_level + ".")  # Print the chosen category here
                 print(" ")
-                print(f"Excellent choice {name}1")
+                print(f"Excellent choice {name}!")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_level, chosen_level_lives
@@ -177,7 +176,7 @@ def choose_level():
 def choose_category():
     print("Step 2: Let's explore the world of letters!")
     print(" ")
-    print("Choose your favorite category!")
+    print("What is your favorite category?")
     print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)  # Blue decorative line
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
@@ -204,7 +203,7 @@ def choose_category():
         else:
             print("Is that character part of a secret code?") 
             print(" ")
-            print(Fore.RED + "Please enter a number." + Style.RESET_ALL)
+            print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
 
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
@@ -214,9 +213,6 @@ def chosen_category_word(chosen_list):
 
 def get_user_input(prompt):
     return input(prompt)
-
-def print_out_to_console(value_to_be_printed):
-    print(value_to_be_printed)
 
 def hangman():
     chosen_level, chosen_level_lives = choose_level()
@@ -267,6 +263,8 @@ def hangman():
         print(" ")
     else:
         print(" ")
+        print("The word was", Fore.GREEN + word + Style.RESET_ALL)
+        print(" ")
         print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
 
 def continue_game():
@@ -275,29 +273,33 @@ def continue_game():
         continue_playing = input("Ready for another round? \n\nIt's like potato chips, you can't have just one. (y/n) \n")
         print(" ")
         if continue_playing.lower() == "y":
+            clear_terminal()
             print("Oh good, you haven't given up yet. This could get interesting...")
             print(" ")
             you_sure = input("Are you sure? (y/n) \n")
-            clear_terminal()
-            hangman()
-        elif continue_playing.lower() == "n":
-            clear_terminal()
-            print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
-            print("Don't tell my therapist I said that.")
+            print(" ")
+            if you_sure.lower() == "y":
+                clear_terminal()
+                hangman()
+            elif continue_playing.lower() == "n":
+                clear_terminal()
+                print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
+                print("Don't tell my therapist I said that.")
             break
         else:
             print("Wow, that was... something.")
             print("Are you trying to speak Morse code?") 
             print(Fore.RED + "Please try again." + Style.RESET_ALL)
     clear_terminal()
-    print("Phew, that was almost too close for comfort!")
+   
     print(" ")
-    print("Thanks for playing,")
+    print("Thanks for playing!")
+    print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
     print(" ")
-    print("...and please excuse any existential dread you may have")
-    print("experienced during the game.")
+    print("...and please excuse any existential dread")
+    print("you may have experienced during the game.")
     print(" ")
-    print("I'm still under development, after all.")
+    print("I'm still under development, after all :-)")
     print(" ")
 
 hangman()
