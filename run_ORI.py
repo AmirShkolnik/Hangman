@@ -7,7 +7,6 @@ import time
 from datetime import datetime, date
 from colorama import init
 from colorama import Fore, Style
-name = ''
 
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
@@ -140,13 +139,8 @@ def display_hangman(mistakes, chosen_level):
 
 def choose_level():
     startup_view()
-    name_is_valid = False
-    while name_is_valid is False:
-        name = get_user_input(Fore.WHITE + "What do your friends call you? \n" + Style.RESET_ALL)
-        clear_terminal()
-        name_is_valid = len(name) >= 3
-        if name_is_valid is False:
-            print("Please enter at least 3 letters for your username")
+    name = get_user_input(Fore.WHITE + "What do your friends call you? \n" + Style.RESET_ALL)
+    clear_terminal()
     print(f"{name}, thrilled to have you join! Ready to tackle some challenging words?")
     print(" ")
     print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
@@ -169,18 +163,17 @@ def choose_level():
                 print(f"Excellent choice {name}!")
                 print(" ")
                 chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
-                return chosen_level, chosen_level_lives, name
+                return chosen_level, chosen_level_lives
             else:
                 print("My circuits are overloaded!")
                 print(" ")
-                print(Fore.RED + f"{name}, Please enter a number between 1 and 3." + Style.RESET_ALL)
+                print(Fore.RED + "Please enter a number between 1 and 2." + Style.RESET_ALL)
         else:
-            print(" ")
             print("Your character sounds like a dolphin sneeze.")
             print(" ")
-            print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
+            print(Fore.RED + "Please enter a number." + Style.RESET_ALL)
 
-def choose_category(name):
+def choose_category():
     print("Step 2: Let's explore the world of letters!")
     print(" ")
     print("What is your favorite category?")
@@ -204,7 +197,6 @@ def choose_category(name):
                 chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 return chosen_category, chosen_list
             else:
-                print(" ")
                 print("I see you're struggling with your keyboard skills.")
                 print(" ")
                 print (Fore.RED + "Please enter a number between 1 and 5." + Style.RESET_ALL)
@@ -223,8 +215,8 @@ def get_user_input(prompt):
     return input(prompt)
 
 def hangman():
-    chosen_level, chosen_level_lives, name = choose_level()
-    chosen_category, chosen_list = choose_category(name)
+    chosen_level, chosen_level_lives = choose_level()
+    chosen_category, chosen_list = choose_category()
     word = chosen_category_word(chosen_list)
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
@@ -296,14 +288,12 @@ def continue_game():
             break
         else:
             print("Wow, that was... something.")
-            print(" ")
-            print("Are you trying to speak Morse code?")
-            print(" ")
-            print(Fore.RED + f"{name}, Please try again." + Style.RESET_ALL)
+            print("Are you trying to speak Morse code?") 
+            print(Fore.RED + "Please try again." + Style.RESET_ALL)
     clear_terminal()
    
     print(" ")
-    print(f"Thanks for playing {name}!")
+    print("Thanks for playing!")
     print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
     print(" ")
     print("...and please excuse any existential dread")
@@ -312,7 +302,5 @@ def continue_game():
     print("I'm still under development, after all :-)")
     print(" ")
 
-
-if __name__ == "__main__":
-    hangman()
-    continue_game()
+hangman()
+continue_game()
