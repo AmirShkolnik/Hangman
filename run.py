@@ -247,7 +247,7 @@ def choose_category(name):
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
     while True:
-        print (" ")
+        print(" ")
         choice = input("Enter your choice (1-5): \n")
         if choice.isdigit():
             choice = int(choice) - 1
@@ -258,7 +258,7 @@ def choose_category(name):
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
                 # Blue decorative line
-                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL )
+                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL)
                 # Print the chosen category here
                 print("On your marks, get set, guess!\n" 
                       "The hangman's rope hangs in the balance!")
