@@ -185,8 +185,11 @@ def display_hangman(mistakes, chosen_level):
     # Hard level  # Display one stage per mistake
         display_per_mistake = 2
     # Calculate the number of stages to display for the current mistake
-    stages_to_display = min(mistakes * display_per_mistake, len(hangman_stages) - 1)
-    print(Fore.RED + hangman_stages[stages_to_display] + Style.RESET_ALL)
+    stages_to_display = min(mistakes * 
+                            display_per_mistake, 
+                            len(hangman_stages) - 1)
+    print(Fore.RED + hangman_stages[
+                                    stages_to_display] + Style.RESET_ALL)
     return stages_to_display
 def choose_level():
     startup_view()
@@ -336,10 +339,8 @@ def hangman():
         print(" ")
 def continue_game():
     while True:
-        print("Ready for another round?")
-        print(" ")
-        print("It's like potato chips, you can't have just one. (y/n)")
-        print(" ")
+        print("Ready for another round?\n\n"
+              "It's like potato chips, you can't have just one. (y/n)")
         choice = input().lower()
         if choice == "y":
             # Assuming you have a clear_terminal function defined
@@ -351,7 +352,7 @@ def continue_game():
             print("Oh good, you haven't given up yet. This could get interesting...")
             print(" ")
             while True:
-                you_sure = input("Are you sure? (y/n) ").lower()
+                you_sure = input("Are you sure? (y/n)\n").lower()
                 # Check for both "y" and "n"
                 if you_sure in ("y", "n"):
                     if you_sure == "y":
