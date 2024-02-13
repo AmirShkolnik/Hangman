@@ -96,7 +96,7 @@ def startup_view():
     time.sleep(1.5)
     # Deinitialize colorama
     colorama.deinit()
-    # Prints the text with a slower typing 
+    # Prints the text with a slower typing
     # effect and additional customizations
     # Adjust speed if needed (lower number means slower typing)
 def txt_effect(text_to_print):
@@ -194,18 +194,16 @@ def choose_level():
     name_is_valid = False
     while name_is_valid is False:
         name = get_user_input(Fore.WHITE + "What do your friends "
-                                         "call you?\n" + Style.RESET_ALL)
-        clear_terminal()
-        name_is_valid = len(name) >= 3
-        if name_is_valid is False:
-            print(Fore.RED + "Please enter at least 3 "
-                              "letters for your username" + Style.RESET_ALL)
-            print(" ")
+                              "call you?\n" + Style.RESET_ALL)
+    clear_terminal()
+    name_is_valid = len(name) >= 3
+    if name_is_valid is False:
+        print(Fore.RED + "Please enter at least 3 "
+              "letters for your username\n" + Style.RESET_ALL)
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
-    print(" ")
     print(Fore.WHITE + "Step 1: Choose "
-    "Your Level of Adventure!" + Style.RESET_ALL)
+          "Your Level of Adventure!" + Style.RESET_ALL)
     # Blue decorative line
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)
     for i, level in enumerate(levels):
@@ -234,13 +232,13 @@ def choose_level():
                 print("My circuits are overloaded!")
                 print(" ")
                 print(Fore.RED + f"{name}, Please enter "
-                "a number between 1 and 2." + Style.RESET_ALL)
+                      "a number between 1 and 2." + Style.RESET_ALL)
         else:
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
             print(" ")
             print(Fore.RED + f"{name}, Please "
-            "enter a number." + Style.RESET_ALL)
+                  "enter a number." + Style.RESET_ALL)
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
@@ -273,13 +271,13 @@ def choose_category(name):
             else:
                 print(" ")
                 print("I see you're struggling with "
-                "your keyboard skills.\n\n")
+                      "your keyboard skills.\n\n")
                 print(Fore.RED + f"{name}, Please "
-                "enter a number between 1 and 5." + Style.RESET_ALL)
+                      "enter a number between 1 and 5." + Style.RESET_ALL)
         else:
             print("Is that character part of a secret code?\n")
             print(Fore.RED + f"{name}, Please "
-            "enter a number." + Style.RESET_ALL)
+                  "enter a number." + Style.RESET_ALL)
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
@@ -304,7 +302,7 @@ def hangman():
         print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)
         print(" ")
         word_list = [letter if letter in
-        used_letters else '_' for letter in word]
+                     used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
         print(" ")
@@ -314,7 +312,7 @@ def hangman():
             used_letters.add(user_letter)
             if user_letter in word_letters:
                 print("The eagle has landed! Or was it a penguin?\n\n"
-                       "No matter, you guessed right!")
+                      "No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
@@ -322,14 +320,14 @@ def hangman():
         elif user_letter in used_letters:
             clear_terminal()
             print("Oopsie! That letter's already "
-            "been served. Let's order something new!")
+                  "been served. Let's order something new!")
         else:
             clear_terminal()
             print(" ")
             print("The keyboard gremlins just ate your character!")
             print(" ")
             print(Fore.RED + "Please choose a valid "
-            "one before they attack again." + Style.RESET_ALL)
+                  "one before they attack again." + Style.RESET_ALL)
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
@@ -359,7 +357,7 @@ def continue_game():
             print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
             print(" ")
             print("Oh good, you haven't given "
-            "up yet. This could get interesting...")
+                  "up yet. This could get interesting...")
             print(" ")
             while True:
                 you_sure = input("Are you sure? (y/n)\n").lower()
@@ -377,7 +375,7 @@ def continue_game():
                         print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
                         print(" ")
                         print("Farewell, brave soul! Remember, "
-                        "quitting is bravery... sometimes.")
+                              "quitting is bravery... sometimes.")
                         print(" ")
                         print("Don't tell my therapist I said that.")
                         print(" ")
@@ -385,7 +383,7 @@ def continue_game():
                         return
                 else:
                     print(Fore.RED + "Please enter "
-                    "'y' or 'n'." + Style.RESET_ALL)
+                          "'y' or 'n'." + Style.RESET_ALL)
         # Handle "n" from the first prompt directly
         elif choice == "n":
             clear_terminal()
@@ -411,4 +409,3 @@ def continue_game():
 if __name__ == "__main__":
     hangman()
     continue_game()
-    
