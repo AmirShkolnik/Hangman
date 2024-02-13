@@ -195,7 +195,7 @@ def choose_level():
     startup_view()
     name_is_valid = False
     while name_is_valid is False:
-        name = get_user_input(Fore.WHITE + "What do your friends call you? \n" + Style.RESET_ALL)
+        name = get_user_input("What do your friends call you? \n")
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
@@ -205,7 +205,8 @@ def choose_level():
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
     print(" ")
-    print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
+    print(Fore.WHITE + "Step 1: Choose
+                       "Your Level of Adventure!" + Style.RESET_ALL)
     # Blue decorative line
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)
     for i, level in enumerate(levels):
