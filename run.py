@@ -193,7 +193,7 @@ def choose_level():
     startup_view()
     name_is_valid = False
     while name_is_valid is False:
-        name = get_user_input(Fore.WHITE + "What do your friends"
+        name = get_user_input(Fore.WHITE + "What do your friends "
                                          "call you?\n" + Style.RESET_ALL)
         clear_terminal()
         name_is_valid = len(name) >= 3
