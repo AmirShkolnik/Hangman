@@ -186,8 +186,8 @@ def display_hangman(mistakes, chosen_level):
     stages_to_display = min(mistakes *
                             display_per_mistake,
                             len(hangman_stages) - 1)
-    print(Fore.RED + hangman_stages[
-                                    stages_to_display] + Style.RESET_ALL)
+    print(Fore.RED + hangman_stages
+          [stages_to_display] + Style.RESET_ALL)
     return stages_to_display
 def choose_level():
     startup_view()
@@ -195,11 +195,12 @@ def choose_level():
     while name_is_valid is False:
         name = get_user_input(Fore.WHITE + "What do your friends "
                               "call you?\n" + Style.RESET_ALL)
-    clear_terminal()
-    name_is_valid = len(name) >= 3
-    if name_is_valid is False:
-        print(Fore.RED + "Please enter at least 3 "
-              "letters for your username\n" + Style.RESET_ALL)
+        clear_terminal()
+        name_is_valid = len(name) >= 3
+        if name_is_valid is False:
+            print(Fore.RED + "Please enter at least 3 "
+                  "letters for your username\n" + Style.RESET_ALL)
+        print(" ")
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
     print(Fore.WHITE + "Step 1: Choose "
