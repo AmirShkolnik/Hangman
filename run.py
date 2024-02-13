@@ -249,7 +249,8 @@ def hangman():
         print(" ")
         print("The word was", Fore.GREEN + word + Style.RESET_ALL)
         print(" ")
-        print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
+        print("You guessed it! Your detective skills are sharper than")
+        print("Sherlock Holmes on a caffeine bender.")
         print(" ")
 def continue_game():
     while True:
