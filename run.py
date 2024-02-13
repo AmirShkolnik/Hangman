@@ -322,6 +322,7 @@ def continue_game():
             print("Are you trying to speak Morse code?")
             print(" ")
             print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
+            print(" ")
 
 
 
