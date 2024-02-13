@@ -146,10 +146,8 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print(Fore.RED + "Please enter at least 3 letters for your username" + Style.RESET_ALL)
-            print(" ")
-    print(f"{name}, thrilled to have you join!")
-    print("Ready to tackle some challenging words?")
+            print("Please enter at least 3 letters for your username")
+    print(f"{name}, thrilled to have you join! Ready to tackle some challenging words?")
     print(" ")
     print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
@@ -280,54 +278,34 @@ def hangman():
 
 def continue_game():
     while True:
-        print("Ready for another round? It's like potato chips, you can't have just one. (y/n)")
-        choice = input().lower()
-
-        if choice == "y":
-            clear_terminal()  # Assuming you have a clear_terminal function defined
-            print("Oh good, you haven't given up yet. This could get interesting...")
-            print(" ")
-            while True:
-                you_sure = input("Are you sure? (y/n) ").lower()
-                if you_sure in ("y", "n"):  # Check for both "y" and "n"
-                    if you_sure == "y":
-                        clear_terminal()
-                        hangman()  # Assuming you have a hangman function defined
-                        break  # Exit inner loop on confirmation
-                    elif you_sure == "n":
-                        print(" ")
-                        print("Farewell, brave soul! Remember, quitting is bravery... sometimes.")
-                        print(" ")
-                        print("Don't tell my therapist I said that.")
-                        print(" ")
-                        return  # Exit the function, effectively ending the game
-                else:
-                    print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
-        elif choice == "n":  # Handle "n" from the first prompt directly
+        print(" ")
+        continue_playing = input("Ready for another round? \n\nIt's like potato chips, you can't have just one. (y/n) \n")
+        print(" ")
+        if continue_playing.lower() == "y":
             clear_terminal()
-            print(" ")
-            print("Thanks for playing!")
-            print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
-            print(" ")
-            print("...and please excuse any existential dread")
-            print("you may have experienced during the game.")
-            print(" ")
-            print("I'm still under development, after all :-)")
-            print(" ")
-            break  # Exit the entire loop after farewell message
+            hangman()    
+        elif continue_playing.lower() == "n":
+            clear_terminal()
+            print("Farewell, brave soul! Remember, quitting is bravery... sometimes.") 
+            print("Don't tell my therapist I said that.")
+            break
         else:
             print("Wow, that was... something.")
             print(" ")
             print("Are you trying to speak Morse code?")
             print(" ")
-            print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
-
-
-
-
-
-
-
+            print(Fore.RED + "Please try again." + Style.RESET_ALL)
+    clear_terminal()
+   
+    print(" ")
+    print("Thanks for playing!")
+    print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
+    print(" ")
+    print("...and please excuse any existential dread")
+    print("you may have experienced during the game.")
+    print(" ")
+    print("I'm still under development, after all :-)")
+    print(" ")
 
 
 if __name__ == "__main__":
