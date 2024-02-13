@@ -204,7 +204,8 @@ def choose_level():
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
     print(" ")
-    print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
+    print(Fore.WHITE + "Step 1: Choose "
+    "Your Level of Adventure!" + Style.RESET_ALL)
     # Blue decorative line
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)
     for i, level in enumerate(levels):
@@ -224,19 +225,22 @@ def choose_level():
                 print(" ")
                 print(f"Excellent choice {name}!")
                 print(" ")
-                # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                # chosen_list refers to a list of words associated 
+                # with the category that the user has chosen to play with.
                 chosen_level_lives = levels[chosen_level]
                 return chosen_level, chosen_level_lives, name
             else:
                 print(" ")
                 print("My circuits are overloaded!")
                 print(" ")
-                print(Fore.RED + f"{name}, Please enter a number between 1 and 2." + Style.RESET_ALL)
+                print(Fore.RED + f"{name}, Please enter "
+                "a number between 1 and 2." + Style.RESET_ALL)
         else:
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
             print(" ")
-            print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
+            print(Fore.RED + f"{name}, Please "
+            "enter a number." + Style.RESET_ALL)
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
