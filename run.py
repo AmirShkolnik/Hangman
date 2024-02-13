@@ -97,10 +97,8 @@ def startup_view():
     # Deinitialize colorama
     colorama.deinit()
 def txt_effect(text_to_print):
-    """
-    Prints the text with a slower typing effect and additional customizations.
-    """
-    # Consider using a more advanced library like "rich" for complex effects
+    
+    # Prints the text with a slower typing effect and additional customizations
     for character in text_to_print:
         # Adjust speed if needed (lower number means slower typing)
         time.sleep(0.03)
@@ -195,7 +193,8 @@ def choose_level():
     startup_view()
     name_is_valid = False
     while name_is_valid is False:
-        name = get_user_input("What do your friends call you? \n")
+        name = get_user_input(Fore.WHITE + "What do your friends"
+                                         "call you?\n" + Style.RESET_ALL)
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
@@ -205,8 +204,7 @@ def choose_level():
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
     print(" ")
-    print(Fore.WHITE + "Step 1: Choose
-                       "Your Level of Adventure!" + Style.RESET_ALL)
+    print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
     # Blue decorative line
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)
     for i, level in enumerate(levels):
@@ -350,7 +348,8 @@ def continue_game():
             # Blue decorative line
             print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
             print(" ")
-            print("Oh good, you haven't given up yet. This could get interesting...")
+            print("Oh good, you haven't given "
+            "up yet. This could get interesting...")
             print(" ")
             while True:
                 you_sure = input("Are you sure? (y/n)\n").lower()
@@ -367,14 +366,16 @@ def continue_game():
                         # Blue decorative line
                         print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
                         print(" ")
-                        print("Farewell, brave soul! Remember, quitting is bravery... sometimes.")
+                        print("Farewell, brave soul! Remember, "
+                        "quitting is bravery... sometimes.")
                         print(" ")
                         print("Don't tell my therapist I said that.")
                         print(" ")
                         # Exit the function, effectively ending the game
                         return
                 else:
-                    print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
+                    print(Fore.RED + "Please enter "
+                    "'y' or 'n'." + Style.RESET_ALL)
         # Handle "n" from the first prompt directly
         elif choice == "n":
             clear_terminal()
