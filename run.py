@@ -88,7 +88,8 @@ def startup_view():
     # Blue decorative line
     print(Fore.CYAN + "—" * 74 + "\n")
     txt_effect(Fore.WHITE + "Welcome to Hangman Madness!\n\n")
-    txt_effect(Fore.WHITE + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
+    txt_effect(Fore.WHITE + "Prepare yourself for an epic journey "
+                            "through the alphabet jungle.\n\n")
     # Blue decorative line
     print(Fore.CYAN + "—" * 74 + "\n\n")
     # Allow time for visual impact
@@ -195,7 +196,8 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print(Fore.RED + "Please enter at least 3 letters for your username" + Style.RESET_ALL)
+            print(Fore.RED + "Please enter at least 3 " 
+                              "letters for your username" + Style.RESET_ALL)
             print(" ")
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?")
@@ -255,7 +257,8 @@ def choose_category(name):
                 # Blue decorative line
                 print(Fore.CYAN + "—" * 36 + Style.RESET_ALL )
                 # Print the chosen category here
-                print("On your marks, get set, guess! The hangman's rope hangs in the balance!")
+                print("On your marks, get set, guess!\n" 
+                      "The hangman's rope hangs in the balance!")
                 # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
                 chosen_list = categories[chosen_category]
                 return chosen_category, chosen_list
@@ -300,9 +303,8 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print ("The eagle has landed! Or was it a penguin?")
-                print(" ")
-                print ("No matter, you guessed right!")
+                print ("The eagle has landed! Or was it a penguin?\n\n"
+                       "No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
@@ -319,7 +321,8 @@ def hangman():
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print("Aw, shucks! Looks like your brain went on vacation with the penguins.") 
+        print("Aw, shucks! Looks like your brain " 
+              "went on vacation with the penguins.") 
         print("The word was", Fore.GREEN + word + Style.RESET_ALL)
         print(" ")
     else:
@@ -328,8 +331,8 @@ def hangman():
         print(" ")
         print(Fore.GREEN + "You guessed it!" + Style.RESET_ALL)
         print(" ")
-        print("Your detective skills are sharper than")
-        print("Sherlock Holmes on a caffeine bender.")
+        print("Your detective skills are sharper than\n"
+              "Sherlock Holmes on a caffeine bender.")
         print(" ")
 def continue_game():
     while True:
