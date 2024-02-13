@@ -286,6 +286,9 @@ def continue_game():
 
         if choice == "y":
             clear_terminal()  # Assuming you have a clear_terminal function defined
+            print(" ")
+            print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)  # Blue decorative line
+            print(" ")
             print("Oh good, you haven't given up yet. This could get interesting...")
             print(" ")
             while True:
@@ -296,6 +299,8 @@ def continue_game():
                         hangman()  # Assuming you have a hangman function defined
                         break  # Exit inner loop on confirmation
                     elif you_sure == "n":
+                        print(" ")
+                        print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)  # Blue decorative line
                         print(" ")
                         print("Farewell, brave soul! Remember, quitting is bravery... sometimes.")
                         print(" ")
