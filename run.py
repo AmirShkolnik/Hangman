@@ -96,17 +96,17 @@ def startup_view():
     time.sleep(1.5)
     # Deinitialize colorama
     colorama.deinit()
+    # Prints the text with a slower typing 
+    # effect and additional customizations
+    # Adjust speed if needed (lower number means slower typing)
 def txt_effect(text_to_print):
-    
-    # Prints the text with a slower typing effect and additional customizations
     for character in text_to_print:
-        # Adjust speed if needed (lower number means slower typing)
         time.sleep(0.03)
         sys.stdout.write(character)
         sys.stdout.flush()
-def clear_terminal():
     # From:
     # https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
@@ -178,9 +178,9 @@ def display_hangman(mistakes, chosen_level):
     # Adjust the rate of displaying hangman stages based on the chosen level
     if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
-    # Easy level
+    # Easy level - Display 1 stage per mistake
+    # Hard level - Display 2 stage per mistake
     else:
-    # Hard level  # Display one stage per mistake
         display_per_mistake = 2
     # Calculate the number of stages to display for the current mistake
     stages_to_display = min(mistakes *
