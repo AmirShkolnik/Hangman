@@ -281,7 +281,10 @@ def hangman():
 
 def continue_game():
     while True:
-        print("Ready for another round? It's like potato chips, you can't have just one. (y/n)")
+        print("Ready for another round?")
+        print(" ")
+        print("It's like potato chips, you can't have just one. (y/n)")
+        print(" ")
         choice = input().lower()
 
         if choice == "y":
