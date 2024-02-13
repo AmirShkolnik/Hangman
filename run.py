@@ -266,7 +266,8 @@ def choose_category(name):
                 print("On your marks, get set, guess!\n" 
                       "The hangman's rope hangs in the balance!")
                 # chosen_list refers to a list of words 
-                # associated with the category that the user has chosen to play with.
+                # associated with the category that 
+                # the user has chosen to play with.
                 chosen_list = categories[chosen_category]
                 return chosen_category, chosen_list
             else:
