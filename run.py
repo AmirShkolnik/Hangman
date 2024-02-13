@@ -198,7 +198,7 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print(Fore.RED + "Please enter at least 3 " 
+            print(Fore.RED + "Please enter at least 3 "
                               "letters for your username" + Style.RESET_ALL)
             print(" ")
     print(f"{name}, thrilled to have you join!")
@@ -225,7 +225,7 @@ def choose_level():
                 print(" ")
                 print(f"Excellent choice {name}!")
                 print(" ")
-                # chosen_list refers to a list of words associated 
+                # chosen_list refers to a list of words associated
                 # with the category that the user has chosen to play with.
                 chosen_level_lives = levels[chosen_level]
                 return chosen_level, chosen_level_lives, name
@@ -245,7 +245,7 @@ def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
     print("What is your favorite category?")
-     # Blue decorative line
+    # Blue decorative line
     print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
@@ -263,10 +263,10 @@ def choose_category(name):
                 # Blue decorative line
                 print(Fore.CYAN + "—" * 36 + Style.RESET_ALL)
                 # Print the chosen category here
-                print("On your marks, get set, guess!\n" 
+                print("On your marks, get set, guess!\n"
                       "The hangman's rope hangs in the balance!")
-                # chosen_list refers to a list of words 
-                # associated with the category that 
+                # chosen_list refers to a list of words
+                # associated with the category that
                 # the user has chosen to play with.
                 chosen_list = categories[chosen_category]
                 return chosen_category, chosen_list
@@ -274,10 +274,12 @@ def choose_category(name):
                 print(" ")
                 print("I see you're struggling with "
                 "your keyboard skills.\n\n")
-                print (Fore.RED + f"{name}, Please enter a number between 1 and 5." + Style.RESET_ALL)
+                print(Fore.RED + f"{name}, Please "
+                "enter a number between 1 and 5." + Style.RESET_ALL)
         else:
             print("Is that character part of a secret code?\n\n")
-            print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
+            print(Fore.RED + f"{name}, Please "
+            "enter a number." + Style.RESET_ALL)
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
@@ -296,12 +298,13 @@ def hangman():
     mistakes = 0
     while len(word_letters) > 0 and mistakes < chosen_level_lives:
         display_hangman(mistakes, chosen_level)
-        print (" ")
+        print(" ")
         print('You have', chosen_level_lives - mistakes, 'lives left.')
         # Blue decorative line
         print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)
         print(" ")
-        word_list = [letter if letter in used_letters else '_' for letter in word]
+        word_list = [letter if letter in
+        used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
         print(" ")
@@ -310,7 +313,7 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print ("The eagle has landed! Or was it a penguin?\n\n"
+                print("The eagle has landed! Or was it a penguin?\n\n"
                        "No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
@@ -318,18 +321,20 @@ def hangman():
                 print("Yikes! Swing and a miss...")
         elif user_letter in used_letters:
             clear_terminal()
-            print("Oopsie! That letter's already been served. Let's order something new!")
+            print("Oopsie! That letter's already "
+            "been served. Let's order something new!")
         else:
             clear_terminal()
             print(" ")
             print("The keyboard gremlins just ate your character!")
             print(" ")
-            print(Fore.RED + "Please choose a valid one before they attack again." + Style.RESET_ALL)
+            print(Fore.RED + "Please choose a valid "
+            "one before they attack again." + Style.RESET_ALL)
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print("Aw, shucks! Looks like your brain " 
-              "went on vacation with the penguins.") 
+        print("Aw, shucks! Looks like your brain "
+              "went on vacation with the penguins.")
         print("The word was", Fore.GREEN + word + Style.RESET_ALL)
         print(" ")
     else:
@@ -406,3 +411,4 @@ def continue_game():
 if __name__ == "__main__":
     hangman()
     continue_game()
+    
