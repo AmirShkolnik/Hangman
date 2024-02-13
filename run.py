@@ -265,17 +265,17 @@ def choose_category(name):
                 # Print the chosen category here
                 print("On your marks, get set, guess!\n" 
                       "The hangman's rope hangs in the balance!")
-                # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                # chosen_list refers to a list of words 
+                # associated with the category that the user has chosen to play with.
                 chosen_list = categories[chosen_category]
                 return chosen_category, chosen_list
             else:
                 print(" ")
-                print("I see you're struggling with your keyboard skills.")
-                print(" ")
+                print("I see you're struggling with "
+                "your keyboard skills.\n\n")
                 print (Fore.RED + f"{name}, Please enter a number between 1 and 5." + Style.RESET_ALL)
         else:
-            print("Is that character part of a secret code?") 
-            print(" ")
+            print("Is that character part of a secret code?\n\n")
             print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
