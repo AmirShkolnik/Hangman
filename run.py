@@ -8,7 +8,6 @@ from datetime import datetime, date
 from colorama import init
 from colorama import Fore, Style
 name = ''
-
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
     "monkey", "gorilla", "kangaroo", "koala", "panda", "penguin", "bear", "wolf", "fox", "deer",
@@ -22,7 +21,6 @@ animals = [
     "rat", "hamster", "guineapig", "gerbil", "ferret", "mole", "weasel", "otter", "badger", "raccoon",
     "skunk", "opossum", "platypus", "echidna"
 ]
-
 countries = [
         "Brazil", "Japan", "France", "Italy", "Germany", "Canada", "Australia", "Mexico", "India", "China",
         "Spain", "Russia", "Argentina", "SouthAfrica", "SouthKorea", "Netherlands", "Switzerland", "Sweden",
@@ -31,7 +29,6 @@ countries = [
         "Pakistan", "Bangladesh", "Nigeria", "Kenya", "Morocco", "Peru", "Chile", "Colombia", "Venezuela",
         "Cuba", "NewZealand", "Ireland", "Austria", "Hungary"
 ]
-
 flowers = [
     "rose", "tulip", "daisy", "lily", "sunflower", "orchid", "daffodil", "peonies", "hydrangea", "carnation",
     "poppy", "marigold", "lavender", "chrysanthemum", "hibiscus", "gerbera", "snapdragon", "freesia", "iris",
@@ -40,7 +37,6 @@ flowers = [
     "buttercup", "columbine", "delphinium", "foxglove", "gardenia", "larkspur", "narcissus", "peony",
     "sweetpea", "tigerlily", "verbena", "wisteria"
 ]
-
 languages = [
     "English", "Spanish", "French", "German", "Italian",
     "Portuguese", "Russian", "Japanese", "Chinese", "Arabic",
@@ -53,7 +49,6 @@ languages = [
     "Macedonian", "Swahili", "Hausa", "Yoruba", "Zulu",
     "Amharic", "Somali", "Gujarati", "Punjabi"
 ]
-
 fruits = [
     "apple", "banana", "orange", "grape", "strawberry",
     "watermelon", "blueberry", "mango", "pineapple", "kiwi",
@@ -66,7 +61,6 @@ fruits = [
     "quince", "plantain", "starfruit", "honeydew", "rhubarb",
     "gooseberry", "soursop", "kumquat", "elderberry", "ackee"
 ]
-
 categories = {
     "Animals": animals,
     "Countries": countries,
@@ -74,12 +68,10 @@ categories = {
     "Languages": languages,
     "Fruits": fruits
 }
-
 levels = {
     "Easy - 8 lives: Perfect for hangman beginners": 8,
     "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
-
 def startup_view():
     """
     Plays the startup welcome effect with colors and text effects.
@@ -92,7 +84,6 @@ def startup_view():
     print(Fore.CYAN + "—" * 74 + "\n\n")  # Blue decorative line
     time.sleep(1.5)  # Allow time for visual impact
     colorama.deinit()  # Deinitialize colorama
-
 def txt_effect(text_to_print):
     """
     Prints the text with a slower typing effect and additional customizations.
@@ -103,16 +94,10 @@ def txt_effect(text_to_print):
         time.sleep(0.03)
         sys.stdout.write(character)
         sys.stdout.flush()
-
 def clear_terminal():
-    """
-    Clears the terminal.
-    """
     # From:
     # https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-
     os.system('cls' if os.name == 'nt' else 'clear')
-
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
         "",
@@ -125,19 +110,15 @@ def display_hangman(mistakes, chosen_level):
         "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
         "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
     ]
-    
     # Adjust the rate of displaying hangman stages based on the chosen level
     if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
     else:  # Easy level
         display_per_mistake = 2  # Hard level  # Display one stage per mistake
-    
     # Calculate the number of stages to display for the current mistake
     stages_to_display = min(mistakes * display_per_mistake, len(hangman_stages) - 1)
-    
     print(Fore.RED + hangman_stages[stages_to_display] + Style.RESET_ALL)
     return stages_to_display
-
 def choose_level():
     startup_view()
     name_is_valid = False
@@ -155,7 +136,6 @@ def choose_level():
     print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
-
     while True:
         print(" ")
         choice = input("Enter your level (1-2): \n")
@@ -182,7 +162,6 @@ def choose_level():
             print("Your character sounds like a dolphin sneeze.")
             print(" ")
             print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
-
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
@@ -190,7 +169,6 @@ def choose_category(name):
     print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)  # Blue decorative line
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
-
     while True:
         print (" ")
         choice = input("Enter your choice (1-5): \n")
@@ -215,16 +193,13 @@ def choose_category(name):
             print("Is that character part of a secret code?") 
             print(" ")
             print(Fore.RED + f"{name}, Please enter a number." + Style.RESET_ALL)
-
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
         word = random.choice(chosen_list) # randomly choose a word fron the chosen category
     return word.upper()
-
 def get_user_input(prompt):
     return input(prompt)
-
 def hangman():
     chosen_level, chosen_level_lives, name = choose_level()
     chosen_category, chosen_list = choose_category(name)
@@ -233,7 +208,6 @@ def hangman():
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
     mistakes = 0
-
     while len(word_letters) > 0 and mistakes < chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print (" ")
@@ -265,7 +239,6 @@ def hangman():
             print("The keyboard gremlins just ate your character!")
             print(" ")
             print(Fore.RED + "Please choose a valid one before they attack again." + Style.RESET_ALL)
-
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
@@ -278,7 +251,6 @@ def hangman():
         print(" ")
         print("You guessed it! Your detective skills are sharper than Sherlock Holmes on a caffeine bender.")
         print(" ")
-
 def continue_game():
     while True:
         print("Ready for another round?")
@@ -286,7 +258,6 @@ def continue_game():
         print("It's like potato chips, you can't have just one. (y/n)")
         print(" ")
         choice = input().lower()
-
         if choice == "y":
             clear_terminal()  # Assuming you have a clear_terminal function defined
             print(" ")
@@ -331,15 +302,6 @@ def continue_game():
             print(" ")
             print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
             print(" ")
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     hangman()
     continue_game()
