@@ -9,16 +9,16 @@ from colorama import init
 from colorama import Fore, Style
 name = ''
 animals = [
-    "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah",
-    "monkey", "gorilla", "kangaroo", "koala", "panda", "penguin", "bear", "wolf", "fox", "deer",
-    "buffalo", "camel", "gazelle", "moose", "elk", "reindeer", "crocodile", "alligator", "snake", "python",
-    "cobra", "anaconda", "lizard", "gecko", "iguana", "turtle", "tortoise", "frog", "toad", "salamander",
-    "newt", "axolotl", "goldfish", "shark", "whale", "dolphin", "octopus", "squid", "jellyfish", "starfish",
-    "seahorse", "crab", "lobster", "shrimp", "oyster", "clam", "snail", "slug", "bee", "ant", "wasp",
-    "butterfly", "moth", "dragonfly", "grasshopper", "cricket", "beetle", "ladybug", "spider", "scorpion",
-    "centipede", "millipede", "fly", "mosquito", "caterpillar", "larva", "butterfly", "mantis",
-    "armadillo", "anteater", "sloth", "hedgehog", "porcupine", "chipmunk", "squirrel", "rabbit", "mouse",
-    "rat", "hamster", "guineapig", "gerbil", "ferret", "mole", "weasel", "otter", "badger", "raccoon",
+    "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah", \
+    "monkey", "gorilla", "kangaroo", "koala", "panda", "penguin", "bear", "wolf", "fox", "deer", \
+    "buffalo", "camel", "gazelle", "moose", "elk", "reindeer", "crocodile", "alligator", "snake", "python", \
+    "cobra", "anaconda", "lizard", "gecko", "iguana", "turtle", "tortoise", "frog", "toad", "salamander", \
+    "newt", "axolotl", "goldfish", "shark", "whale", "dolphin", "octopus", "squid", "jellyfish", "starfish", \
+    "seahorse", "crab", "lobster", "shrimp", "oyster", "clam", "snail", "slug", "bee", "ant", "wasp", \
+    "butterfly", "moth", "dragonfly", "grasshopper", "cricket", "beetle", "ladybug", "spider", "scorpion", \
+    "centipede", "millipede", "fly", "mosquito", "caterpillar", "larva", "butterfly", "mantis", \
+    "armadillo", "anteater", "sloth", "hedgehog", "porcupine", "chipmunk", "squirrel", "rabbit", "mouse", \
+    "rat", "hamster", "guineapig", "gerbil", "ferret", "mole", "weasel", "otter", "badger", "raccoon", \
     "skunk", "opossum", "platypus", "echidna"
 ]
 countries = [
@@ -249,7 +249,9 @@ def hangman():
         print(" ")
         print("The word was", Fore.GREEN + word + Style.RESET_ALL)
         print(" ")
-        print("You guessed it! Your detective skills are sharper than")
+        print(Fore.GREEN + "You guessed it!" + Style.RESET_ALL)
+        print(" ")
+        print("Your detective skills are sharper than")
         print("Sherlock Holmes on a caffeine bender.")
         print(" ")
 def continue_game():
