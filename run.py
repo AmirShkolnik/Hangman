@@ -9,45 +9,51 @@ from colorama import init
 from colorama import Fore, Style
 name = ''
 animals = [
-    "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo", "rhino", "cheetah", \
-    "monkey", "gorilla", "kangaroo", "koala", "panda", "penguin", "bear", "wolf", "fox", "deer", \
-    "buffalo", "camel", "gazelle", "moose", "elk", "reindeer", "crocodile", "alligator", "snake", "python", \
-    "cobra", "anaconda", "lizard", "gecko", "iguana", "turtle", "tortoise", "frog", "toad", "salamander", \
-    "newt", "axolotl", "goldfish", "shark", "whale", "dolphin", "octopus", "squid", "jellyfish", "starfish", \
-    "seahorse", "crab", "lobster", "shrimp", "oyster", "clam", "snail", "slug", "bee", "ant", "wasp", \
-    "butterfly", "moth", "dragonfly", "grasshopper", "cricket", "beetle", "ladybug", "spider", "scorpion", \
-    "centipede", "millipede", "fly", "mosquito", "caterpillar", "larva", "butterfly", "mantis", \
-    "armadillo", "anteater", "sloth", "hedgehog", "porcupine", "chipmunk", "squirrel", "rabbit", "mouse", \
-    "rat", "hamster", "guineapig", "gerbil", "ferret", "mole", "weasel", "otter", "badger", "raccoon", \
+    "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo",
+    "rhino", "cheetah", "monkey", "gorilla", "kangaroo", "koala", "panda",
+    "penguin", "bear", "wolf", "fox", "deer", "buffalo", "camel", "gazelle",
+    "moose", "elk", "reindeer", "crocodile", "alligator", "snake", "python",
+    "cobra", "anaconda", "lizard", "gecko", "iguana", "turtle", "tortoise",
+    "frog", "toad", "salamander", "newt", "axolotl", "goldfish", "shark",
+    "whale", "dolphin", "octopus", "squid", "jellyfish", "starfish",
+    "seahorse", "crab", "lobster", "shrimp", "oyster", "clam", "snail", "slug",
+    "bee", "ant", "wasp", "butterfly", "moth", "dragonfly", "grasshopper",
+    "cricket", "beetle", "ladybug", "spider", "scorpion", "centipede",
+    "millipede", "fly", "mosquito", "caterpillar", "larva", "butterfly",
+    "mantis", "armadillo", "anteater", "sloth", "hedgehog", "porcupine",
+    "chipmunk", "squirrel", "rabbit", "mouse", "rat", "hamster", "guineapig",
+    "gerbil", "ferret", "mole", "weasel", "otter", "badger", "raccoon",
     "skunk", "opossum", "platypus", "echidna"
 ]
 countries = [
-        "Brazil", "Japan", "France", "Italy", "Germany", "Canada", "Australia", "Mexico", "India", "China",
-        "Spain", "Russia", "Argentina", "SouthAfrica", "SouthKorea", "Netherlands", "Switzerland", "Sweden",
-        "Portugal", "Belgium", "Norway", "Denmark", "Finland", "Greece", "Egypt", "Turkey", "Thailand", "Iran",
-        "Vietnam", "Poland", "Ukraine", "Indonesia", "Philippines", "Malaysia", "Israel", "SaudiArabia",
-        "Pakistan", "Bangladesh", "Nigeria", "Kenya", "Morocco", "Peru", "Chile", "Colombia", "Venezuela",
-        "Cuba", "NewZealand", "Ireland", "Austria", "Hungary"
+    "Brazil", "Japan", "France", "Italy", "Germany", "Canada", "Australia",
+    "Mexico", "India", "China", "Spain", "Russia", "Argentina", "SouthAfrica",
+    "SouthKorea", "Netherlands", "Switzerland", "Sweden", "Portugal",
+    "Belgium", "Norway", "Denmark", "Finland", "Greece", "Egypt", "Turkey",
+    "Thailand", "Iran", "Vietnam", "Poland", "Ukraine", "Indonesia",
+    "Philippines", "Malaysia", "Israel", "SaudiArabia", "Pakistan",
+    "Bangladesh", "Nigeria", "Kenya", "Morocco", "Peru", "Chile", "Colombia",
+    "Venezuela", "Cuba", "NewZealand", "Ireland", "Austria", "Hungary"
 ]
 flowers = [
-    "rose", "tulip", "daisy", "lily", "sunflower", "orchid", "daffodil", "peonies", "hydrangea", "carnation",
-    "poppy", "marigold", "lavender", "chrysanthemum", "hibiscus", "gerbera", "snapdragon", "freesia", "iris",
-    "aster", "zinnia", "dahlia", "crocus", "azalea", "anemone", "cosmos", "lilac", "hyacinth", "geranium",
-    "pansy", "forgetmenot", "bougainvillea", "camellia", "ranunculus", "gladiolus", "fuchsia", "birdofparadise",
-    "buttercup", "columbine", "delphinium", "foxglove", "gardenia", "larkspur", "narcissus", "peony",
-    "sweetpea", "tigerlily", "verbena", "wisteria"
+    "rose", "tulip", "daisy", "lily", "sunflower", "orchid", "daffodil",
+    "peonies", "hydrangea", "carnation", "poppy", "marigold", "lavender",
+    "chrysanthemum", "hibiscus", "gerbera", "snapdragon", "freesia", "iris",
+    "aster", "zinnia", "dahlia", "crocus", "azalea", "anemone", "cosmos",
+    "lilac", "hyacinth", "geranium", "pansy", "forgetmenot", "bougainvillea",
+    "camellia", "ranunculus", "gladiolus", "fuchsia", "birdofparadise",
+    "buttercup", "columbine", "delphinium", "foxglove", "gardenia", "larkspur",
+    "narcissus", "peony", "sweetpea", "tigerlily", "verbena", "wisteria"
 ]
 languages = [
-    "English", "Spanish", "French", "German", "Italian",
-    "Portuguese", "Russian", "Japanese", "Chinese", "Arabic",
-    "Hindi", "Bengali", "Urdu", "Indonesian", "Korean",
-    "Turkish", "Dutch", "Swedish", "Greek", "Polish",
-    "Vietnamese", "Thai", "Finnish", "Norwegian", "Danish",
-    "Romanian", "Czech", "Hungarian", "Slovak", "Croatian",
-    "Serbian", "Bulgarian", "Ukrainian", "Malay", "Tagalog",
-    "Lithuanian", "Latvian", "Estonian", "Albanian", "Slovenian",
-    "Macedonian", "Swahili", "Hausa", "Yoruba", "Zulu",
-    "Amharic", "Somali", "Gujarati", "Punjabi"
+    "English", "Spanish", "French", "German", "Italian", "Portuguese",
+    "Russian", "Japanese", "Chinese", "Arabic", "Hindi", "Bengali", "Urdu",
+    "Indonesian", "Korean", "Turkish", "Dutch", "Swedish", "Greek", "Polish",
+    "Vietnamese", "Thai", "Finnish", "Norwegian", "Danish", "Romanian",
+    "Czech", "Hungarian", "Slovak", "Croatian", "Serbian", "Bulgarian",
+    "Ukrainian", "Malay", "Tagalog", "Lithuanian", "Latvian", "Estonian",
+    "Albanian", "Slovenian", "Macedonian", "Swahili", "Hausa", "Yoruba",
+    "Zulu", "Amharic", "Somali", "Gujarati", "Punjabi"
 ]
 fruits = [
     "apple", "banana", "orange", "grape", "strawberry",
@@ -76,14 +82,19 @@ def startup_view():
     """
     Plays the startup welcome effect with colors and text effects.
     """
-    colorama.init()  # Initialize colorama
+    # Initialize colorama
+    colorama.init()
     # Welcome message with slow typing effect using txt_effect
-    print(Fore.CYAN + "—" * 74 + "\n") # Blue decorative line
+    # Blue decorative line
+    print(Fore.CYAN + "—" * 74 + "\n")
     txt_effect(Fore.WHITE + "Welcome to Hangman Madness!\n\n")
     txt_effect(Fore.WHITE + "Prepare yourself for an epic journey through the alphabet jungle.\n\n")
-    print(Fore.CYAN + "—" * 74 + "\n\n")  # Blue decorative line
-    time.sleep(1.5)  # Allow time for visual impact
-    colorama.deinit()  # Deinitialize colorama
+    # Blue decorative line
+    print(Fore.CYAN + "—" * 74 + "\n\n")
+    # Allow time for visual impact
+    time.sleep(1.5)
+    # Deinitialize colorama
+    colorama.deinit()
 def txt_effect(text_to_print):
     """
     Prints the text with a slower typing effect and additional customizations.
@@ -100,21 +111,78 @@ def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
-        "",
-        "      _____ \n     |      \n     |      \n     |      \n     |      \n     |      \n     |      \n   __|_________      ",
-        "      _____  \n     |     | \n     |       \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____ \n     |     | \n     |     O \n     |       \n     |       \n     |       \n     |       \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |     |  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|  \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____   \n     |     |  \n     |     O  \n     |    /|\\ \n     |        \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    /   \n     |        \n     |        \n   __|_________ ",
-        "      _____    \n     |     |  \n     |     O  \n     |    /|\\ \n     |    / \\ \n     |        \n     |        \n   __|_________ "
+        f"   ______\n"
+        f"  |      \n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|_________ ",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|_________ ",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |     /\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |     /|\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |     /|\\\n"
+        f"  |\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |     /|\\\n"
+        f"  |     /\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________",
+        f"   ______\n"
+        f"  |      |\n"
+        f"  |      O\n"
+        f"  |     /|\\\n"
+        f"  |     / \\\n"
+        f"  |\n"
+        f"  |\n"
+        f"__|__________"
     ]
     # Adjust the rate of displaying hangman stages based on the chosen level
     if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
-    else:  # Easy level
-        display_per_mistake = 2  # Hard level  # Display one stage per mistake
+    # Easy level
+    else:
+    # Hard level  # Display one stage per mistake
+        display_per_mistake = 2
     # Calculate the number of stages to display for the current mistake
     stages_to_display = min(mistakes * display_per_mistake, len(hangman_stages) - 1)
     print(Fore.RED + hangman_stages[stages_to_display] + Style.RESET_ALL)
@@ -133,7 +201,8 @@ def choose_level():
     print("Ready to tackle some challenging words?")
     print(" ")
     print(Fore.WHITE + "Step 1: Choose Your Level of Adventure!" + Style.RESET_ALL)
-    print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)  # Blue decorative line
+    # Blue decorative line
+    print(Fore.CYAN + "—" * 39 + Style.RESET_ALL)
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
     while True:
@@ -145,12 +214,14 @@ def choose_level():
                 chosen_level = list(levels.keys())[choice]
                 clear_terminal()
                 print("You selected:")
-                print(Fore.CYAN + "—" * 13 + Style.RESET_ALL) 
-                print(chosen_level + ".")  # Print the chosen category here
+                print(Fore.CYAN + "—" * 13 + Style.RESET_ALL)
+                # Print the chosen category here
+                print(chosen_level + ".")
                 print(" ")
                 print(f"Excellent choice {name}!")
                 print(" ")
-                chosen_level_lives = levels[chosen_level]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                chosen_level_lives = levels[chosen_level]
                 return chosen_level, chosen_level_lives, name
             else:
                 print(" ")
@@ -166,7 +237,8 @@ def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
     print("What is your favorite category?")
-    print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)  # Blue decorative line
+     # Blue decorative line
+    print(Fore.CYAN + "—" * 30 + Style.RESET_ALL)
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
     while True:
@@ -180,9 +252,12 @@ def choose_category(name):
                 print("You selected", chosen_category + ".")
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
-                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL ) # Blue decorative line
-                print("On your marks, get set, guess! The hangman's rope hangs in the balance!")  # Print the chosen category here
-                chosen_list = categories[chosen_category]  # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                # Blue decorative line
+                print(Fore.CYAN + "—" * 36 + Style.RESET_ALL )
+                # Print the chosen category here
+                print("On your marks, get set, guess! The hangman's rope hangs in the balance!")
+                # chosen_list refers to a list of words associated with the category that the user has chosen to play with.
+                chosen_list = categories[chosen_category]
                 return chosen_category, chosen_list
             else:
                 print(" ")
@@ -196,7 +271,8 @@ def choose_category(name):
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
-        word = random.choice(chosen_list) # randomly choose a word fron the chosen category
+        # randomly choose a word fron the chosen category
+        word = random.choice(chosen_list)
     return word.upper()
 def get_user_input(prompt):
     return input(prompt)
@@ -212,7 +288,8 @@ def hangman():
         display_hangman(mistakes, chosen_level)
         print (" ")
         print('You have', chosen_level_lives - mistakes, 'lives left.')
-        print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)  # Blue decorative line
+        # Blue decorative line
+        print(Fore.CYAN + "—" * 22 + Style.RESET_ALL)
         print(" ")
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
@@ -262,42 +339,52 @@ def continue_game():
         print(" ")
         choice = input().lower()
         if choice == "y":
-            clear_terminal()  # Assuming you have a clear_terminal function defined
+            # Assuming you have a clear_terminal function defined
+            clear_terminal()
             print(" ")
-            print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)  # Blue decorative line
+            # Blue decorative line
+            print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
             print(" ")
             print("Oh good, you haven't given up yet. This could get interesting...")
             print(" ")
             while True:
                 you_sure = input("Are you sure? (y/n) ").lower()
-                if you_sure in ("y", "n"):  # Check for both "y" and "n"
+                # Check for both "y" and "n"
+                if you_sure in ("y", "n"):
                     if you_sure == "y":
                         clear_terminal()
-                        hangman()  # Assuming you have a hangman function defined
-                        break  # Exit inner loop on confirmation
+                        # Assuming you have a hangman function defined
+                        hangman()
+                        # Exit inner loop on confirmation
+                        break
                     elif you_sure == "n":
                         print(" ")
-                        print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)  # Blue decorative line
+                        # Blue decorative line
+                        print(Fore.CYAN + "—" * 70 + Style.RESET_ALL)
                         print(" ")
                         print("Farewell, brave soul! Remember, quitting is bravery... sometimes.")
                         print(" ")
                         print("Don't tell my therapist I said that.")
                         print(" ")
-                        return  # Exit the function, effectively ending the game
+                        # Exit the function, effectively ending the game
+                        return
                 else:
                     print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
-        elif choice == "n":  # Handle "n" from the first prompt directly
+        # Handle "n" from the first prompt directly
+        elif choice == "n":
             clear_terminal()
             print(" ")
             print("Thanks for playing!")
-            print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)  # Blue decorative line
+            # Blue decorative line
+            print(Fore.CYAN + "—" * 19 + Style.RESET_ALL)
             print(" ")
             print("...and please excuse any existential dread")
             print("you may have experienced during the game.")
             print(" ")
             print("I'm still under development, after all :-)")
             print(" ")
-            break  # Exit the entire loop after farewell message
+            # Exit the entire loop after farewell message
+            break
         else:
             print("Wow, that was... something.")
             print(" ")
