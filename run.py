@@ -277,7 +277,7 @@ def choose_category(name):
                 print(Fore.RED + f"{name}, Please "
                 "enter a number between 1 and 5." + Style.RESET_ALL)
         else:
-            print("Is that character part of a secret code?\n\n")
+            print("Is that character part of a secret code?\n")
             print(Fore.RED + f"{name}, Please "
             "enter a number." + Style.RESET_ALL)
 def chosen_category_word(chosen_list):
