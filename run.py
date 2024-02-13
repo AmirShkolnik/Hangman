@@ -185,8 +185,8 @@ def display_hangman(mistakes, chosen_level):
     # Hard level  # Display one stage per mistake
         display_per_mistake = 2
     # Calculate the number of stages to display for the current mistake
-    stages_to_display = min(mistakes * 
-                            display_per_mistake, 
+    stages_to_display = min(mistakes *
+                            display_per_mistake,
                             len(hangman_stages) - 1)
     print(Fore.RED + hangman_stages[
                                     stages_to_display] + Style.RESET_ALL)
