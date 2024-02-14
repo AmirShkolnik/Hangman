@@ -1,3 +1,4 @@
+from tkinter import *
 import colorama
 import random
 import string
@@ -7,7 +8,17 @@ import time
 from datetime import datetime, date
 from colorama import init
 from colorama import Fore, Style
+init()
 name = ''
+
+root = Tk()
+
+app_width = 1000
+app_height = 500
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo",
     "rhino", "cheetah", "monkey", "gorilla", "kangaroo", "koala", "panda",
