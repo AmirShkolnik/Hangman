@@ -79,9 +79,7 @@ levels = {
     "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
 def startup_view():
-    """
-    Plays the startup welcome effect with colors and text effects.
-    """
+    # Plays the startup welcome effect with colors and text effects.
     # Initialize colorama
     colorama.init()
     # Welcome message with slow typing effect using txt_effect
@@ -99,6 +97,8 @@ def startup_view():
     # Prints the text with a slower typing
     # effect and additional customizations
     # Adjust speed if needed (lower number means slower typing)
+
+
 def txt_effect(text_to_print):
     for character in text_to_print:
         time.sleep(0.03)
@@ -106,8 +106,12 @@ def txt_effect(text_to_print):
         sys.stdout.flush()
     # From:
     # https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+
+
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
         f"   ______\n"
@@ -189,6 +193,8 @@ def display_hangman(mistakes, chosen_level):
     print(Fore.RED + hangman_stages
           [stages_to_display] + Style.RESET_ALL)
     return stages_to_display
+
+
 def choose_level():
     startup_view()
     name_is_valid = False
@@ -240,6 +246,8 @@ def choose_level():
             print(" ")
             print(Fore.RED + f"{name}, Please "
                   "enter a number." + Style.RESET_ALL)
+
+
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     print(" ")
@@ -279,14 +287,20 @@ def choose_category(name):
             print("Is that character part of a secret code?\n")
             print(Fore.RED + f"{name}, Please "
                   "enter a number." + Style.RESET_ALL)
+
+
 def chosen_category_word(chosen_list):
     word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
         # randomly choose a word fron the chosen category
         word = random.choice(chosen_list)
     return word.upper()
+
+
 def get_user_input(prompt):
     return input(prompt)
+
+
 def hangman():
     chosen_level, chosen_level_lives, name = choose_level()
     chosen_category, chosen_list = choose_category(name)
@@ -345,6 +359,8 @@ def hangman():
         print("Your detective skills are sharper than\n"
               "Sherlock Holmes on a caffeine bender.")
         print(" ")
+
+
 def continue_game():
     while True:
         print("Ready for another round?\n\n"
@@ -407,6 +423,8 @@ def continue_game():
             print(" ")
             print(Fore.RED + "Please enter 'y' or 'n'." + Style.RESET_ALL)
             print(" ")
+
+
 if __name__ == "__main__":
     hangman()
     continue_game()
