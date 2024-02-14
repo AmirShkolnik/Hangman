@@ -200,7 +200,7 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print("Please enter at least 3 letters for your username\n")
+            print("\033[91mGimme names, not games! 3+ letters!\033[0m\n")
     print(f"{name}, thrilled to have you join!\n")
     print("Ready to tackle some challenging words?\n")
     print("Step 1: Choose "
@@ -230,7 +230,7 @@ def choose_level():
                 return chosen_level, chosen_level_lives, name
             else:
                 print(" ")
-                print("My circuits are overloaded!")
+                print("\033[91mMy circuits are overloaded!\033[0m")
                 print(" ")
                 print(f"{name}, Please enter "
                       "a number between 1 and 2.")
@@ -238,14 +238,13 @@ def choose_level():
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
             print(" ")
-            print(f"{name}, Please "
-                  "enter a number.")
+            print(f"\033[91m{name}, Please enter a number.\033[0m")
 
 
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
     # Blue decorative line
-    print("\033[1;36;40m" + "—" * 30 + "\033[0m\n")
+    print("\033[1;36;40m" + "—" * 43 + "\033[0m\n")
     print("What is your favorite category?")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
@@ -258,9 +257,10 @@ def choose_category(name):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
                 print("You selected", chosen_category + ".")
-                # Blue decorative line
-                print("\033[1;36;40m" + "—" * 30 + "\033[0m\n")
+                print(" ")
                 print("Step 3: Let the guessing game begin!")
+                # Blue decorative line
+                print("\033[1;36;40m" + "—" * 36 + "\033[0m\n")
                 # Print the chosen category here
                 print("On your marks, get set, guess!\n"
                       "The hangman's rope hangs in the balance!")
@@ -272,11 +272,11 @@ def choose_category(name):
             else:
                 print(" ")
                 print("I see you're struggling with "
-                      "your keyboard skills.\n\n")
-                print(f"{name}, Please "
-                      "enter a number between 1 and 5.")
+                      "your keyboard skills.\n")
+                print("\033[91mPlease enter a number between 1 and 5.\033[0m")
         else:
-            print("Is that character part of a secret code?\n")
+            print(" ")
+            print("\033[91mIs that character part of a secret code?\033[0m\n")
             print(f"{name}, Please "
                   "enter a number.")
 
@@ -317,12 +317,13 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print("The eagle has landed! Or was it a penguin?\n\n"
+                print("\033[92mThe eagle has landed! \033[0m"
+                      "\033[92mOr was it a penguin?\033[0m\n\n"
                       "No matter, you guessed right!")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
-                print("Yikes! Swing and a miss...")
+                print("\033[91mYikes! Swing and a miss...\033[0m")
         elif user_letter in used_letters:
             clear_terminal()
             print("Oopsie! That letter's already "
@@ -332,18 +333,18 @@ def hangman():
             print(" ")
             print("The keyboard gremlins just ate your character!")
             print(" ")
-            print("Please choose a valid "
-                  "one before they attack again.")
+            print("\033[91mPlease choose a valid\033[0m"
+                  "\033[91mone before they attack again.\033[0m")
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
         print("Aw, shucks! Looks like your brain "
               "went on vacation with the penguins.")
-        print("The word was" + word)
+        print("\033[92mThe word was", word, "\033[0m")
         print(" ")
     else:
         print(" ")
-        print("The word was" + word)
+        print("\033[92mThe word was", word, "\033[0m")
         print(" ")
         print("You guessed it!")
         print(" ")
