@@ -1,3 +1,4 @@
+import colorama
 import random
 import string
 import sys
