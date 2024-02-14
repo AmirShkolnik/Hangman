@@ -1,13 +1,13 @@
+import colorama
 import random
 import string
 import sys
 import os
 import time
 from datetime import datetime, date
-import colorama
 from colorama import init
 from colorama import Fore, Style
-init()
+colorama.init()
 name = ''
 animals = [
     "dog", "cat", "elephant", "lion", "tiger", "zebra", "giraffe", "hippo",
