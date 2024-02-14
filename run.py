@@ -211,7 +211,7 @@ def choose_level():
                   "letters for your username\n" + Style.RESET_ALL)
         print(" ")
     print(f"{name}, thrilled to have you join!")
-    print("Ready to tackle some challenging words?")
+    print("Ready to tackle some challenging words?\n\n")
     print(Fore.WHITE + "Step 1: Choose "
           "Your Level of Adventure!" + Style.RESET_ALL)
     # Blue decorative line
