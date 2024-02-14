@@ -186,8 +186,8 @@ def display_hangman(mistakes, chosen_level):
     stages_to_display = min(mistakes *
                             display_per_mistake,
                             len(hangman_stages) - 1)
-    print(hangman_stages
-          [stages_to_display])
+    print("\033[91m" + hangman_stages
+          [stages_to_display] + "\033[0m")
     return stages_to_display
 
 
@@ -201,9 +201,8 @@ def choose_level():
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
             print("Please enter at least 3 letters for your username\n")
-        print(" ")
-    print(f"{name}, thrilled to have you join!")
-    print("Ready to tackle some challenging words?\n\n")
+    print(f"{name}, thrilled to have you join!\n")
+    print("Ready to tackle some challenging words?\n")
     print("Step 1: Choose "
           "Your Level of Adventure!")
     # Blue decorative line
@@ -212,7 +211,7 @@ def choose_level():
         print(f"{i+1}. {level}")
     while True:
         print(" ")
-        choice = input("Enter your level (1-2): \n")
+        choice = input("Enter your level (1-2): ")
         if choice.isdigit():
             choice = int(choice) - 1
             if 0 <= choice < len(levels):
@@ -252,7 +251,7 @@ def choose_category(name):
         print(f"{i+1}. {category}")
     while True:
         print(" ")
-        choice = input("Enter your choice (1-5): \n")
+        choice = input("Enter your choice (1-5): ")
         if choice.isdigit():
             choice = int(choice) - 1
             if 0 <= choice < len(categories):
@@ -308,12 +307,12 @@ def hangman():
         print('You have', chosen_level_lives - mistakes, 'lives left.')
         # Blue decorative line
         print("\033[1;36;40m" + "—" * 22 + "\033[0m\n")
-        word_list = [letter if letter in
+        word_list = [f'\033[1;36m{letter}\033[0m' if letter in
                      used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
         print(" ")
-        user_letter = input('Guess a letter: \n').upper()
+        user_letter = input('Guess a letter: ').upper()
         if user_letter in alphabet - used_letters:
             clear_terminal()
             used_letters.add(user_letter)
