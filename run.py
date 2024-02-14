@@ -78,6 +78,8 @@ levels = {
     "Easy - 8 lives: Perfect for hangman beginners": 8,
     "Hard - 4 lives: For the daring souls who seek a challenge": 4
 }
+
+
 def startup_view():
     # Plays the startup welcome effect with colors and text effects.
     # Initialize colorama
