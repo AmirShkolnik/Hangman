@@ -219,7 +219,7 @@ def choose_level():
                 chosen_level = list(levels.keys())[choice]
                 clear_terminal()
                 print("You selected:")
-                print("—" * 13)
+                print("\033[1;36;40m" + "—" * 13 + "\033[0m\n")
                 # Print the chosen category here
                 print(chosen_level + ".")
                 print(" ")
@@ -245,10 +245,9 @@ def choose_level():
 
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
-    print(" ")
-    print("What is your favorite category?")
     # Blue decorative line
     print("\033[1;36;40m" + "—" * 30 + "\033[0m\n")
+    print("What is your favorite category?")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
     while True:
@@ -260,7 +259,8 @@ def choose_category(name):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
                 print("You selected", chosen_category + ".")
-                print(" ")
+                # Blue decorative line
+                print("\033[1;36;40m" + "—" * 30 + "\033[0m\n")
                 print("Step 3: Let the guessing game begin!")
                 # Blue decorative line
                 print("\033[1;36;40m" + "—" * 36 + "\033[0m\n")
