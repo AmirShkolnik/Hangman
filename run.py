@@ -262,8 +262,6 @@ def choose_category(name):
                 # Blue decorative line
                 print("\033[1;36;40m" + "—" * 30 + "\033[0m\n")
                 print("Step 3: Let the guessing game begin!")
-                # Blue decorative line
-                print("\033[1;36;40m" + "—" * 36 + "\033[0m\n")
                 # Print the chosen category here
                 print("On your marks, get set, guess!\n"
                       "The hangman's rope hangs in the balance!")
@@ -310,7 +308,6 @@ def hangman():
         print('You have', chosen_level_lives - mistakes, 'lives left.')
         # Blue decorative line
         print("\033[1;36;40m" + "—" * 22 + "\033[0m\n")
-        print(" ")
         word_list = [letter if letter in
                      used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
@@ -343,13 +340,13 @@ def hangman():
         print(" ")
         print("Aw, shucks! Looks like your brain "
               "went on vacation with the penguins.")
-        print("The word was", Fore.GREEN + word)
+        print("The word was" + word)
         print(" ")
     else:
         print(" ")
-        print("The word was", Fore.GREEN + word)
+        print("The word was" + word)
         print(" ")
-        print(Fore.GREEN + "You guessed it!")
+        print("You guessed it!")
         print(" ")
         print("Your detective skills are sharper than\n"
               "Sherlock Holmes on a caffeine bender.")
