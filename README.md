@@ -437,6 +437,8 @@ Bugs
 ## After
 ![Bug number 5](Readme-images/bug-5-after.png)
 
+- Bug nr. 6. - https://stackoverflow.com/questions/41561952/i-get-continuation-line-under-indented-for-visual-indent-error
+
 
 
      def get_valid_word(words_list):
