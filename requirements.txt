@@ -1,3 +1,2 @@
 colorama==0.4.6
 pipenv==2021.5.29
-pygame==2.5.2
