@@ -312,8 +312,8 @@ def hangman():
         display_hangman(mistakes, chosen_level)
         print(" ")
         print('You have', chosen_level_lives - mistakes, 'lives left.')
-        # Blue decorative line
-        print("\033[1;36;40m" + "—" * 22 + "\033[0m\n")
+        # Yellow decorative line
+        print("\033[1;33;40m" + "—" * 22 + "\033[0m\n")
         word_list = [f'\033[1;36m{letter}\033[0m' if letter in
                      used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
@@ -369,8 +369,8 @@ def continue_game():
             # Assuming you have a clear_terminal function defined
             clear_terminal()
             print(" ")
-            # Blue decorative line
-            print("\033[1;36;40m" + "—" * 70 + "\033[0m\n")
+            # Yellow decorative line
+            print("\033[1;33;40m" + "—" * 70 + "\033[0m\n")
             print(" ")
             print("Oh good, you haven't given "
                   "up yet. This could get interesting...")
@@ -387,8 +387,8 @@ def continue_game():
                         break
                     elif you_sure == "n":
                         print(" ")
-                        # Blue decorative line
-                        print("\033[1;36;40m" + "—" * 70 + "\033[0m\n")
+                        # Yellow decorative line
+                        print("\033[1;33;40m" + "—" * 70 + "\033[0m\n")
                         print(" ")
                         print("Farewell, brave soul! Remember, "
                               "quitting is bravery... sometimes.")
@@ -405,8 +405,8 @@ def continue_game():
             clear_terminal()
             print(" ")
             print("Thanks for playing!")
-            # Blue decorative line
-            print("\033[1;36;40m" + "—" * 19 + "\033[0m\n")
+            # Yellow decorative line
+            print("\033[1;33;40m" + "—" * 19 + "\033[0m\n")
             print(" ")
             print("...and please excuse any existential dread")
             print("you may have experienced during the game.")
