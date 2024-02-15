@@ -10,6 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
     <title>The Hangman Madness</title>
     <style>
+        /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Lemon&Kaisei+HarunoUmi&display=swap');
         body {
             margin: 0;
             font-family: Arial;
@@ -26,6 +28,7 @@
 
         header {
             text-shadow: 2px 2px #272727;
+            font-family: "Lemon", sans-serif;
             font-size: xx-large;
             color: #f7c331;
             text-shadow: #f7c331;
@@ -188,6 +191,9 @@
             margin: 10px;
             margin-bottom: 20px;
             border-radius: 8px;
+        }
+        button:hover {
+            transform: perspective(500px) rotateY(20deg);
         }
     </style>
 </head>
