@@ -81,8 +81,6 @@ levels = {
 def startup_view():
     # Plays the startup welcome effect with colors and text effects.
     # Welcome message with slow typing effect using txt_effect
-    # Blue decorative line
-    print("\033[1;36;40m" + "—" * 74 + "\033[0m\n")
     txt_effect("Welcome to The Hangman Madness!\n\n")
     txt_effect("\033[91m"
           f"   ______\n"
