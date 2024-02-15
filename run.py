@@ -84,9 +84,7 @@ def startup_view():
     # Blue decorative line
     print("\033[1;36;40m" + "—" * 74 + "\033[0m\n")
     txt_effect("Welcome to The Hangman Madness!\n\n")
-    txt_effect("Prepare yourself for an epic journey "
-               "through the alphabet jungle.\n\n")
-    print("\033[91m"
+    txt_effect("\033[91m"
           f"   ______\n"
           f"  |      |\n"
           f"  |      O\n"
@@ -95,7 +93,9 @@ def startup_view():
           f"  |\n"
           f"  |\n"
           f"__|_________"
-          + "\033[0m")
+          + "\033[0m\n\n")
+    txt_effect("Prepare yourself for an epic journey "
+               "through the alphabet jungle.\n")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
