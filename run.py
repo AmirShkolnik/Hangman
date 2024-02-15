@@ -116,6 +116,7 @@ def clear_terminal():
 
 def display_hangman(mistakes, chosen_level):
     hangman_stages = [
+        "",
         f"   ______\n"
         f"  |      \n"
         f"  |\n"
@@ -206,7 +207,7 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print("Gimme names, not games!\n")
+            print("Gimme names, not games!")
             print("\033[91mEnter at least 3 letters!\033[0m\n")
     print(f"{name}, thrilled to have you join!\n")
     print("Ready to tackle some challenging words?\n")
