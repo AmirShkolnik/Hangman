@@ -262,7 +262,7 @@ def choose_category(name):
             if 0 <= choice < len(categories):
                 clear_terminal()
                 chosen_category = list(categories.keys())[choice]
-                print("You selected", chosen_category + ".")
+                print("\033[92mYou selected", chosen_category + ".\033[0m")
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
                 # Yellow decorative line
