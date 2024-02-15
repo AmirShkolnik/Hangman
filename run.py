@@ -82,7 +82,7 @@ def startup_view():
     # Plays the startup welcome effect with colors and text effects.
     # Welcome message with slow typing effect using txt_effect
     txt_effect("Welcome to The Hangman Madness!\n\n")
-    txt_effect("\033[1;33;40m"
+    txt_effect("\033[91m"
           f"   ______\n"
           f"  |      |\n"
           f"  |      O\n"
@@ -91,7 +91,7 @@ def startup_view():
           f"  |\n"
           f"  |\n"
           f"__|_________"
-          + "\033[0m\n")
+          + "\033[0m\n\n")
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
     # Allow time for visual impact
