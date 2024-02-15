@@ -279,7 +279,7 @@ def choose_category(name):
             else:
                 print(" ")
                 print("I see you're struggling with "
-                      "your keyboard skills.\n")
+                      "your keyboard skills.")
                 print("\033[91mPlease enter a number between 1 and 5.\033[0m")
         else:
             print(" ")
