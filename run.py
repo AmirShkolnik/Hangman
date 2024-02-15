@@ -209,7 +209,7 @@ def choose_level():
         if name_is_valid is False:
             print("Gimme names, not games!")
             print("\033[91mEnter at least 3 letters!\033[0m\n")
-    print(f"{name}, thrilled to have you join!\n")
+    print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?\n")
     print("Step 1: Choose "
           "Your Level of Adventure!")
