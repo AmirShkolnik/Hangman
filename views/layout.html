@@ -8,10 +8,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
+    <!--Favicon must have links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="views/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="views/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="views/favicon/favicon-32x32.png">
     <title>The Hangman Madness</title>
     <style>
         /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Lemon&Kaisei+HarunoUmi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lemon&Kaisei+HarunoUmi&display=swap');
+
         body {
             margin: 0;
             font-family: Arial;
@@ -39,7 +44,7 @@
         */
 
         .xterm {
-            font-feature-settings: "liga"0;
+            font-feature-settings: "liga" 0;
             position: relative;
             user-select: none;
             -ms-user-select: none;
@@ -183,7 +188,7 @@
         button {
             width: 200px;
             height: 40px;
-            font-weight:bold;
+            font-weight: bold;
             background-color: #f7c331;
             border: 1px solid grey;
             color: black;
@@ -192,9 +197,19 @@
             margin-bottom: 20px;
             border-radius: 8px;
         }
+
         button:hover {
             transform: perspective(500px) rotateY(20deg);
-            font-weight:bold;
+            font-weight: bold;
+        }
+
+        /* Media query: Mobile devices. (min-width:321px - max-width:480px) */
+
+        @media screen and (min-width: 321px) and (max-width: 480px) {
+
+            header {
+            font-size: large;
+            }
         }
     </style>
 </head>
