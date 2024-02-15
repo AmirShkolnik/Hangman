@@ -323,9 +323,9 @@ def hangman():
             clear_terminal()
             used_letters.add(user_letter)
             if user_letter in word_letters:
-                print("\033[92mThe eagle has landed! \033[0m"
-                      "\033[92mOr was it a penguin?\033[0m\n\n"
-                      "No matter, you guessed right!")
+                print("The eagle has landed! "
+                      "Or was it a penguin?\n"
+                      "\033[92mNo matter, you guessed right!\033[0m")
                 word_letters.remove(user_letter)
             else:
                 mistakes += 1
