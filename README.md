@@ -18,7 +18,7 @@ To play "The Hangman Madness," simply select your desired level and category. Th
 
 The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
-![Jungle Quiz](doc/readme-images/amiresponsive.png)
+![Hangman Madness](Readme-images/AmIResponsive.png)
 
 ## CONTENTS
 
