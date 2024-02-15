@@ -342,8 +342,9 @@ def hangman():
     if mistakes == chosen_level_lives:
         display_hangman(mistakes, chosen_level)
         print(" ")
-        print("Aw, shucks!\nLooks like your brain "
-              "went\non vacation with the penguins.")
+        print("\033[91mAw, shucks!\n\n\033[0m"
+              "Looks like your brain "
+              "went\non vacation with the penguins.\n")
         print("\033[92mThe word was", word, "\033[0m")
         print(" ")
     else:
