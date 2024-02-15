@@ -83,15 +83,15 @@ def startup_view():
     # Welcome message with slow typing effect using txt_effect
     txt_effect("Welcome to The Hangman Madness!\n\n")
     txt_effect("\033[91m"
-          f"   ______\n"
-          f"  |      |\n"
-          f"  |      O\n"
-          f"  |     /|\\\n"
-          f"  |     / \\\n"
-          f"  |\n"
-          f"  |\n"
-          f"__|_________"
-          + "\033[0m\n\n")
+               f"   ______\n"
+               f"  |      |\n"
+               f"  |      O\n"
+               f"  |     /|\\\n"
+               f"  |     / \\\n"
+               f"  |\n"
+               f"  |\n"
+               f"__|_________"
+               + "\033[0m\n\n")
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
     # Allow time for visual impact
@@ -228,7 +228,7 @@ def choose_level():
                 # Print the chosen category here
                 print(chosen_level + ".")
                 # Yellow decorative line
-                print("\033[1;33;40m" + "—" * 57 + "\033[0m\n")
+                print("\033[1;33;40m" + "—" * 58 + "\033[0m\n")
                 print(f"Excellent choice {name}!")
                 print(" ")
                 # chosen_list refers to a list of words associated
