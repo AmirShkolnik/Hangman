@@ -95,7 +95,7 @@ def startup_view():
           f"__|_________"
           + "\033[0m\n\n")
     txt_effect("Prepare yourself for an epic journey "
-               "through the alphabet jungle.\n")
+               "through the alphabet jungle.\n\n")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
