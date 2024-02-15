@@ -244,7 +244,6 @@ def choose_level():
         else:
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
-            print(" ")
             print(f"\033[91m{name}, Please enter a number.\033[0m")
 
 
