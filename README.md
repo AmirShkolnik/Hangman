@@ -1,6 +1,6 @@
-![Jungle Quiz Logo](doc/readme-images/Jungel-Quiz-Logo.png)
+![Hangman Logo](Readme-images/The-Hangman-Madness.png)
 
-Welcome To The Jungle Quiz!
+Welcome To The Hangman Madness!
 ---------------------------
 
 Embark on an exhilarating journey into the heart of the jungle with our Jungle Quiz!
@@ -15,7 +15,7 @@ Your score will be revealed instantly, and in just 2 seconds, you'll move on to 
 
 Are you ready to answer the call of the wild and conquer the Jungle Quiz?
 
-The live link can be found here - [Jungle Quiz](https://amirshkolnik.github.io/JungleQuiz/)
+The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
 ![Jungle Quiz](doc/readme-images/amiresponsive.png)
 
