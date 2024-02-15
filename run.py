@@ -230,7 +230,7 @@ def choose_level():
                 print(chosen_level + ".")
                 # Yellow decorative line
                 print("\033[1;33;40m" + "—" * 58 + "\033[0m\n")
-                print(f"Excellent choice {name}!")
+                print(f"\033[92mExcellent choice {name}!\033[0m")
                 print(" ")
                 # chosen_list refers to a list of words associated
                 # with the category that the user has chosen to play with.
