@@ -332,7 +332,7 @@ def hangman():
                 print("\033[91mYikes! Swing and a miss...\033[0m")
         elif user_letter in used_letters:
             clear_terminal()
-            print("Oopsie! That letter's already "
+            print("\033[91mOopsie!\033[0m That letter's already "
                   "been served.\nLet's order something new!")
         else:
             clear_terminal()
