@@ -385,11 +385,9 @@ def continue_game():
                     elif you_sure == "n":
                         clear_terminal()
                         print(" ")
-                        print("Farewell, brave soul! Remember, "
-                              "quitting is bravery... sometimes.")
-                        print(" ")
+                        print("Farewell, brave soul! Remember,\n"
+                              "quitting is bravery... sometimes.\n")
                         print("Don't tell my therapist I said that.")
-                        print(" ")
                         # Exit the function, effectively ending the game
                         return
                 else:
