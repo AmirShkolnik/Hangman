@@ -411,12 +411,10 @@ def continue_game():
             # Exit the entire loop after farewell message
             break
         else:
+            print(" ")
             print("Wow, that was... something.")
-            print(" ")
             print("Are you trying to speak Morse code?")
-            print(" ")
-            print("\033[91mPlease enter 'y' or 'n'.\033[0m")
-            print(" ")
+            print("\033[91mPlease enter 'y' or 'n'.\033[0m\n")
 
 
 if __name__ == "__main__":
