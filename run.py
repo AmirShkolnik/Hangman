@@ -333,7 +333,7 @@ def hangman():
         elif user_letter in used_letters:
             clear_terminal()
             print("Oopsie! That letter's already "
-                  "been served. Let's order something new!")
+                  "been served.\nLet's order something new!")
         else:
             clear_terminal()
             print("The keyboard gremlins just ate your character!")
