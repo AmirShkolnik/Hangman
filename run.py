@@ -83,11 +83,11 @@ def startup_view():
     # Welcome message with slow typing effect using txt_effect
     # Blue decorative line
     print("\033[1;36;40m" + "—" * 74 + "\033[0m\n")
-    txt_effect("Welcome to Hangman Madness!\n\n")
+    txt_effect("Welcome to The Hangman Madness!\n\n")
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
-    # Blue decorative line
-    print("\033[1;36;40m" + "—" * 74 + "\033[0m\n")
+    print("\033[91m" + hangman_stages
+          [8] + "\033[0m")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
