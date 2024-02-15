@@ -238,7 +238,6 @@ def choose_level():
             else:
                 print(" ")
                 print("My circuits are overloaded!")
-                print(" ")
                 print(f"\033[91m{name}, Please enter \033[0m"
                       "\033[91ma number between 1 and 2.\033[0m")
         else:
