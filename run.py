@@ -362,15 +362,12 @@ def hangman():
 
 def continue_game():
     while True:
-        print("Ready for another round? (y/n)"
+        print("Ready for another round? (y/n)\n"
               "It's like potato chips, you can't have just one.")
         choice = input().lower()
         if choice == "y":
             # Assuming you have a clear_terminal function defined
             clear_terminal()
-            print(" ")
-            # Yellow decorative line
-            print("\033[1;33;40m" + "—" * 70 + "\033[0m\n")
             print(" ")
             print("Oh good, you haven't given "
                   "up yet. This could get interesting...")
@@ -386,9 +383,7 @@ def continue_game():
                         # Exit inner loop on confirmation
                         break
                     elif you_sure == "n":
-                        print(" ")
-                        # Yellow decorative line
-                        print("\033[1;33;40m" + "—" * 70 + "\033[0m\n")
+                        clear_terminal()
                         print(" ")
                         print("Farewell, brave soul! Remember, "
                               "quitting is bravery... sometimes.")
