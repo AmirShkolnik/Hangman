@@ -206,13 +206,14 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print("\033[91mGimme names, not games! 3+ letters!\033[0m\n")
+            print("\033[91mGimme names, not games!\033[0m\n")
+            print("\033[91mEnter at least 3 letters!\033[0m\n")
     print(f"{name}, thrilled to have you join!\n")
     print("Ready to tackle some challenging words?\n")
     print("Step 1: Choose "
           "Your Level of Adventure!")
-    # Blue decorative line
-    print("\033[1;36;40m" + "—" * 39 + "\033[0m\n")
+    # Yellow decorative line
+    print("\033[1;33;40m" + "—" * 39 + "\033[0m\n")
     for i, level in enumerate(levels):
         print(f"{i+1}. {level}")
     while True:
