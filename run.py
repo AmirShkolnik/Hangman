@@ -206,7 +206,7 @@ def choose_level():
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
-            print("\033[91mGimme names, not games!\033[0m\n")
+            print("Gimme names, not games!\n")
             print("\033[91mEnter at least 3 letters!\033[0m\n")
     print(f"{name}, thrilled to have you join!\n")
     print("Ready to tackle some challenging words?\n")
@@ -225,10 +225,10 @@ def choose_level():
                 chosen_level = list(levels.keys())[choice]
                 clear_terminal()
                 print("You selected:")
-                print("\033[1;36;40m" + "—" * 13 + "\033[0m\n")
                 # Print the chosen category here
                 print(chosen_level + ".")
-                print(" ")
+                # Yellow decorative line
+                print("\033[1;33;40m" + "—" * 72 + "\033[0m\n")
                 print(f"Excellent choice {name}!")
                 print(" ")
                 # chosen_list refers to a list of words associated
@@ -250,8 +250,8 @@ def choose_level():
 
 def choose_category(name):
     print("Step 2: Let's explore the world of letters!")
-    # Blue decorative line
-    print("\033[1;36;40m" + "—" * 43 + "\033[0m\n")
+    # Yellow decorative line
+    print("\033[1;33;40m" + "—" * 43 + "\033[0m\n")
     print("What is your favorite category?")
     for i, category in enumerate(categories):
         print(f"{i+1}. {category}")
@@ -266,8 +266,8 @@ def choose_category(name):
                 print("You selected", chosen_category + ".")
                 print(" ")
                 print("Step 3: Let the guessing game begin!")
-                # Blue decorative line
-                print("\033[1;36;40m" + "—" * 36 + "\033[0m\n")
+                # Yellow decorative line
+                print("\033[1;33;40m" + "—" * 36 + "\033[0m\n")
                 # Print the chosen category here
                 print("On your marks, get set, guess!\n"
                       "The hangman's rope hangs in the balance!")
