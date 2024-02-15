@@ -1,19 +1,20 @@
 ![Hangman Logo](Readme-images/The-Hangman-Madness.png)
 
 Welcome To The Hangman Madness!
----------------------------
+-------------------------------
 
-Embark on an exhilarating journey into the heart of the jungle with our Jungle Quiz!
+Imagine being stuck in a car during a snowstorm, the icy wind howling outside while you sit snugly inside. Boredom begins to creep in, but then you remember the Hangman Madness game on your phone. With two levels to choose from, you opt for the daring challenge of Hard mode, ready to test your skills.
 
-Test your knowledge and explore the mysteries of the jungle with 5 captivating questions randomly selected from our extensive database of 20 intriguing queries.
+Scrolling through the categories, you select "Languages" and begin guessing letters, trying to uncover the hidden word. Each incorrect guess brings a moment of suspense, but also a hint of laughter as you try to outsmart the hangman.
 
-With each question, challenge yourself to uncover the secrets of the jungle while immersing yourself in the wonders of nature.
+Despite the freezing temperatures outside, the game keeps you entertained and focused. Finally, after a series of amusing guesses, you unveil the word "Esperanto," feeling a sense of triumph in the midst of the storm.
 
-Don't worry if you're not sure - take your best guess and click on an answer. Correct answers will shine in yellow following the text "The Answer Is:", while incorrect ones will stand out in red.
+As you wait for the snowplows to clear the highway, you realize that even in the chilliest of situations, a little game can bring warmth and joy.
 
-Your score will be revealed instantly, and in just 2 seconds, you'll move on to the next question. At the conclusion of your jungle adventure, receive feedback tailored to your performance. 
+How To Play
+-----------
 
-Are you ready to answer the call of the wild and conquer the Jungle Quiz?
+To play "The Hangman Madness," simply select your desired level and category. Then, guess letters to reveal the hidden word, but be careful not to run out of lives!
 
 The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
