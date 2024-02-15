@@ -86,8 +86,16 @@ def startup_view():
     txt_effect("Welcome to The Hangman Madness!\n\n")
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
-    print("\033[91m" + hangman_stages
-          [8] + "\033[0m")
+    print("\033[91m"
+          f"   ______\n"
+          f"  |      |\n"
+          f"  |      O\n"
+          f"  |     /|\\\n"
+          f"  |     / \\\n"
+          f"  |\n"
+          f"  |\n"
+          f"__|_________"
+          + "\033[0m")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
