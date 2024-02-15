@@ -336,9 +336,7 @@ def hangman():
                   "been served. Let's order something new!")
         else:
             clear_terminal()
-            print(" ")
             print("The keyboard gremlins just ate your character!")
-            print(" ")
             print("\033[91mPlease choose a valid \033[0m"
                   "\033[91mone before they attack again.\033[0m")
     if mistakes == chosen_level_lives:
