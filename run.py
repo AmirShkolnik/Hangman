@@ -237,10 +237,10 @@ def choose_level():
                 return chosen_level, chosen_level_lives, name
             else:
                 print(" ")
-                print("\033[91mMy circuits are overloaded!\033[0m")
+                print("My circuits are overloaded!")
                 print(" ")
-                print(f"{name}, Please enter "
-                      "a number between 1 and 2.")
+                print(f"\033[91m{name}, Please enter \033[0m"
+                      "\033[91ma number between 1 and 2.\033[0m"")
         else:
             print(" ")
             print("Your character sounds like a dolphin sneeze.")
@@ -283,9 +283,9 @@ def choose_category(name):
                 print("\033[91mPlease enter a number between 1 and 5.\033[0m")
         else:
             print(" ")
-            print("\033[91mIs that character part of a secret code?\033[0m\n")
-            print(f"{name}, Please "
-                  "enter a number.")
+            print("Is that character part of a secret code?")
+            print(f"\033[91m{name}, Please \033[0m"
+                  "\033[91menter a number.\033[0m")
 
 
 def chosen_category_word(chosen_list):
@@ -398,8 +398,8 @@ def continue_game():
                         # Exit the function, effectively ending the game
                         return
                 else:
-                    print("Please enter "
-                          "'y' or 'n'.")
+                    print("\033[91mPlease enter \033[0m"
+                          "\033[91m'y' or 'n'.\033[0m")
         # Handle "n" from the first prompt directly
         elif choice == "n":
             clear_terminal()
@@ -420,7 +420,7 @@ def continue_game():
             print(" ")
             print("Are you trying to speak Morse code?")
             print(" ")
-            print("Please enter 'y' or 'n'.")
+            print("\033[91mPlease enter 'y' or 'n'.\033[0m")
             print(" ")
 
 
