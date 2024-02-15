@@ -362,8 +362,8 @@ def hangman():
 
 def continue_game():
     while True:
-        print("Ready for another round?\n\n"
-              "It's like potato chips, you can't have just one. (y/n)")
+        print("Ready for another round? (y/n)"
+              "It's like potato chips, you can't have just one.")
         choice = input().lower()
         if choice == "y":
             # Assuming you have a clear_terminal function defined
