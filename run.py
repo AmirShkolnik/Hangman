@@ -371,7 +371,10 @@ def continue_game():
                   "up yet. This could get interesting...")
             print(" ")
             while True:
-                you_sure = input("Are you sure? (y/n)\n").lower()
+                print("Are you as certain as a squirrel\n"
+                      "crossing a busy highway?\n"
+                      "better say...\n")
+                you_sure = input("Are you sure you're sure? (y/n)\n").lower()
                 # Check for both "y" and "n"
                 if you_sure in ("y", "n"):
                     if you_sure == "y":
