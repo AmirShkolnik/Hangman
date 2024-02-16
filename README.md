@@ -3,18 +3,51 @@
 Welcome To The Hangman Madness!
 -------------------------------
 
-Imagine being stuck in a car during a snowstorm, the icy wind howling outside while you sit snugly inside. Boredom begins to creep in, but then you remember the Hangman Madness game on your phone. With two levels to choose from, you opt for the daring challenge of Hard mode, ready to test your skills.
+Imagine being stuck in a car during a snowstorm, the icy wind howling outside while you sit snugly inside. 
 
-Scrolling through the categories, you select "Languages" and begin guessing letters, trying to uncover the hidden word. Each incorrect guess brings a moment of suspense, but also a hint of laughter as you try to outsmart the hangman.
+Boredom begins to creep in, but then you remember the Hangman Madness game on your phone. With two levels 
+to choose from, you opt for the daring challenge of Hard mode, ready to test your skills.
 
-Despite the freezing temperatures outside, the game keeps you entertained and focused. Finally, after a series of amusing guesses, you unveil the word "Esperanto," feeling a sense of triumph in the midst of the storm.
+Scrolling through the categories, you select "Languages" and begin guessing letters, trying to uncover the hidden word. 
+Each incorrect guess brings a moment of suspense, but also a hint of laughter as you try to outsmart the hangman.
 
-As you wait for the snowplows to clear the highway, you realize that even in the chilliest of situations, a little game can bring warmth and joy.
+Despite the freezing temperatures outside, the game keeps you entertained and focused. Finally, after a series of 
+amusing guesses, you unveil the word "Esperanto," feeling a sense of triumph in the midst of the storm.
+
+As you wait for the snowplows to clear the highway, you realize that even in the chilliest of situations, 
+a little game can bring warmth and joy.
+
+The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
 How To Play
 -----------
 
-To play "The Hangman Madness," simply select your desired level and category. Then, guess letters to reveal the hidden word, but be careful not to run out of lives!
+Press the "Ready, Set, Guess" button to start the game.
+
+2. After the welcome message, enter your name. It must be at least 3 letters or numbers.
+
+3. Choose your level of adventure:
+
+  - Easy: 8 lives - perfect for hangman beginners.
+  - Hard: 4 lives - for the daring souls who seek a challenge.
+
+4. Select your favorite category out of 5 options:
+
+  1. Animals
+  2. Countries
+  3. Flowers
+  4. Languages
+  5. Fruits
+
+5. Let the guessing game begin at step 3! Based on your level selection, you'll have either 4 or 8 
+
+6. lives. Guess the letters to reveal the hidden word. Incorrect guesses will display the hangman in red and decrease your remaining lives. Correct guesses will reveal the letters in the right places.
+
+7. The game ends when you run out of lives or correctly guess the word. You'll be announced the right word and given the option to continue playing or not.
+
+8. If you choose to keep playing, the game will start over. If you choose not to continue, you'll see a goodbye message. You can restart the game by clicking the "Ready, Set, Guess" button if you change your mind.
+
+### Happy playing! Enjoy the challenge and have fun guessing the words!
 
 The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
