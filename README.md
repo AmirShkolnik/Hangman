@@ -31,7 +31,6 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
   * [Typography](#typography)
   * [Imagery](#imagery)
   * [Layout](#layout)
-  * [Wireframes](#wireframes)
 
 * [Features](#features)
   * [Welcome](#welcome)
@@ -146,105 +145,195 @@ The application is split into different 'paths' or sections. Each section is a p
 Design
 ------
 
+As the application operates within the terminal, there isn't a conventional user interface design.
+
+The deployed application runs on Heroku within a simulated terminal environment, showcasing the project's functionality. The design of this mock terminal is integrated into the template provided by Code Institute.
+
 ### Color Scheme
 
-I used the [Jungle Color Palette](https://www.color-hex.com/color-palette/84872) from the website color-hex made by [Chad_torino](https://www.color-hex.com/member/chad_torino) and the color red (#ff0000).
+- I've used #f7c331 and #f7882f as the primary and secondary colors for the headline.
 
-- I've used #e9ed60 & #422f25 as the primary and secondary colors for the site's text.
+- For the button display and design, I've utilized #f7c331, #000000, and #808080.
 
-- I've used #422f25 as the overlay on the site's background image.
+- To highlight positive comments and display the correct word, I've employed #00ff00.
 
-- I've used #e9ed60 & #be945b for borders on buttons, questions, answers, and the quiz area.
+- For displaying the hangman animation and highlighting negative comments, I've opted for #ff0000.
 
-- I've used #52843c to show buttons.
-
-- I've used #e9ed60 for button hover effects.
-
-- I've used #ff0000 to indicate wrong answers.
-
-- I've used #e9ed60 to highlight the correct answer.
-
-
-![J U N G L E Color Palette](/doc/readme-images/color-palette.png)
+- Lastly, I've used #ffff00 to highlight correctly guessed letters.
 
 ### Typography
 
+## Headline
+
+![Lemon Google Fonts](Readme-images/The-Hangman-Madness.png)
+
 [Google Fonts](https://fonts.google.com/) was used to import the chosen fonts for use in the site.
 
-I chose the [Lemon Google Fonts](https://fonts.google.com/specimen/Lemon?query=lemon&sort=alpha) for the site's font because it's a personal preference of mine. I find that the font has a visually appealing appearance that I personally enjoy. Additionally, it's easy to read, which is important for a quiz-style website where users need to quickly comprehend the text.
+I chose the [Lemon Google Fonts](https://fonts.google.com/specimen/Lemon?query=lemon&sort=alpha) for the headline font because it's a personal preference of mine. I find that the font has a visually appealing appearance that I personally enjoy.
 
-Furthermore, I believe that the Lemon font fits perfectly with the style and aesthetic of the quiz. Its clean and modern look adds a touch of sophistication while still maintaining a playful vibe, which aligns well with the overall theme of the quiz. Overall, I selected the Lemon Google Fonts because I found it aesthetically pleasing, easy to read, and fitting for the style and tone of the quiz.
+Furthermore, I believe that the Lemon font fits perfectly with the style and aesthetic of the hangman game. Its clean and modern look adds a touch of sophistication while still maintaining a playful vibe, which aligns well with the overall theme of the quiz. Overall, I selected the Lemon Google Fonts because I found it aesthetically pleasing, easy to read, and fitting for the style and tone of the quiz.
 
 Sans Serif is used as a backup font, in case for any reason the [Lemon](https://fonts.google.com/specimen/Lemon?query=lemon&sort=alpha) font isn't being imported into the site correctly.
 
-![Lemon](doc/readme-images/Lemon.png)
-
 ### Imagery
 
-I chose a jungle background for the website because of its thematic relevance to the website's title, 'Jungle Quiz.'
+I selected Mariano Ruffas' [Ljus manniskor konst kreativ](https://www.pexels.com/sv-se/foto/ljus-manniskor-konst-kreativ-169406/) image from Pexels as the website's background due to its thematic relevance to the hangman game.
 
-By incorporating an image of a jungle as the page background, I aimed to immerse the user in the atmosphere of a jungle environment, creating an engaging and immersive experience. 
+By integrating an image of an art exhibition featuring hanging figures as the background, my goal was to immerse users in an atmosphere of excitement and intrigue, fostering an engaging and immersive experience.
 
-This choice is intended to evoke the sense of adventure and exploration that one might associate with a jungle setting, enhancing the overall theme and appeal of the Jungle Quiz website. 
+This choice aims to evoke a sense of adventure and discovery synonymous with the hangman game, enriching its overall theme and appeal.
 
-Ultimately, the jungle background serves to enhance the user's participation in the quiz, making them feel as though they are embarking on a thrilling journey through the heart of the jungle.
+Ultimately, the artwork's background enhances user engagement, evoking the sensation of embarking on a thrilling journey through the heart of the game.
 
-![Jungle](doc/readme-images/Jungle.png)
+![Hangman](Readme-images/hanging.jpg)
 
 ### Layout
 
-The site is a single page with 4 steps/sections:
+The site is a single page with 5 steps/sections:
   - Welcome area
-  - Rules area
-  - Quiz area
-  - Feedback and score area
-
-### Wireframes
-
-The wireframe shows designs for iPad/tablet and desktop displays, but the finished site is responsive to all devices.
-
-#### 1. Welcome To The Jungle Quiz:
-
-![Home Page](/doc/readme-images/welcome-1.png)
-
-#### 2. Follow The Rules:
-
-![Rules](/doc/readme-images/Follow-The-Rules.png)
-
-#### 3. Quiz Questions:
-
-![Questions](/doc/readme-images/questions-2.png)
-
-#### 4. Score:
-
-![Score](/doc/readme-images/score-4.png)
-
+  - Step 1: Choose Your Level of Adventure
+  - Step 2: Let's explore the world of letters
+  - Step 3: Let the guessing game begin
+  - Game Over
 
 Features
 --------
-
-![All Pages](doc/readme-images/amiresponsive-mix.png)
-
 ### Welcome
 
-I chose the quiz features based on their simplicity and user-friendliness. 
+The Hangman Madness game features a welcoming message followed by a brief note explaining the purpose of the application. Users are prompted to enter their username to personalize their gaming experience. 
 
-The landing page of the website has a straightforward layout, featuring a prominent H1 heading that clearly states the name of the quiz. 
+Additionally, the game presents a visual representation of the hangman illustration, setting the stage for an immersive and engaging word-guessing adventure.
 
-Additionally, there are two large and colorful interactive buttons, making it easy for users to navigate and select their desired option. 
+![Welcome Page](Readme-images/welcome.png)
 
-- Rules
-- Start
+#### Username Validation
 
-By providing users with only two options to choose from, we aim to streamline the decision-making process, ensuring a hassle-free and enjoyable experience for all users.
+Users are required to input a username with at least 3 characters. If the username does not meet this requirement, a message will display prompting the user to correct it.
 
-![Welcome Page](doc/readme-images/welcome.jpg)
+![Wrong Username](Readme-images/welcome-wrong.png)
 
-### Rules
+### Step 1: Choose Your Level of Adventure!
 
-If the user clicks the 'Rules' button, the instructions section will appear, allowing them to read the main rules of the quiz. Pressing the back button will return them to the welcome area.
+After choosing a username, players will proceed to step 1 of the hangman game. Here, they will receive a warm greeting and be prompted to select their desired difficulty level. They have two options:
 
-![Rules](doc/readme-images/rules.png)
+ - Easy mode, offering 8 lives, perfect for beginners.
+ - Hard mode, with 4 lives, designed for those seeking a challenge.
+
+![Step 1](Readme-images/step-1.png)
+
+### Error Handling for Level Selection:
+
+If the user fails to choose one of the two levels, an error message will prompt them to select again. Upon choosing a character, the user will then be prompted to select a number. If the chosen number is not 1 or 2, the user will be asked to select either 1 or 2 to proceed.
+
+![Step 1 Wrong](Readme-images/step-1-wrong.png)
+
+### Step 2: Let's explore the world of letters!
+
+The hangman game offers an array of exciting features for players to enjoy. Once a level is selected, users progress to step number 2, where they have the opportunity to choose from five captivating categories:
+ 1. Animals
+ 2. Countries
+ 3. Flowers
+ 4. Languages
+ 5. Fruits
+
+With a diverse range of categories, players can tailor their gaming experience to their interests, ensuring endless fun and challenges as they embark on their hangman adventure.
+
+![Step 2](Readme-images/step-2.png)
+
+### Error Handling for Category Selection
+
+If the user fails to choose one of the 5 categories, an error message will prompt them to select again.
+
+#### Character vs. Number Input Handling:
+
+If the user enters a character instead of a number, a message will prompt:
+"Is that character part of a secret code? [Username], please enter a number."
+
+#### Numerical Range Validation:
+
+If the user enters a number that is not between 1 and 5, the following message will be presented:
+"I see you're struggling with your keyboard skills. Please enter a number between 1 and 5."
+
+![Step 2](Readme-images/step-2-wrong.png)
+
+### Step 3: Let the guessing game begin!
+
+In Step 3 of the game, users are presented with the chosen category and the remaining lives based on their selection in Step 2. Upon entering the first letter after the prompt "Guess a letter," the game begins.
+
+![Step 3](Readme-images/step-3.png)
+
+### Error Handling for Letter Guessing
+
+If the user fails to choose a letter, a new screen will open, and an error message will prompt them to select again with the following message: "The keyboard gremlins just ate your character! Please choose a valid one before they attack again."
+
+![Step 3](Readme-images/letter-wrong.png)
+
+### Correct Letter Highlighting and Confirmation
+
+- When the user guesses a correct letter, it will be displayed and highlighted in yellow both in the "Current word" and "Used letters" sections.
+
+- A message will prompt: "The eagle has landed! Or was it a penguin? No matter, you guessed right!"
+
+- The user will be informed about how many lives are left, providing them with crucial information to strategize their next moves.
+
+![Correct Letter](Readme-images/letter-correct.png)
+
+
+#### Wrong Letter Display
+
+- When the user guesses a wrong letter, it will be displayed under "Used Letters," accompanied by a message saying "Yikes! Swing and a miss..."
+
+- The hangman will then appear on the screen, illustrating the progression of the game as each wrong guess is made.
+
+- The user will be informed about how many lives are left, providing them with crucial information to strategize their next moves.
+
+![Wrong Letter](Readme-images/LETTER-WRONG-2.png)
+
+### Game Over Message
+
+#### Wrong Guess
+- If the user couldn't guess the word and is running out of lives, a message will prompt: "Aw, shucks! Looks like your brain went on vacation with the penguins."
+
+- The correct word will be displayed, highlighted in light green color. For example: "The word was BEE."
+
+- The user will be given the option to continue playing or not: "Ready for another round? (y/n) It's like potato chips, you can't have just one."
+
+![Guess Wrong](Readme-images/guess-wrong.png)
+
+#### Correct Guess
+
+If the user correctly guesses the word, a message will prompt displaying the correct word. They will then be given the option to play again or quit the game.
+
+![Correct Guess](Readme-images/Guess-right.png)
+
+#### Choosing No
+
+If the user decides not to continue playing, the screen will clear, and a thank you message will appear.
+
+![Choosing No](Readme-images/choosing-no.png)
+
+#### Choosing Yes
+
+If the user chooses "yes":
+
+- The screen will clear.
+- A funny message will appear, asking if they made the right decision.
+- They need to choose again between "yes" or "no".
+- If they choose "no", the screen will clear, and a goodbye message will appear.
+- If they choose "yes", the screen will clear, and the game will start all over again.
+
+This feature allows users to easily restart the game or exit with a humorous touch.
+
+![Choosing Yes](Readme-images/choosing-yes.png)
+
+#### Choosing No
+
+![Choosing No](Readme-images/choosing-no-no.png)
+
+
+
+
+### 
 
 ### Quiz
 
