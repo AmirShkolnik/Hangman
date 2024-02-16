@@ -33,11 +33,11 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
   * [Layout](#layout)
 
 * [Features](#features)
-  * [Welcome](#welcome)
-  * [Rules](#rules)
-  * [Quiz](#quiz)
-  * [Score](#score)
-  * [Future Implementations](#future-implementations)
+  * [Welcom](#welcome)
+  * [Step 1](#step-1)
+  * [Step 2](#step-2)
+  * [Step 3](#step-3)
+  * [Game Over](#game-over)
 
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
@@ -212,7 +212,8 @@ Users are required to input a username with at least 3 characters. If the userna
 
 ![Wrong Username](Readme-images/welcome-wrong.png)
 
-### Step 1: Choose Your Level of Adventure!
+### Step 1 
+### Choose Your Level of Adventure!
 
 After choosing a username, players will proceed to step 1 of the hangman game. Here, they will receive a warm greeting and be prompted to select their desired difficulty level. They have two options:
 
@@ -227,7 +228,8 @@ If the user fails to choose one of the two levels, an error message will prompt 
 
 ![Step 1 Wrong](Readme-images/step-1-wrong.png)
 
-### Step 2: Let's explore the world of letters!
+### Step 2 
+### Let's explore the world of letters!
 
 The hangman game offers an array of exciting features for players to enjoy. Once a level is selected, users progress to step number 2, where they have the opportunity to choose from five captivating categories:
  1. Animals
@@ -256,7 +258,8 @@ If the user enters a number that is not between 1 and 5, the following message w
 
 ![Step 2](Readme-images/step-2-wrong.png)
 
-### Step 3: Let the guessing game begin!
+### Step 3 
+### Let the guessing game begin!
 
 In Step 3 of the game, users are presented with the chosen category and the remaining lives based on their selection in Step 2. Upon entering the first letter after the prompt "Guess a letter," the game begins.
 
@@ -278,7 +281,6 @@ If the user fails to choose a letter, a new screen will open, and an error messa
 
 ![Correct Letter](Readme-images/letter-correct.png)
 
-
 #### Wrong Letter Display
 
 - When the user guesses a wrong letter, it will be displayed under "Used Letters," accompanied by a message saying "Yikes! Swing and a miss..."
@@ -289,7 +291,7 @@ If the user fails to choose a letter, a new screen will open, and an error messa
 
 ![Wrong Letter](Readme-images/LETTER-WRONG-2.png)
 
-### Game Over Message
+### Game Over
 
 #### Wrong Guess
 - If the user couldn't guess the word and is running out of lives, a message will prompt: "Aw, shucks! Looks like your brain went on vacation with the penguins."
@@ -306,13 +308,13 @@ If the user correctly guesses the word, a message will prompt displaying the cor
 
 ![Correct Guess](Readme-images/Guess-right.png)
 
-#### Choosing No
+#### Choosing No (Quit)
 
 If the user decides not to continue playing, the screen will clear, and a thank you message will appear.
 
 ![Choosing No](Readme-images/choosing-no.png)
 
-#### Choosing Yes
+#### Choosing Yes (Continue Playing)
 
 If the user chooses "yes":
 
@@ -326,11 +328,11 @@ This feature allows users to easily restart the game or exit with a humorous tou
 
 ![Choosing Yes](Readme-images/choosing-yes.png)
 
-#### Choosing No
+#### Choosing No (Quit)
 
 ![Choosing No](Readme-images/choosing-no-no.png)
 
-
+![Choosing Wrong](Readme-images/choosing-yes-no-wrong-chara.png)
 
 
 ### 
