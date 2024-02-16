@@ -1,7 +1,7 @@
-![Hangman Logo](Readme-images/The-Hangman-Madness.png)
-
 Welcome To The Hangman Madness!
 -------------------------------
+
+![Hangman Madness](Readme-images/AmIResponsive.png)
 
 Imagine being stuck in a car during a snowstorm, the icy wind howling outside while you sit snugly inside. 
 
@@ -19,41 +19,9 @@ a little game can bring warmth and joy.
 
 The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
-How To Play
------------
-
-Press the "Ready, Set, Guess" button to start the game.
-
-2. After the welcome message, enter your name. It must be at least 3 letters or numbers.
-
-3. Choose your level of adventure:
-
-  - Easy: 8 lives - perfect for hangman beginners.
-  - Hard: 4 lives - for the daring souls who seek a challenge.
-
-4. Select your favorite category out of 5 options:
-
-  1. Animals
-  2. Countries
-  3. Flowers
-  4. Languages
-  5. Fruits
-
-5. Let the guessing game begin at step 3! Based on your level selection, you'll have either 4 or 8 
-
-6. lives. Guess the letters to reveal the hidden word. Incorrect guesses will display the hangman in red and decrease your remaining lives. Correct guesses will reveal the letters in the right places.
-
-7. The game ends when you run out of lives or correctly guess the word. You'll be announced the right word and given the option to continue playing or not.
-
-8. If you choose to keep playing, the game will start over. If you choose not to continue, you'll see a goodbye message. You can restart the game by clicking the "Ready, Set, Guess" button if you change your mind.
-
-### Happy playing! Enjoy the challenge and have fun guessing the words!
-
-The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
-
-![Hangman Madness](Readme-images/AmIResponsive.png)
-
 ## CONTENTS
+
+* [How To Play](#how-to-play)
 
 * [User Experience](#user-experience-ux)
   * [User Stories](#user-stories)
@@ -106,25 +74,72 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
 
 ---
 
+How To Play
+-----------
+
+Press the "Ready, Set, Guess" button to start the game.
+
+After the welcome message, enter your name. It must be at least 3 letters or numbers.
+
+Choose your level of adventure:
+
+  - Easy: 8 lives - perfect for hangman beginners.
+  - Hard: 4 lives - for the daring souls who seek a challenge.
+
+Select your favorite category out of 5 options:
+
+  1. Animals
+  2. Countries
+  3. Flowers
+  4. Languages
+  5. Fruits
+
+Let the guessing game begin at step 3! Based on your level selection, you'll have either 4 or 8 
+lives. Guess the letters to reveal the hidden word. Incorrect guesses will display the hangman in red and decrease your remaining lives. Correct guesses will reveal the letters in the right places.
+
+The game ends when you run out of lives or correctly guess the word. You'll be announced the right word and given the option to continue playing or not.
+
+If you choose to keep playing, the game will start over. If you choose not to continue, you'll see a goodbye message. You can restart the game by clicking the "Ready, Set, Guess" button if you change your mind.
+
+### Happy playing! Enjoy the challenge and have fun guessing the words!
+
+The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
+
+
 User Experience (UX)
 -----------------------
+
+### Flow Chart
+
+[The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
+
+View the flowchart here, showing the steps that run in the application, how the user can move through the application and the user options at each stage.
+
+The application is split into different 'paths' or sections. Each section is a path that the user can link into from a different section of the application, when they are presented with options. (Except for the one_score_path() which is not selected by the user, but determined by their choice of country - there are five countries in the dataset where the happiness score is only recorded for one year.) At the end of each section the user is presented with options, and put onto the new relevant path (or exit the application), based on their choice.
 
 ### User Stories
 
 ### First Time Visitor Goals
 
-- I want to participate in an online quiz about the jungle and enhance my general knowledge.
-- I want the ability to play the quiz anytime, anywhere.
-- I want the website to adjust to my device's screen size.
-- I want the website to be easy to navigate.
-- I want to view my score to gauge my knowledge level.
+- As a first-time visitor, I want to participate in an online hangman game and test my knowledge in various categories such as animals, countries, flowers, languages, and fruits.
+
+- I want the ability to play the game anytime, anywhere, whether I'm stuck in traffic or waiting for an appointment.
+
+- I expect the website to adjust to my device's screen size, ensuring a seamless gaming experience.
+
+- I desire the website to be easy to navigate, allowing me to quickly select my preferred level and category.
+
+- I would like to view my score after each game to gauge my progress and skill level.
 
 ### Returning Visitor Goals
 
-- I want to expand my understanding of the jungle.
-- I want to encounter new questions to test my knowledge.
-- I want to explore various aspects of jungle life, such as plants, trees, animals, rivers, climate, and more.
-- I want to achieve high scores to track my progress.
+- As a returning visitor, I aim to further challenge myself and expand my knowledge by encountering new words and categories in the hangman game.
+
+- I want to explore various topics related to language, such as idioms, slang, and famous quotes, to enhance my linguistic understanding.
+
+- I am interested in achieving high scores and tracking my progress over time to see how my hangman skills improve with each visit.
+
+- I look forward to engaging with the game's features and enjoying the fun and educational experience it offers.
 
 ---
 

@@ -313,7 +313,7 @@ def hangman():
         print('You have', chosen_level_lives - mistakes, 'lives left.')
         # Yellow decorative line
         print("\033[1;33;40m" + "—" * 22 + "\033[0m\n")
-        word_list = [f'\033[1;36m{letter}\033[0m' if letter in
+        word_list = [f'\033[1;33;40m{letter}\033[0m' if letter in
                      used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         print('Used letters:', ' '.join(used_letters))
