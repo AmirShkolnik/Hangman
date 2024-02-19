@@ -42,6 +42,8 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
   * [Step 3](#step-3)
   * [Game Over](#game-over)
 
+* [Future Implementations](#future-implementations)
+
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
   * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
@@ -343,36 +345,6 @@ If they choose "no", the screen will clear, and a goodbye message will appear.
 If the user fails to choose 'y' or 'n' an error message will prompt them to select again.
 
 ![Choosing Wrong](Readme-images/choosing-yes-no-wrong-chara.png)
-
-
-### 
-
-### Quiz
-
-#### Questions and Answers
-
-If the user clicks the 'Start' button, the first question will appear. The user will then encounter 5 captivating questions randomly chosen from a database of 20 intriguing queries. 
-
-![Score](doc/readme-images/shuffle2.jpg)
-
-Upon selecting an answer, correct responses will shine in yellow following the text "The Answer Is:", while incorrect ones will be highlighted in red. 
-
-![Questions and Answers](doc/readme-images/questions-and-answers.jpg)
-
-The score will be promptly revealed, and within 2 seconds, the user will proceed to the next question.
-
-![Questions and Answers](doc/readme-images/score3.jpg)
-### Score
-
-#### Score and Feedback
-
-- After answering 5 questions, the user will be directed to the results page. Here, they will see their score and receive brief feedback. The feedback will vary depending on the user's results.
-
-- The user will be presented with two options:
-  - Home
-  - Play Again
-
-![Score](doc/readme-images/feedback.jpg)
 
 ### Future Implementations
 
