@@ -393,7 +393,7 @@ def continue_game():
                         return
                 else:
                     print("\n\033[91mPlease enter \033[0m"
-                          "\033[91m'y' or 'n'.\033[0m")
+                          "\033[91m'y' or 'n'.\033[0m\n")
         # Handle "n" from the first prompt directly
         elif choice == "n":
             clear_terminal()
