@@ -24,7 +24,10 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
 * [How To Play](#how-to-play)
 
 * [User Experience](#user-experience-ux)
+  * [Flow Chart](#flow-chart)
   * [User Stories](#user-stories)
+    *[First Time Visitor Goals](#first-time-visitor-goals)
+    *[Returning Visitor Goals](#returning-visitor-goals)
 
 * [Design](#design)
   * [Colour Scheme](#colour-scheme)
@@ -104,6 +107,7 @@ If you choose to keep playing, the game will start over. If you choose not to co
 
 The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
+---
 
 User Experience (UX)
 -----------------------
@@ -140,7 +144,7 @@ The [flowchart](Readme-images/chartflow.jpeg) below illustrates the sequential s
 
 ---
 
-Design
+### Design
 ------
 
 As the application operates within the terminal, there isn't a conventional user interface design.
@@ -161,7 +165,7 @@ The deployed application runs on Heroku within a simulated terminal environment,
 
 ### Typography
 
-## Headline
+### Headline
 
 ![Lemon Google Fonts](Readme-images/The-Hangman-Madness.png)
 
@@ -193,6 +197,8 @@ The site is a single page with 5 steps/sections:
   - Step 2: Let's explore the world of letters
   - Step 3: Let the guessing game begin
   - Game Over
+
+---
 
 Features
 --------
@@ -314,21 +320,27 @@ If the user decides not to continue playing, the screen will clear, and a thank 
 
 #### Choosing Yes (Continue Playing)
 
+This feature allows users to easily restart the game or exit with a humorous touch.
+
 If the user chooses "yes":
 
 - The screen will clear.
 - A funny message will appear, asking if they made the right decision.
 - They need to choose again between "yes" or "no".
-- If they choose "no", the screen will clear, and a goodbye message will appear.
-- If they choose "yes", the screen will clear, and the game will start all over again.
 
-This feature allows users to easily restart the game or exit with a humorous touch.
+If they choose "yes", the screen will clear, and the game will start all over again.
 
 ![Choosing Yes](Readme-images/choosing-yes.png)
 
 #### Choosing No (Quit)
 
+If they choose "no", the screen will clear, and a goodbye message will appear.
+
 ![Choosing No](Readme-images/choosing-no-no.png)
+
+### Error Handling for Category Selection
+
+If the user fails to choose 'y' or 'n' an error message will prompt them to select again.
 
 ![Choosing Wrong](Readme-images/choosing-yes-no-wrong-chara.png)
 

@@ -392,7 +392,7 @@ def continue_game():
                         # Exit the function, effectively ending the game
                         return
                 else:
-                    print("\033[91mPlease enter \033[0m"
+                    print("\n\033[91mPlease enter \033[0m"
                           "\033[91m'y' or 'n'.\033[0m")
         # Handle "n" from the first prompt directly
         elif choice == "n":
