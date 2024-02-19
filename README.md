@@ -357,6 +357,8 @@ Future Implementations
 - Enable sound playback.
 - Implement an option for two players to play together or against the computer. Each player receives a word and has the opportunity to guess on their turn. The first to guess correctly wins.
 
+---
+
 Technologies Used
 -----------------
 
@@ -375,9 +377,9 @@ This website was created using the following languages:
 
 - [Responsinator](http://www.responsinator.com/?url=amirshkolnik.github.io%2FJungleQuiz) To show the website image on a range of devices.
 
-- [Affinity Photo](https://affinity.serif.com/en-gb/photo/) Photo editor software.
+- [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Photo editor software.
 
-- [Balsamiq](https://balsamiq.com/) - Used to create wireframes.
+- [Flow Chart](https://lucid.app/) - Lucid Visual Collaboration Suite is a platform for creating and sharing visuals, such as diagrams, whiteboards, and scale models.
 
 - [Github](https://github.com/) - To save and store the files for the website.
 
@@ -389,12 +391,7 @@ This website was created using the following languages:
 
 - [TinyPNG](https://tinypng.com/) To compress images
 
-- [Birme](https://www.birme.net/) To resize images and convert to webp format.
-
 - [Favicon Creator](https://realfavicongenerator.net/) To create favicon.
-
-- [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
-
 
 Deployment & Local Development
 ------------------------------
