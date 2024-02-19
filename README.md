@@ -346,15 +346,16 @@ If the user fails to choose 'y' or 'n' an error message will prompt them to sele
 
 ![Choosing Wrong](Readme-images/choosing-yes-no-wrong-chara.png)
 
-### Future Implementations
+---
+Future Implementations
+--------------------------
 
-- User can create a username and track his score.
-- Shuffling the answer buttons.
-- Generating questions across various subjects so that users can choose the area they wish to test their knowledge in.
-- Establishing difficulty levels according to a timer.
-- Background images and sounds will change according to the questions.
-- Email JS to signup to newsletter.
-- Ability to play sounds.
+- Users can track their results/guesses.
+- Establish difficulty levels based on the user's results.
+- Include additional difficulty levels.
+- Introduce more categories.
+- Enable sound playback.
+- Implement an option for two players to play together or against the computer. Each player receives a word and has the opportunity to guess on their turn. The first to guess correctly wins.
 
 Technologies Used
 -----------------
@@ -363,6 +364,7 @@ Technologies Used
 
 This website was created using the following languages:
 
+- Python
 - JavaScript
 - HTML5
 - CSS
