@@ -60,8 +60,8 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
   * [Solved Bugs](#solved-bugs)
   * [Known Bugs](#known-bugs)
   
-* [Credits](#credits)
-  * [Code Used](#code-used)
+* [Credits and Resources Used](#credits-and-resources-used)
+  * [Youtube Channels](#youtube-channels)
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
