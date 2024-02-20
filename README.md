@@ -523,7 +523,7 @@ Solution:
 
 To address this issue, I added the following code:
 
- # Adjust the rate of displaying hangman stages based on the chosen level
+ # Lines 185-198
     if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
     # Easy level - Display 1 stage per mistake
@@ -576,11 +576,7 @@ I used images, vectors, and illustrations from the following websites with thank
 
 #### Pexels
 
-- Background Image - [Alex Qian](https://www.pexels.com/sv-se/foto/landskap-natur-vatten-trad-2304796/)
-
-#### Pixabay
-
-- Favicon - Question Mark - [PClker-Free-Vector-Images](https://pixabay.com/sv/vectors/fr%C3%A5ga-m%C3%A4rke-knapp-tecken-symbol-24851/)
+- Background Image - [Mariano Ruffa](https://www.pexels.com/sv-se/foto/ljus-manniskor-konst-kreativ-169406/)
   
 Acknowledgments
 ---------------
