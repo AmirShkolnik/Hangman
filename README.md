@@ -55,16 +55,6 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
     * [How to Clone](#how-to-clone)
 
 * [Testing](#testing)
-  * [Validator Testing](#validator-testing)
-    * [HTML](#html)
-    * [CSS](#css)
-    * [Javascript](#javascript)
-  * [Accessibility](#accessibility)
-  * [Buttons Testing](#buttons-testing)
-  * [Quiz Testing](#quiz-testing)
-  * [Responsiveness](#responsiveness)
-  * [Browser Testing](browser-testing)
-  * [Device Testing](#device-testing)
 
 * [Bugs](#bugs)
   * [Solved Bugs](#solved-bugs)
@@ -445,111 +435,78 @@ To clone this repository follow the below steps:
 
 ## Testing
 
-### Validator Testing
-### HTML
-  - No errors were returned when passing through the official W3C Markup Validator
-        - [Jungle Quiz - W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Famirshkolnik.github.io%2FJungleQuiz%2F)
+- Running the code through [pep8ci](https://pep8ci.herokuapp.com/) confirms that there are no issues with the code.
 
-      ![Jungle Quiz - W3C Validator Results](doc/readme-images/HTML-checker.png)
+![pep8ci](Readme-images/pep8ci.png)
 
-### CSS
-  - No errors were found when passing through the official W3C CSS Validator 
-        - [Jungle Quiz - W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Famirshkolnik.github.io%2FJungleQuiz%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+- Testing the app's capability to handle incorrect inputs by providing invalid inputs throughout the application.
 
-      ![Jungle Quiz - W3C CSS Validator Results](doc/readme-images/CSS-Validering.png)
+- I have tested the deployed application on Google Chrome, Safari, Firefox, and Microsoft Edge. I can confirm that the application functions properly on all of these web browsers
 
+- I have validated the HTML, CSS, and JavaScript code on W3C, and the results were clean with no errors.
 
-### Javascript
-
-[JSHint Validator](https://jshint.com/) 
-
-- ### Test results for script.js
-  ![JSHint Validator Results](doc/readme-images/JSHint-script.png)
-
-Accessibility
--------------
-
-### Accessibility
-
-The website attained a Lighthouse accessibility score of 100% on both mobile and desktop, affirming that the selected colors and fonts are easily readable and accessible.
-
-- ### Lighthouse Score For PC
-
-[Lighthouse Score For Mobile](https://pagespeed.web.dev/analysis/https-amirshkolnik-github-io-JungleQuiz/o5sdsclq4r?form_factor=desktop)
-
-![Lighthouse Score For PC](doc/readme-images/lighthouse-pc.png)
-
-- ### Lighthouse Score For Mobile
-
-[Lighthouse Score For Mobile](https://pagespeed.web.dev/analysis/https-amirshkolnik-github-io-JungleQuiz/o5sdsclq4r?form_factor=mobile)
-
-![Lighthouse Score For Mobile](doc/readme-images/lighthouse-mobile.png)
-
-### Buttons Testing
-
-- I verified all the navigation buttons to ensure they direct users to the correct sections of the website.
-- I conducted manual testing on each button to guarantee users can navigate the quiz correctly.
-- I manually tested the answers to confirm that the scoring displays the accurate result.
-- I manually verified that the correct and incorrect answers are displayed with the appropriate colors and effects.
-- I tested the score and feedback section to ensure that upon completing the quiz, users are directed to the final page and presented with the correct result along with the appropriate feedback.
-
-### Quiz Testing
-
-The quiz was thoroughly tested by friends and family to ensure everything functioned as intended, including the following:
-
-- Questions were shuffled.
-- No question appeared twice in the same quiz.
-- The quiz displayed a different selection of questions each time it was played.
-- The quiz concluded after all 5 questions were answered.
-- The score was accurately tallied and ceased when the quiz ended.
-- Correct answers were highlighted in yellow, while incorrect ones were distinguished in red.
-- The correct final score was displayed once the quiz concluded.
-- Appropriate feedback was presented at the end of the quiz.
-- Buttons effects operated as expected.
-- The 2-second function is functioning correctly; the user moves on to the next question 2 seconds after clicking the answer button
-
-### Browser Testing
-
-I checked the website on Google Chrome, Firefox, Microsoft Edge, opera and Safari browsers and everything was fine with no problems.
-
-### Responsiveness
-
-- I also tried the website on the following websites to test its responsiveness:
-
-    - [Responsinator](http://www.responsinator.com/?url=amirshkolnik.github.io%2FJungleQuiz)
-    - [Am I Responsive](https://ui.dev/amiresponsive?url=https://amirshkolnik.github.io/JungleQuiz/)
-    
-### Device Testing
-I checked and tested the website on various devices such as desktops, laptops, and mobiles to ensure the quiz functions well on different screen sizes.
-
-#### Laptop and Desktop:
-- The website is responsive as planned, and the quiz is working as expected.
-
-#### Android Mobiles:
-- The website was tested on Samsung S9, S21, and 14A. It is responsive as planned, and the quiz is working as it should.
-
-#### iPhone Devices:
-- The website was tested on iPhone 10 and 14 Pro. While it is responsive as planned, the quiz is not functioning as expected. 
+- I tested the game in my local terminal and in the Code Institute Heroku terminal, and no errors were displayed.
 
 Bugs
 ----
 
 ### Solved Bugs
 
-- First testing after deployment the hangman game started with "You have 7 lives left..." 
-     - Bug nr 1. - the choosing a category option is not displaying.
-      Solution: adding "\n" after the "choice (1-5):"  choise = int(input("Enter your choice (1-5): \n")) - 1.
-     - Bug nr 2. - Should be 8 and not 6 lives.
-     - Bug nr 3. - category option works on VS Code BUT display only words from the fruits category. 
-     The problem was in the following code I wrote at the beggining as defult before adding more categories and forgot to change 
-     - Bug nr 4. - The user is suppose to chose a category number between 1 and 5 but if he chose a letter or a symbole an error was displayed. The solution was modifing "def choose_category()". The code continuously prompts the user for input until a valid numeric choice between 1 and 5 is entered. If the input cannot be converted to an integer or is outside this range, appropriate error messages are displayed. Once a valid choice is made, the chosen category and its associated word list are returned.
-## Before
+### Bug nr 1.
+
+When I tested the code on PEP8CI, it kept showing an error message saying, 'continuation line under-indented for visual indent.' The problem was that my code lines were too long, more than 80 characters. 
+
+To fix it, I had to change how I structured those long lines. 
+
+Got inspired by this article: https://stackoverflow.com/questions/41561952/i-get-continuation-line-under-indented-for-visual-indent-error
+
+Solution:
+
+![Long Lines](Readme-images/Line-too-long-1.png)
+
+### Before
+![pep8ci](Readme-images/bug-6.png)
+
+### After
+![pep8ci](Readme-images/pep8ci.png)
+
+### Bug Nr 2.
+
+After deploying the hangman game, the first test revealed that it started with 'You have 7 lives left...' when it should have been 8 lives instead of 7.
+
+![Bug number 2](Readme-images/bug-1.png)
+
+### Bug Nr. 3
+     
+The category option functions in VS Code, BUT it only displays words from the 'fruits' category.
+
+The issue stemmed from the code I initially wrote as the default before adding more categories, and I forgot to change it.
+
+ def get_valid_word(words_list):
+    word = random.choice(fruits)  # randomly choose a fruit from the fruits list
+    while '-' in word or ' ' in word:
+        word = random.choice(fruits)
+    return word.upper()
+
+### Bug Nr. 4
+
+Issue: The user is supposed to select a category number between 1 and 5, but if they choose a letter or symbol, an error is displayed.
+
+Resolution: Modify the function "choose_category()".
+
+The code will continually prompt the user for input until a valid numeric choice between 1 and 5 is entered.
+
+If the input cannot be converted to an integer or falls outside this range, appropriate error messages will be displayed. Once a valid choice is made, the chosen category and its associated word list will be returned.
+
+### Before
 ![Bug number 4](Readme-images/bug-4.png)
 
-## After
+### After
 ![Bug number 4](Readme-images/bug-4-after.png)
 
-    - Bug nr 5. - The hangman drawing is not showing the whole body when the player ran out of guesse and loses. The solution was changing the number of lives from 7 to 8.
+### Bug Nr. 5
+
+The hangman drawing is not showing the whole body when the player ran out of guesse and loses. The solution was changing the number of lives from 7 to 8.
 
 ## Before
 ![Bug number 5](Readme-images/bug-5.png)
@@ -557,62 +514,35 @@ Bugs
 ## After
 ![Bug number 5](Readme-images/bug-5-after.png)
 
-- Bug nr. 6. - https://stackoverflow.com/questions/41561952/i-get-continuation-line-under-indented-for-visual-indent-error
+### Bug Nr. 6
 
+Problem:
+When adding levels to the beginning of the game, the display became synchronized with the hard level, resulting in only 4 lives being displayed. This occurred because I intended for the hangman display to progress twice as fast, with 2 steps for each mistake. After adding an easy option with 8 lives nothing was synchronized and on top of that I forgot to include the return stages_to_display on line 198.
 
+Solution:
 
-     def get_valid_word(words_list):
-    word = random.choice(fruits)  # randomly choose a fruit from the fruits list
-    while '-' in word or ' ' in word:
-        word = random.choice(fruits)
-    return word.upper()
+To address this issue, I added the following code:
 
-![Bug number 1](Readme-images/bug-1.png)
-
-- Bug nr. 6 - While adding levels at the begging of the game the display was syncronized aith the hard level which gave only 4 lives. I want the hangman to display twice as fast aka 2 stpes for each mistake.
-
-solution was adding: if chosen_level == "Easy_8_lives":
+ # Adjust the rate of displaying hangman stages based on the chosen level
+    if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
-    else:  # Easy level
-        display_per_mistake = 2  # Hard level  # Display one stage per mistake
+    # Easy level - Display 1 stage per mistake
+    # Hard level - Display 2 stage per mistake
+    else:
+        display_per_mistake = 2
+    # Calculate the number of stages to display for the current mistake
+    stages_to_display = min(mistakes *
+                            display_per_mistake,
+                            len(hangman_stages) - 1)
+    print("\033[91m" + hangman_stages
+          [stages_to_display] + "\033[0m")
+    return stages_to_display
 
-and
-
-I forgot return stages_to_display
---------------
-
-- When testing the JavaScript code for the first time, [JSHint Validator](https://jshint.com/) returned a few crucial errors because semicolons were missing in a couple of lines.
-
-After fixing all the errors, JSHint returned 23 warnings regarding ES6. 
-
-For example, 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use 'moz').
-
-At this juncture, I lack the knowledge on how to resolve this issue/warnings.
-
-- I implemented an onclick() event in the buttons on the index.html page, resolving it by using the getElementById method.
-
-- At first, I created two separate files for questions and styles. This resulted in an undefined question warning when validating. My mentor recommended combining these two files into one for better practice.
-
-- In the media query for small and medium screens (min-width: 769px - max-width: 1024px), the correct answer effect was presented on top of the other questions. I fixed that by adding:
-
-.answerbutton {
-    margin: 15px 0;
-}
-
-- For the same screens, the height was mistakenly set to 7000px. I changed it to 700px.
-
-#question_area_box {
-    max-width: 750px;
-    height: 700px;
-    margin: 40px auto 0;
-}
-
+This solution ensures that the hangman display progresses appropriately according to the chosen level, displaying the correct number of stages per mistake.
 
 ### Known Bugs
 
-- For an unknown reason, a random answer is being highlighted in yellow before the user even selects an answer. This bug must be resolved so iPhone users can enjoy the quiz too.
-
-![iPhone Devices](doc/readme-images/iphone.jpg)
+I am not aware of any remaining bugs.
 
 Credits and Resources Used
 -----------------------------
