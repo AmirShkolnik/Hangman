@@ -566,26 +566,9 @@ The following article was very helpful in understanding What does if __name__ ==
 
 - [Hangman Display](https://www.youtube.com/watch?v=uoXiDwLkqzU&t=367s) - Code Challenge #1: Display Hangman (Beginner Python Code).
 
-### Color scheme
-
-- [J U N G L E Color Palette](https://www.color-hex.com/color-palette/84872) - I used the jungle color palette from the website color-hex made by [Chad_torino](https://www.color-hex.com/member/chad_torino)
-
-### Code Used
-
-- The basic code for building the quiz was inspired by the following tutorial which I then adapted for my own Jungle Quiz. - [How To Make Quiz App Using JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8) by GreatStack.
-
-- I used the Fisher Yates Shuffle in order to shuffle the questions and answer from a 20 questions database which I learned about in this tutorial - [Shuffle an array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array).
-
 ### Content
 
-I gathered questions from various websites and utilized ChatGPT to both compose and revise some of them.
-
-- [howstuffworks.com](https://play.howstuffworks.com/quiz/how-much-do-you-know-animals-that-live-the-jungle) - How Much Do You Know About Animals That Live in the Jungle by Annette.
-- [beano.com](https://www.beano.com/posts/the-ultimate-jungle-quiz) - The Ultimate Jungle Quiz
-Find out if you're the king of jungle trivia by Beano Quiz Team.
-- [welovequizzes.com](https://www.beano.com/posts/the-ultimate-jungle-quiz) - 26 Jungle Quiz Questions And Answers: Dense by We Love Quizzes.
-- [wanderlustchloe.com](https://www.wanderlustchloe.com/animal-trivia-questions/) - 50 Animal Trivia Questions + Animal Picture Round.
-- [funtrivia.com](https://www.funtrivia.com/trivia-quiz/ForChildren/Animals-of-the-Jungle-392709.html) - Animals of the Jungle Trivia Quiz by AlexT781.
+I utilized ChatGPT to gather words for different categories. All the comments were written by myself, and I used ChatGPT to correct my grammar and spelling errors.
 
 ### Media
 
