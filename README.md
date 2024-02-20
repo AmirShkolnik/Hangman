@@ -553,22 +553,18 @@ Great websites for general knowledge, training, and practical solutions.
 - [Stack Overflow](https://stackoverflow.com/)
 - [JSchallenger](https://www.jschallenger.com/)
 
-The following article was very helpful in understanding shuffling and the Fisher–Yates shuffle algorithm.
-- [Wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+The following article was very helpful in understanding the "continuation line under-indented for visual indent" error:
+- [Stack Overflow](https://stackoverflow.com/questions/41561952/i-get-continuation-line-under-indented-for-visual-indent-error)
 
-The following article was very helpful in understanding events.
+The following article was very helpful in understanding What does if __name__ == "__main__": do?
 
-- [Java Script](https://javascript.info/bubbling-and-capturing) 
+- [Name_Main](https://stackoverflow.com/questions/419163/what-does-if-name-main-do) 
 
 ### Youtube Channels
 
-- [Programming with Mosh](https://www.youtube.com/watch?v=W6NZfCO5SIk) - JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour.
+- [Game of Hangman](https://www.youtube.com/watch?v=cJJTnI22IF8) - How to Code a Game of Hangman... The EASY Way!! (Beginner Python Tutorial).
 
-- [SuperSimpleDev](https://www.youtube.com/watch?v=SBmSRK3feww) - JavaScript Full Course - Beginner to Pro.
-
-- [Telusko](https://www.youtube.com/watch?v=uDwSnnhl1Ng&list=PLsyeobzWxl7qtP8Lo9TReqUMkiOp446cV) - JavaScript Tutorial.
-
-- [Code Institute](https://www.youtube.com/watch?v=ZH-w2Ht4jqU&t=29s) - Community Q&A: PP2 Project FAQ's
+- [Hangman Display](https://www.youtube.com/watch?v=uoXiDwLkqzU&t=367s) - Code Challenge #1: Display Hangman (Beginner Python Code).
 
 ### Color scheme
 
