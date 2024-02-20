@@ -1,7 +1,7 @@
 Welcome To The Hangman Madness!
 -------------------------------
 
-![Hangman Madness](Readme-images/AmIResponsive.png)
+![The Hangman Madness](Readme-images/AmIResponsive.png)
 
 Imagine being stuck in a car during a snowstorm, the icy wind howling outside while you sit snugly inside. 
 
@@ -398,9 +398,8 @@ Deployment & Local Development
 
 ### Deployment
 
-The live link can be found here - [Jungle Quiz](https://amirshkolnik.github.io/JungleQuiz/).
+The live link can be found here - [The Hangman Madness](https://play-hangman-3f577e016fa9.herokuapp.com/)
 
-Deployment
 This project was deployed using the Code Institute's mock terminal for Heroku, and the live link can be found here The Battleship Game.
 
 These steps were taken for the deployment:
@@ -430,14 +429,14 @@ These steps were taken for the deployment:
 To fork the repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project - [Jungle Quiz](https://github.com/AmirShkolnik/JungleQuiz).
+2. Go to the repository for this project - [The Hangman Madness](https://github.com/AmirShkolnik/Hangman).
 3. Click the Fork button in the top right corner.
 
 ### How to Clone
 
 To clone this repository follow the below steps: 
 
-1. Locate the repository at this link [Jungle Quiz Repository](https://github.com/AmirShkolnik/JungleQuiz). 
+1. Locate the repository at this link [The Hangman Madness](https://github.com/AmirShkolnik/Hangman). 
 2. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided. 
 3. Open **Terminal**.
 4. In Terminal, change the current working directory to the desired location of the cloned directory.
