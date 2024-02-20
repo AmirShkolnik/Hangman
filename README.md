@@ -482,10 +482,12 @@ The category option functions in VS Code, BUT it only displays words from the 'f
 
 The issue stemmed from the code I initially wrote as the default before adding more categories, and I forgot to change it.
 
- def get_valid_word(words_list):
-    word = random.choice(fruits)  # randomly choose a fruit from the fruits list
+#### Lines 289 -294
+    def chosen_category_word(chosen_list):
+    word = random.choice(chosen_list)
     while '-' in word or ' ' in word:
-        word = random.choice(fruits)
+        # randomly choose a word fron the chosen category
+        word = random.choice(chosen_list)
     return word.upper()
 
 ### Bug Nr. 4
@@ -523,7 +525,7 @@ Solution:
 
 To address this issue, I added the following code:
 
- # Lines 185-198
+ #### Lines 185-198
     if chosen_level == "Easy - 8 lives: Perfect for hangman beginners":
         display_per_mistake = 1  # Display two stages per mistake
     # Easy level - Display 1 stage per mistake
