@@ -207,14 +207,15 @@ def choose_level():
     startup_view()
     name_is_valid = False
     while name_is_valid is False:
-        name = get_user_input("Gamer, your username"
+        name = get_user_input("Gamer, your username "
                               "is your secret sauce. "
                               "Make it funny, make it fly!\n")
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
             print("Gimme names, not games!")
-            print("\033[91mEnter at least 3 letters!\033[0m\n")
+            print("\033[91mEnter at least 3 letters \033[0m"
+                  "\033[91mor numbers!\033[0m\n")
     print(f"{name}, thrilled to have you join!")
     print("Ready to tackle some challenging words?\n")
     print("Step 1: Choose "
