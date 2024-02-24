@@ -94,6 +94,7 @@ def startup_view():
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
     txt_effect("How To Play\n\n")
+    print("\033[1;33;40m" + "—" * 11 + "\033[0m\n")
     print("1. Enter your username. "
           "It must be at least 3 letters or numbers.")
     print("2. Choose your level of adventure.")
