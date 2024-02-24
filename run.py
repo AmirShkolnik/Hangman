@@ -94,7 +94,6 @@ def startup_view():
                f"  |\n"
                f"__|_________"
                + "\033[0m\n\n")
-    print("\033[1;33;40m" + "—" * 11 + "\033[0m\n")
     print("1. Enter your username. "
           "It must be at least 3 letters or numbers.")
     print("2. Choose your level of adventure.")
