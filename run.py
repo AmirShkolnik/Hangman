@@ -81,6 +81,9 @@ def startup_view():
     # Plays the startup welcome effect with colors and text effects.
     # Welcome message with slow typing effect using txt_effect
     txt_effect("Welcome to The Hangman Madness!\n\n")
+    txt_effect("Prepare yourself for an epic journey "
+               "through the alphabet jungle.\n\n")
+    txt_effect("How To Play\n")
     txt_effect("\033[91m"
                f"   ______\n"
                f"  |      |\n"
@@ -91,9 +94,6 @@ def startup_view():
                f"  |\n"
                f"__|_________"
                + "\033[0m\n\n")
-    txt_effect("Prepare yourself for an epic journey "
-               "through the alphabet jungle.\n\n")
-    txt_effect("How To Play")
     print("\033[1;33;40m" + "—" * 11 + "\033[0m\n")
     print("1. Enter your username. "
           "It must be at least 3 letters or numbers.")
