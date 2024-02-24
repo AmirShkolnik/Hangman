@@ -102,7 +102,7 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
 ---
 
 User Experience (UX)
------------------------
+--------------------
 
 ### Flow Chart
 
@@ -136,7 +136,7 @@ The [flowchart](Readme-images/chartflow.jpeg) below illustrates the sequential s
 
 ---
 
-### Design
+Design
 ------
 
 As the application operates within the terminal, there isn't a conventional user interface design.
@@ -544,7 +544,9 @@ This solution ensures that the hangman display progresses appropriately accordin
 
 ### Known Bugs
 
-I am not aware of any remaining bugs.
+One user complained about weird symbols appearing on the screen during step 3 while using the Firefox browser. I tested it myself manually on a few devices using Mozilla Firefox, and the test was free of errors and symbols. 
+
+I must check it more deeply in the future to ensure that the game functions properly on all browsers and devices.
 
 Credits and Resources Used
 -----------------------------
