@@ -93,6 +93,12 @@ def startup_view():
                + "\033[0m\n\n")
     txt_effect("Prepare yourself for an epic journey "
                "through the alphabet jungle.\n\n")
+    txt_effect("How To Play\n\n")
+    print("1. Enter your username. "
+          "It must be at least 3 letters or numbers.")
+    print("2. Choose your level of adventure.\n\n")
+    print("3. Select your favorite category.\n\n")
+    print("4. Start guessing.\n\n")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
