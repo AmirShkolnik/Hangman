@@ -231,7 +231,7 @@ def choose_level():
             if 0 <= choice < len(levels):
                 chosen_level = list(levels.keys())[choice]
                 clear_terminal()
-                print("You selected "
+                print("You selected " +
                       chosen_level + ".")
                 # Yellow decorative line
                 print("\033[1;33;40m" + "—" * 58 + "\033[0m\n")
