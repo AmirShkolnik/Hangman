@@ -98,7 +98,7 @@ def startup_view():
           "It must be at least 3 letters or numbers.")
     print("2. Choose your level of adventure.")
     print("3. Select your favorite category.")
-    print("4. Start guessing.\n\n")
+    print("4. Start guessing.\n")
     # Allow time for visual impact
     time.sleep(1.5)
     # Prints the text with a slower typing
