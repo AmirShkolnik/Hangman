@@ -96,8 +96,8 @@ def startup_view():
     txt_effect("How To Play\n\n")
     print("1. Enter your username. "
           "It must be at least 3 letters or numbers.")
-    print("2. Choose your level of adventure.\n\n")
-    print("3. Select your favorite category.\n\n")
+    print("2. Choose your level of adventure.")
+    print("3. Select your favorite category.")
     print("4. Start guessing.\n\n")
     # Allow time for visual impact
     time.sleep(1.5)
@@ -207,8 +207,9 @@ def choose_level():
     startup_view()
     name_is_valid = False
     while name_is_valid is False:
-        name = get_user_input("What do your friends "
-                              "call you?\n")
+        name = get_user_input("Gamer, your username" 
+                              "is your secret sauce. "
+                              "Make it funny, make it fly!\n")
         clear_terminal()
         name_is_valid = len(name) >= 3
         if name_is_valid is False:
