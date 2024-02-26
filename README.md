@@ -435,11 +435,15 @@ To clone this repository follow the below steps:
 
 ## Testing
 
-- Running the code through [pep8ci](https://pep8ci.herokuapp.com/) confirms that there are no issues with the code.
+While running the code through [pep8ci](https://pep8ci.herokuapp.com/), my mentor and I noticed a peculiar occurrence. Occasionally, when copying the raw code from GitHub, it yields no errors, as demonstrated in the attached video. However, at other times, it shows 'Results: 427: W292 no newline at end of file'. Despite adding a new empty line 428 multiple times and pushing it to GitHub, it never reflected the change. 
+
+At this stage of my coding experience, I am unable to explain this inconsistency.
 
 ![pep8ci](Readme-images/pep8ci.png)
-[pep8ci](Readme-images/pep8ci.mp4)
-<video>Readme-images/pep8ci.mp4</video>
+
+[![Klicka här för att se videon](Readme-images/pep8ci.gif)](Readme-images/pep8ci.mp4)
+
+![Pep8ci Line 428](Readme-images/pep8ci-line-428.jpg)
 
 - Testing the app's capability to handle incorrect inputs by providing invalid inputs throughout the application.
 
