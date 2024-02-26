@@ -36,7 +36,7 @@ The live link can be found here - [The Hangman Madness](https://play-hangman-3f5
   * [Layout](#layout)
 
 * [Features](#features)
-  * [Welcom](#welcome)
+  * [Welcome](#welcome)
   * [Step 1](#step-1)
   * [Step 2](#step-2)
   * [Step 3](#step-3)
