@@ -438,6 +438,8 @@ To clone this repository follow the below steps:
 - Running the code through [pep8ci](https://pep8ci.herokuapp.com/) confirms that there are no issues with the code.
 
 ![pep8ci](Readme-images/pep8ci.png)
+[pep8ci](Readme-images/pep8ci.mp4)
+<video>Readme-images/pep8ci.mp4</video>
 
 - Testing the app's capability to handle incorrect inputs by providing invalid inputs throughout the application.
 
