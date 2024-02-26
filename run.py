@@ -417,7 +417,7 @@ def continue_game():
             break
         else:
             print(" ")
-            print("Wow, that was... something.")
+            print("Wow, that was... something...")
             print("Are you trying to speak Morse code?")
             print("\033[91mPlease enter 'y' or 'n'.\033[0m\n")
 
