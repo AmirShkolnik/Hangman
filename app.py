@@ -1,13 +1,14 @@
-from flask import Flask, request, render_template_string
-import io
-import contextlib
 import builtins
+import contextlib
+import io
 import os
 
-import run  # this imports your run.py (must contain hangman())
+from flask import Flask, request, render_template, render_template_string, url_for
+
+import run  # your existing run.py (must contain hangman())
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 app.secret_key = os.environ.get("SECRET_KEY", "change-me")
 
 
@@ -34,7 +35,7 @@ def play_with_inputs(user_text: str) -> str:
         with contextlib.redirect_stdout(buf):
             run.hangman()
     except EOFError:
-        # Game asked for more inputs than provided; show what we captured so far.
+        # Means the game asked for more input than we provided.
         pass
     finally:
         builtins.input = old_input
@@ -42,58 +43,85 @@ def play_with_inputs(user_text: str) -> str:
     return buf.getvalue()
 
 
-HOME_HTML = """
+# --- Option 1 (recommended): use templates if they exist ---
+# Create:
+#   templates/index.html
+#   templates/result.html
+#
+# And put your assets in:
+#   static/style.css
+#   static/app.js
+#   static/image.png
+#
+# If templates are missing, the app will fall back to inline HTML below.
+@app.get("/")
+def home():
+    if os.path.exists(os.path.join(app.template_folder, "index.html")):
+        return render_template("index.html")
+    return render_template_string(_home_inline_html())
+
+
+@app.post("/play")
+def play():
+    user_text = request.form.get("inputs", "")
+    output = play_with_inputs(user_text)
+
+    if os.path.exists(os.path.join(app.template_folder, "result.html")):
+        return render_template("result.html", output=output)
+
+    return render_template_string(_result_inline_html(), output=output)
+
+
+def _home_inline_html() -> str:
+    # Uses url_for so paths always work.
+    css = url_for("static", filename="style.css")
+    js = url_for("static", filename="app.js")
+    bg = url_for("static", filename="image.png")
+
+    return f"""
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>The Hangman Madness</title>
+    <link rel="stylesheet" href="{css}">
+    <script defer src="{js}"></script>
+
+    <!-- Fallback styles if style.css is missing -->
     <style>
-      body{
+      body {{
         margin:0;
         min-height:100vh;
-        background-image:url("/static/image.png");
+        background-image:url("{bg}");
         background-size:cover;
         background-repeat:no-repeat;
         background-position:center;
         font-family: Arial, sans-serif;
-      }
-      .card{
+      }}
+      .card {{
         background: rgba(255,255,255,0.90);
         width: min(900px, 92%);
         margin: 40px auto;
         padding: 16px 20px;
         border-radius: 10px;
-      }
-      textarea{
+      }}
+      textarea {{
         width: 100%;
         max-width: 100%;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      }
-      button{
+      }}
+      button {{
         margin-top: 10px;
         padding: 10px 14px;
         cursor: pointer;
-      }
-      .hint{
-        font-size: 0.95rem;
-      }
+      }}
     </style>
   </head>
 
   <body>
     <div class="card">
       <h1>The Hangman Madness (Render)</h1>
-
-      <p class="hint">
-        Paste your inputs below, one per line (username, level, category, guesses...).
-        Example:<br/>
-        <code>Amir</code><br/>
-        <code>1</code><br/>
-        <code>2</code><br/>
-        <code>a</code><br/>
-        <code>e</code>
-      </p>
+      <p>Paste your inputs below, one per line (username, level, category, guesses...).</p>
 
       <form method="post" action="/play">
         <textarea name="inputs" rows="12" placeholder="Type/paste inputs here..."></textarea><br/>
@@ -105,43 +133,52 @@ HOME_HTML = """
 """
 
 
-RESULT_HTML = """
+def _result_inline_html() -> str:
+    css = url_for("static", filename="style.css")
+    js = url_for("static", filename="app.js")
+    bg = url_for("static", filename="image.png")
+
+    return f"""
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Hangman Output</title>
+    <link rel="stylesheet" href="{css}">
+    <script defer src="{js}"></script>
+
+    <!-- Fallback styles if style.css is missing -->
     <style>
-      body{
+      body {{
         margin:0;
         min-height:100vh;
-        background-image:url("/static/image.png");
+        background-image:url("{bg}");
         background-size:cover;
         background-repeat:no-repeat;
         background-position:center;
         font-family: Arial, sans-serif;
-      }
-      .card{
+      }}
+      .card {{
         background: rgba(255,255,255,0.90);
         width: min(1000px, 92%);
         margin: 40px auto;
         padding: 16px 20px;
         border-radius: 10px;
-      }
-      pre{
+      }}
+      pre {{
         white-space: pre-wrap;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      }
-      a{
+      }}
+      a {{
         display:inline-block;
         margin-top:10px;
-      }
+      }}
     </style>
   </head>
 
   <body>
     <div class="card">
-      <pre>{{ output }}</pre>
+      <pre>{{{{ output }}}}</pre>
       <a href="/">Back</a>
     </div>
   </body>
@@ -149,18 +186,6 @@ RESULT_HTML = """
 """
 
 
-@app.get("/")
-def home():
-    return render_template_string(HOME_HTML)
-
-
-@app.post("/play")
-def play():
-    user_text = request.form.get("inputs", "")
-    output = play_with_inputs(user_text)
-    return render_template_string(RESULT_HTML, output=output)
-
-
 if __name__ == "__main__":
-    # Local testing only. Render will run: gunicorn app:app
+    # Local testing only. On Render you run: gunicorn app:app
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", "5000")))
